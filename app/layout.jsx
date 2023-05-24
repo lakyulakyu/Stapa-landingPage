@@ -1,5 +1,18 @@
+import Footer from "@/components/Footer";
 import "./globals.css";
-import { Bebas_Neue, Montserrat, Source_Serif_Pro } from "next/font/google";
+import {
+  Bebas_Neue,
+  Montserrat,
+  Source_Serif_Pro,
+  Poppins,
+} from "next/font/google";
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  display: "swap",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebasneue",
@@ -31,9 +44,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable}`}
+        className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable} ${poppins.variable} overflow-x-hidden`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,7 +1,11 @@
+import Hero from "./Sections/Hero";
+import Sponsorship from "./Sections/Sponsorship";
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="font-bebasNeue">Hello World!</h1>
-    </main>
+    <div className="w-screen">
+      <Hero />
+      <Sponsorship />
+    </div>
   );
 }
