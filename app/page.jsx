@@ -1,9 +1,11 @@
-import MatchScedule from "@/components/MatchScedule";
+import Hero from "./Sections/Hero";
+import Sponsorship from "./Sections/Sponsorship";
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="font-bebasNeue"></h1>
-   
-    </main>
+    <div className="w-screen">
+      <Hero />
+      <Sponsorship />
+    </div>
   );
 }
