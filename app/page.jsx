@@ -1,7 +1,9 @@
+import MatchScedule from "@/components/MatchScedule";
 export default function Home() {
   return (
     <main>
-      <h1 className="font-bebasNeue">Hello World!</h1>
+      <h1 className="font-bebasNeue"></h1>
+   
     </main>
   );
 }
