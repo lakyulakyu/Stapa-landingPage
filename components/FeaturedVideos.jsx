@@ -1,62 +1,53 @@
 "use client";
 import { CgArrowLongRight } from "react-icons/cg";
+import { IoMdAdd } from "react-icons/io";
+
 import Link from "next/link";
-import React, { useRef, useState } from "react";
-// import { Carousel } from "react-responsive-carousel";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-import CardVideos from "./CardVideos";
+import React from "react";
+import CardVideos from "./Card/CardVideos";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const FeaturedVideos = () => {
-  const carouselRef = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const goToPrevious = () => {
-    setCurrentSlide((prevSlide) => prevSlide - 1);
-  };
-
-  const goToNext = () => {
-    setCurrentSlide((prevSlide) => prevSlide + 1);
-  };
-
-  var settings = {
-    dots: true,
+  const settings = {
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
   };
+
   return (
-    <div>
-      <div className="flex justify-between items-center mb-10 w-full px-10 absolute z-20">
-        <div className="p-2">
-          <h1 className="text-2xl text-white uppercase font-semibold">
-            Match schedule
-          </h1>
-          <Link href={"/all_match"}>
-            <p className="text-gray-500 text-xs font-semibold">
-              view all matches +
+    <div className="mx-auto w-full font-poppins font-semibold h-full">
+      <div className="flex justify-between items-center absolute max-w-7xl z-50 w-full ">
+        <div>
+          <h2 className="uppercase font-bold text-2xl text-white">
+            Featured videos
+          </h2>
+          <Link href={"/#"}>
+            <p className="text-base text-zinc-500 font-medium flex items-center gap-x-1 mt-1 cursor-pointer">
+              View all matches <IoMdAdd />
             </p>
           </Link>
         </div>
-        <div className=" flex divide-x-2  text-2xl">
-          <button onClick={goToPrevious} className="">
+        <div className=" flex divide-x-2 divide-gray-400  text-2xl">
+          <button className="">
             <h1 className="rotate-180 hover:bg-slate-100 rounded-r-lg py-4 px-2 text-gray-400">
               <CgArrowLongRight />
             </h1>
           </button>
-          <button
-            onClick={goToNext}
-            className="px-2 text-red-500 hover:bg-slate-100 rounded-r-lg py-4  "
-          >
-            {" "}
+          <button className="px-2 hover:bg-slate-100 rounded-r-lg py-4 text-gray-400  ">
             <CgArrowLongRight />
           </button>
         </div>
       </div>
-      <div className="bg-red-200 ">
+
+      <div className="bg-red-200 w-full">
         <div></div>
-        <Slider {...settings}>
+        <Slider {...settings} className="w-full h-fit">
           {Array.from({ length: 4 }).map((_, index) => (
             <CardVideos />
           ))}

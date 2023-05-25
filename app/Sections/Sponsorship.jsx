@@ -4,6 +4,8 @@ import React from "react";
 import { IoMdAdd } from "react-icons/io";
 import Slider from "react-slick";
 
+
+
 const Sponsorship = () => {
   const settings = {
     infinite: true,
@@ -50,7 +52,7 @@ const Sponsorship = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto mt-12 w-full font-poppins font-semibold h-screen">
+    <div className="max-w-7xl mx-auto mt-12 w-full font-poppins font-semibold h-fit">
       <div>
         <h2 className="uppercase font-bold text-2xl text-black-main">
           Sponsorship
