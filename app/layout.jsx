@@ -2,11 +2,6 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 // import { Bebas_Neue, Montserrat, Source_Serif_Pro,poppins } from "next/font/google";
 import NavBar_ from "@/components/Navbar";
-import MatchScedule from "@/components/MatchScedule";
-import FeaturedVideos from "@/components/FeaturedVideos";
-import LatestNews from "@/components/LatestNews";
-import LfcOnSosmed from "@/components/LfcOnSosmed";
-import LfcRecomd from "@/components/LfcRecomd";
 
 const items = ["Item 1", "Item 2", "Item 3", "Item 4"];
 import {
@@ -57,13 +52,6 @@ export default function RootLayout({ children }) {
       >
         <NavBar_ />
         {children}
-        <div className="overflow-hidden">
-          <MatchScedule />
-          <FeaturedVideos />
-          <LatestNews/>
-          <LfcOnSosmed/>
-          <LfcRecomd/>
-        </div>
         <Footer />
       </body>
     </html>

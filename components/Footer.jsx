@@ -1,35 +1,59 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-
+import { MdWhatsapp } from "react-icons/md";
 const Footer = () => {
+  useEffect(() => {
+    const handleClick = () => {
+      var phoneNumber = "+6289529028582";
+      var whatsappUrl =
+        "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent();
+      window.open(whatsappUrl, "_blank");
+    };
+    const button = document.getElementById("whatsappButton");
+    button.addEventListener("click", handleClick);
+
+    return () => {
+      button.removeEventListener("click", handleClick);
+    };
+  }, []);
   return (
-    <div className="bg-primary-red h-[34vh] py-8">
+    <div className="bg-primary-red h-[50vh] py-8">
       <div className="max-w-7xl mx-auto flex h-full gap-x-16">
         <Image
-          src={
-            "https://www.freepnglogos.com/uploads/adidas-logo-png-transparent-24.png"
-          }
+          src="/logo.png"
           alt=""
           width={400}
           height={400}
-          className="invert-[1] brightness-0 h-full w-auto"
+          className="h-44 w-auto"
         />
         <div className="w-4/5">
           <div className="flex text-light-grey text-2xl gap-x-3 mt-6">
-            <FaFacebookF />
-            <FaTwitter />
             <FaInstagram />
             <FaYoutube />
+            <button id="whatsappButton" alt='hubungi admin' >
+            <MdWhatsapp />
+
+            </button>
+
           </div>
           <div className="flex text-light-grey gap-x-6 mt-4 text-lg font-semibold opacity-90">
             <p>Privacy Policy</p>
-            <p>Term and Condition</p>
-            <p>Anti-Slavery</p>
-            <p>Cookies</p>
             <p>Help</p>
+            <div>
             <p>Contact Us</p>
-            <p>Accessibility</p>
+            <button id="whatsappButton" className="w-full mt-1  bg-green-500 p-2">
+            <div className="flex justify-between items-center">
+              <p className="text-xl">
+                <MdWhatsapp />
+              </p>
+              <p className="text-medium font-semibold">Hubungi Admin</p>
+            </div>
+          </button>
+
+            </div>
+            
           </div>
           <div className="mt-8 text-light-grey opacity-80">
             <p>©Copyright 2022 The Moklet Sport Science. All rights reserved</p>

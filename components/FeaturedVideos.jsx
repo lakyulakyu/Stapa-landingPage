@@ -21,7 +21,10 @@ const FeaturedVideos = () => {
   };
 
   return (
-    <div className="mx-auto w-full font-poppins font-semibold h-full">
+    <div
+    id="video"
+      className="mx-auto w-full font-poppins font-semibold h-full"
+    >
       <div className="flex justify-between items-center absolute max-w-7xl z-50 w-full ">
         <div>
           <h2 className="uppercase font-bold text-2xl text-white">

@@ -50,7 +50,7 @@ const Hero = () => {
           return (
             <div
               key={item.id}
-              className="h-[90vh] w-screen bg-cover bg-no-repeat"
+              className="h-screen w-screen bg-cover bg-no-repeat"
             >
               <div className="font-poppins relative top-2/4 max-w-7xl mx-auto text-light-grey ">
                 <h4 className="text-lg uppercase font-semibold">
@@ -64,7 +64,7 @@ const Hero = () => {
                 </button>
               </div>
               <div className="absolute w-screen h-[80vh] top-0 -z-10">
-                <div className="absolute opacity-30 h-[90vh] w-full bg-primary-red"></div>
+                <div className="absolute opacity-30 h-screen w-full bg-primary-red"></div>
                 <Image
                   src={item.image}
                   alt=""
