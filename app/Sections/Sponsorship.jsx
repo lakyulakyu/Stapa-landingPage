@@ -61,7 +61,7 @@ const Sponsorship = () => {
           View all sponsorship <IoMdAdd />
         </p>
       </div>
-      <div className="mt-4">
+      <div className="my-8">
         <Slider {...settings} className="w-full h-fit">
           {imageSponsor.map((item) => {
             return (

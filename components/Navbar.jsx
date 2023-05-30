@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRouter } from "react";
 import { MdArrowRight } from "react-icons/md";
 import { HiOutlineSearch } from "react-icons/hi";
 import { Fragment } from "react";
@@ -10,11 +10,11 @@ import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "News", href: "/news" },
-  { name: "Tim", href: "/Team" },
-  { name: "Match", href: "/match" },
-  { name: "Video", href: "#" },
-  { name: "More", href: "/More" },
+  { name: "News", href: "/News" },
+  { name: "Team", href: "/Team" },
+  { name: "Match", href: "/Matched" },
+  { name: "Video", href: "#video" },
+  { name: "More", href: "/#More" },
 ];
 const NavBar_ = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -51,7 +51,7 @@ const NavBar_ = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-10 top-0`}>
+    <nav className={`fixed w-full z-50 top-0`}>
       <div
         className={`flex absolute z-50 w-full py-4 justify-between items-center px-6 duration-200 ${
           scrollPosition > 10
@@ -61,11 +61,11 @@ const NavBar_ = () => {
       >
         <div>
           <Image
-            src="/logo.png"
+            src="/Logo-Web.png"
             alt="logo"
             width={100}
             height={100}
-            className="h-16 w-fit"
+            className="h-20 w-fit bg-slate-50 rounded-full p-2"
           />
         </div>
         <div>

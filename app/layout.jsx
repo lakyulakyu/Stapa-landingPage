@@ -1,9 +1,7 @@
 import Footer from "@/components/Footer";
 import "./globals.css";
-// import { Bebas_Neue, Montserrat, Source_Serif_Pro,poppins } from "next/font/google";
 import NavBar_ from "@/components/Navbar";
 
-const items = ["Item 1", "Item 2", "Item 3", "Item 4"];
 import {
   Bebas_Neue,
   Montserrat,
@@ -41,7 +39,7 @@ const sourceSerifPro = Source_Serif_Pro({
 
 export const metadata = {
   title: "STAPA | Statistic Player",
-  description: "Website for idk",
+  description: "Website for ",
 };
 
 export default function RootLayout({ children }) {
@@ -52,7 +50,9 @@ export default function RootLayout({ children }) {
       >
         <NavBar_ />
         {children}
-        <Footer />
+        <div id="More" className="overflow-hidden">
+          <Footer />
+        </div>
       </body>
     </html>
   );

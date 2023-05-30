@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 
 const dataNews = [
   {
@@ -25,7 +24,7 @@ const dataNews = [
   },
 ];
 
-const CardLfcRecomd = () => {
+const Advers = () => {
   const settings = {
     infinite: true,
     slidesToShow: 1,
@@ -38,7 +37,7 @@ const CardLfcRecomd = () => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto h-fit ">
         <Slider {...settings} className="w-full h-fit">
           {dataNews.map((item) => (
             <div key={item.id} className="w-full object-cover ">
@@ -48,7 +47,7 @@ const CardLfcRecomd = () => {
                   alt=""
                   width={1000}
                   height={1000}
-                  className="object-cover w-full h-full  "
+                  className="object-cover w-full h-full"
                 />
               </div>
             </div>
@@ -59,4 +58,4 @@ const CardLfcRecomd = () => {
   );
 };
 
-export default CardLfcRecomd;
+export default Advers;

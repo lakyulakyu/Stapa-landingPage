@@ -9,32 +9,90 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const FeaturedVideos = () => {
+const Video = [
+  {
+    id: 1,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    time: "20.12",
+    liga: "solo premiere league",
+  },
+  {
+    id: 2,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    time: "20.12",
+    liga: "solo premiere league",
+  },
+
+  {
+    id: 3,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    time: "20.12",
+    liga: "solo premiere league",
+  },
+
+  {
+    id: 4,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    time: "20.12",
+    liga: "solo premiere league",
+  },
+  {
+    id: 5,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    liga: "solo premiere league",
+    time: "20.12",
+  },
+  {
+    id: 6,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    liga: "solo premiere league",
+    time: "20.12",
+  },
+  {
+    id: 7,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    time: "20.12",
+    liga: "solo premiere league",
+  },
+  {
+    id: 8,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    time: "20.12",
+    liga: "solo premiere league",
+  },
+  {
+    id: 9,
+    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
+    headline: "Deddy corbuziez makan bersama andika lopes",
+    time: "20.12",
+    liga: "solo premiere league",
+  },
+];
+
+const FeaturedVideos = ({ item }) => {
   const settings = {
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 4000,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
 
   return (
-    <div
-    id="video"
-      className="mx-auto w-full font-poppins font-semibold h-full"
-    >
-      <div className="flex justify-between items-center absolute max-w-7xl z-50 w-full ">
+    <div id="video" className="w-screen font-poppins font-semibold h-full">
+      <div className="flex text-black-main justify-between mb-10 items-center mx-auto  max-w-7xl z-10 w-full ">
         <div>
-          <h2 className="uppercase font-bold text-2xl text-white">
-            Featured videos
-          </h2>
-          <Link href={"/#"}>
-            <p className="text-base text-zinc-500 font-medium flex items-center gap-x-1 mt-1 cursor-pointer">
-              View all matches <IoMdAdd />
-            </p>
-          </Link>
+          <h2 className="uppercase font-bold text-2xl">Featured videos</h2>
         </div>
         <div className=" flex divide-x-2 divide-gray-400  text-2xl">
           <button className="">
@@ -47,12 +105,15 @@ const FeaturedVideos = () => {
           </button>
         </div>
       </div>
-
-      <div className="bg-red-200 w-full">
+      <div className="w-full">
         <div></div>
         <Slider {...settings} className="w-full h-fit">
-          {Array.from({ length: 4 }).map((_, index) => (
-            <CardVideos />
+          {Video.map((item) => (
+            <>
+              <div className="">
+                <CardVideos key={item.id} item={item} />
+              </div>
+            </>
           ))}
         </Slider>
       </div>
