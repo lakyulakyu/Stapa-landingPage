@@ -65,7 +65,7 @@ const MatchCard = () => {
                       <div className=" lg:flex mx-auto text-center  h-fit py-4 w-full min-h-fit hover:bg-opacity-5 min-w-fit ">
                         <div className="pb-4  w-full">
                           <div className="flex justify-center items-center gap-4">
-                            <p className="font-semibold text-primary-red text-lg capitalize">
+                            <p className="font-semibold text-red-500 text-lg capitalize">
                               {item.name_tim1}
                             </p>
                             <Image
