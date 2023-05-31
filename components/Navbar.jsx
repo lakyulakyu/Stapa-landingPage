@@ -18,7 +18,7 @@ const navigation = [
 ];
 const NavBar_ = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  
   useEffect(() => {
     const smoothScroll = (event) => {
       event.preventDefault();
@@ -70,15 +70,15 @@ const NavBar_ = () => {
         </div>
         <div>
           {navigation.map((item) => (
-            <a
-              key={item.name}
+            <Link
+              key={item}
               href={item.href}
               className={` ${
                 scrollPosition > 10 ? "border-black-main" : "border-white"
               } hover:border-b-2 focus:borderb-2 bg-opacity-5 pb-3  uppercase mx-3 font-normal`}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="uppercase flex items-center divide-x-2 divide-white gap-4">

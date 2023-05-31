@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
+    "dom-to-image": "^2.6.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "fs": "^0.0.1-security",
     "fuse.js": "^6.6.2",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "next": "13.4.3",
     "postcss": "8.4.23",
     "react": "18.2.0",

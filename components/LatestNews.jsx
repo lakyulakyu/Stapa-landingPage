@@ -24,13 +24,13 @@ const LatestNews = () => {
     autoplaySpeed: 6000,
   };
   return (
-    <div className="max-w-7xl mx-auto  w-full font-poppins font-semibold h-full">
+    <div className="max-w-7xl mb-10 mx-auto  w-full font-poppins font-semibold h-full">
       <div className="flex justify-between items-center ">
         <div>
           <h2 className="uppercase font-bold text-2xl text-black-main">
             Latest News
           </h2>
-          <Link href={"/#"}>
+          <Link href={"/News"}>
             <p className="text-base text-zinc-500 font-medium flex items-center gap-x-1 mt-1 cursor-pointer">
               View all news <IoMdAdd />
             </p>

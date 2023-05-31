@@ -5,29 +5,9 @@ import { IoMdAdd } from "react-icons/io";
 import Image from "next/image";
 import DataMatch from "../../Json/Match";
 
+
 const MatchCard = () => {
-  const itemsPerPage = 5;
-  const [currentPage, setCurrentPage] = useState(1);
-  const [currentData, setCurrentData] = useState([]);
-
-  useEffect(() => {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    setCurrentData(DataMatch.slice(startIndex, endIndex));
-  }, [currentPage]);
-
-  const nextPage = () => {
-    const totalPages = Math.ceil(DataMatch.length / itemsPerPage);
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const previousPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
+  
   return (
     <>
       <div className="h-full pb-10">
@@ -46,7 +26,7 @@ const MatchCard = () => {
           </div>
         </div>
         <div className="w-full mt-10 h-fit">
-          {currentData.map((item, index) => {
+          {DataMatch.map((item, index) => {
             const isEven = index % 2 === 0;
             const handleClick = (e) => {
               if (!(item.score_tim_1 || item.score_tim_2)) {
@@ -126,12 +106,7 @@ const MatchCard = () => {
             );
           })}
         </div>
-        <button onClick={previousPage} disabled={currentPage === 1}>
-          Halaman Sebelumnya
-        </button>
-        <button onClick={nextPage} disabled={currentData.length < itemsPerPage}>
-          Halaman Selanjutnya
-        </button>
+        
       </div>
     </>
   );

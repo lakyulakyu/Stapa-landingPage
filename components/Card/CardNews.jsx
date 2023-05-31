@@ -28,7 +28,7 @@ const NewsCard = ({ item, index }) => {
               alt={item.tittle}
               className="object-cover  max-h-[25vh] h-full w-full"
             />
-          </div> 
+          </div>
           <div className="w-full px-2 pt-4 text-black-main  h-full max-h-[180px] min-h-[170px]">
             <h1
               className="text-[10px] w-full  font-semibold uppercase
@@ -39,12 +39,11 @@ const NewsCard = ({ item, index }) => {
             <p className="text-lg hover:underline font-semibold mt-1 capitalize max-w-xs w-full  max-h-14  overflow-hidden ">
               {item.headline}
             </p>
-          
-            <p className="text-xs line-clamp-3 hover:underline text-gray-400 max-h-8 overflow-hidden font-normal tracking-wider">
+
+            <p className="text-xs line-clamp-3 w-52 hover:underline text-gray-400 max-h-8 overflow-hidden font-normal tracking-wider">
               {item.tittle}
             </p>
 
-            
             <div className="flex gap-2 mt-6 items-center">
               <Image
                 src={item.person_img}
