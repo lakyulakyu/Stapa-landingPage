@@ -23,7 +23,7 @@ const NewsCard = ({ item, index }) => {
           key={item.id}
           className="max-h-96 divide-x-2  flex sm:flex-col mb-4 max-w-[40vh] "
         >
-          <div className=" h-full min-h-full sm:w-[40vh] bg-slate-100">
+          <div className=" h-full min-h-full sm:w-[40vh] ">
             <Image
               src={item.bg_img}
               height={1000}

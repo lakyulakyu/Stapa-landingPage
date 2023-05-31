@@ -3,7 +3,7 @@ import { MdPlayCircleOutline } from "react-icons/md";
 
 const CardVideos = ({ item }) => {
   return (
-    <div className="sm:max-w-xs w-full mx-auto px-4  bg-slate-100 bg-cover h-fit">
+    <div className="sm:max-w-xs w-full mx-auto px-4 bg-cover h-fit">
       <div className="w-full bg-opacity-40 max-w-xs mx-auto flex">
         <div className="max-w-xs object-cover text-black-main  mb-14">
           <iframe
