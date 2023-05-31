@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
-import { useEffect, useState, useRouter } from "react";
+import { useEffect, useState } from "react";
 import { MdArrowRight } from "react-icons/md";
-import { HiOutlineSearch } from "react-icons/hi";
-import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,12 +10,12 @@ const navigation = [
   { name: "News", href: "/News" },
   { name: "Team", href: "/Team" },
   { name: "Match", href: "/Matched" },
-  { name: "Video", href: "#video" },
+  { name: "Video", href: "/Video" },
   { name: "More", href: "/#More" },
 ];
 const NavBar_ = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const smoothScroll = (event) => {
       event.preventDefault();
@@ -50,10 +47,28 @@ const NavBar_ = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 830) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className={`fixed w-full z-50 top-0`}>
+    <nav className="fixed w-full z-50 top-0">
       <div
-        className={`flex absolute z-50 w-full py-4 justify-between items-center px-6 duration-200 ${
+        className={`flex z-50 md:max-w-6xl md:mx-auto xl:w-full lg:max-w-none py-4 justify-between items-center px-6 duration-200 ${
           scrollPosition > 10
             ? "text-black-main bg-white"
             : "text-white bg-transparent hover:bg-black-main hover:text-white "
@@ -68,7 +83,7 @@ const NavBar_ = () => {
             className="h-20 w-fit bg-slate-50 rounded-full p-2"
           />
         </div>
-        <div>
+        <div className="max-md:hidden">
           {navigation.map((item) => (
             <Link
               key={item}
@@ -81,45 +96,60 @@ const NavBar_ = () => {
             </Link>
           ))}
         </div>
-        <div className="uppercase flex items-center divide-x-2 divide-white gap-4">
+        <div className="flex md:hidden">
+          <button
+            onClick={toggleMenu}
+            type="button"
+            className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+        {isOpen && (
+          <div className="">
+            {navigation.map((item) => (
+              <Link
+                key={item}
+                href={item.href}
+                className={` ${
+                  scrollPosition > 10 ? "border-black-main" : "border-white"
+                } hover:border-b-2 focus:borderb-2 bg-opacity-5 pb-3 pr-4 hover:bg-slate-300  uppercase flex font-normal`}
+              >
+                <p className=" hover:bg-slate-200 text-center">{item.name}</p>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        <div className="uppercase max-md:hidden flex items-center divide-x-2 divide-white gap-4">
           <h1 className="flex items-center">
             Id{" "}
             <span className="rotate-90 text-xl">
               <MdArrowRight />
             </span>
           </h1>
-          <Menu>
-            <div className="pl-4 pt-1">
-              <Menu.Button>
-                {" "}
-                <HiOutlineSearch />
-              </Menu.Button>
-            </div>
-
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-100"
-              enterFrom="transform scale-95"
-              enterTo="transform scale-100"
-              leave="transition ease-in duration=75"
-              leaveFrom="transform scale-100"
-              leaveTo="transform scale-95"
-            >
-              <Menu.Items className="absolute right-0 w-56 z-50 mt-2 origin-top-right bg-white rounded shadow-sm">
-                <input type="text" name="" id="">
-                  <Menu.Item>
-                    <Link
-                      href="#"
-                      className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
-                    >
-                      <HiOutlineSearch className="h-4 w-4 mr-2" />
-                      Cari..
-                    </Link>
-                  </Menu.Item>
-                </input>
-              </Menu.Items>
-            </Transition>
-          </Menu>
         </div>
       </div>
     </nav>

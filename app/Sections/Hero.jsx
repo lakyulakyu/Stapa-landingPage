@@ -44,7 +44,7 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="w-screen">
+    <div className="w-screen ">
       <Slider {...settings} className="w-full h-fit">
         {heroContent.map((item) => {
           return (
@@ -52,19 +52,19 @@ const Hero = () => {
               key={item.id}
               className="h-screen w-screen bg-cover bg-no-repeat"
             >
-              <div className="font-poppins relative top-2/4 max-w-7xl mx-auto text-light-grey ">
+              <div className="font-poppins relative md:top-1/4  lg:top-2/4 sm:top-1/2  lg:max-w-6xl md:mx-20 xl:max-w-7xl sm:mx-10  lg:mx-auto text-light-grey ">
                 <h4 className="text-lg uppercase font-semibold">
                   {item.number}
                 </h4>
-                <h1 className="text-4xl mt-2 font-bold w-1/2">
+                <h1 className="lg:text-4xl md:text-2xl text-xl mt-2 font-bold w-1/2">
                   {item.content}
                 </h1>
                 <button className="bg-primary-red mt-8 px-5 text-lg py-2 font-normal flex items-center gap-x-2">
                   View Now <IoMdArrowDropright size={26} />
                 </button>
               </div>
-              <div className="absolute w-screen h-[80vh] top-0 -z-10">
-                <div className="absolute opacity-30 h-screen w-full bg-primary-red"></div>
+              <div className="absolute w-screen md: lg:h-full top-0 -z-10">
+                <div className="absolute opacity-30 sm:h-full lg:h-screen w-full bg-primary-red"></div>
                 <Image
                   src={item.image}
                   alt=""

@@ -8,12 +8,10 @@ import Adsvers from "@/components/Card/Adsvers";
 
 export default function Home() {
   return (
-    <div className="w-screen">
+    <div className="w-screen overflow-hidden">
       <Hero />
       <Match />
-      <div id="video" className="overflow-hidden">
-        <FeaturedVideos />
-      </div>
+      <FeaturedVideos />
       <LatestNews />
       <Adsvers />
       <LfcOnSosmed />

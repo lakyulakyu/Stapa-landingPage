@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
+import MatchReport from "@/components/Card/MatchReport";
 
 const page = () => {
   const [showDetail, setShowDetail] = useState(false);
@@ -35,7 +36,7 @@ const page = () => {
       <div>
         {showDetail && (
           <div className="max-w-3xl h-fit py-10 my-10 px-4 mx-auto bg-slate-200">
-            detail
+            <MatchReport />
           </div>
         )}
       </div>
@@ -60,7 +61,7 @@ const page = () => {
 
           <div className="uppercase w-full  ">
             <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full rounded-t-full py-1  max-w-[120px] ">
+              <p className="bg-red-200 w-full border-primary-red rounded-t-full py-1  max-w-[120px] ">
                 24
               </p>
               <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">

@@ -18,16 +18,6 @@ const LfcOnSosmed = () => {
             </p>
           </Link>
         </div>
-        <div className=" flex divide-x-2  text-2xl">
-          <button className="">
-            <h1 className="rotate-180 hover:bg-slate-100 rounded-lg py-4 px-2 text-gray-400">
-              <CgArrowLongRight />
-            </h1>
-          </button>
-          <button className="px-2 text-red-500 hover:bg-slate-100 rounded-lg py-4  ">
-            <CgArrowLongRight />
-          </button>
-        </div>
       </div>
       <div className="w-screen ">
         <div className="mt-10 w-screen  lg:translate-x-12">

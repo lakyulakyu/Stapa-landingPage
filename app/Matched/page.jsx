@@ -5,12 +5,10 @@ import { IoMdAdd } from "react-icons/io";
 import Image from "next/image";
 import DataMatch from "../../Json/Match";
 
-
 const MatchCard = () => {
-  
   return (
     <>
-      <div className="h-full pb-10">
+      <div className="h-full pb-10 ">
         <div className="max-w-7xl  mx-auto mt-8 w-full font-poppins font-semibold">
           <div className="flex justify-between items-center ">
             <div>
@@ -25,25 +23,23 @@ const MatchCard = () => {
             </div>
           </div>
         </div>
-        <div className="w-full mt-10 h-fit">
+        <div className="w-full divide-y-2 divide-gray-300 mt-10 h-fit">
           {DataMatch.map((item, index) => {
             const isEven = index % 2 === 0;
-            const handleClick = (e) => {
-              if (!(item.score_tim_1 || item.score_tim_2)) {
-                e.preventDefault();
-              }
-            };
             return (
               <>
-                <div className="w-full mx-auto max-w-2xl divide-y-2  divide-black ">
+                <div className="w-full  mx-auto max-w-2xl  divide-black ">
                   <div
                     className={` ${
                       isEven ? "bg-slate-100" : "bg-white"
                     } hover:bg-slate-100 py-4`}
                   >
                     <Link href={`/Matched/${item.id}`}>
-                      <div className=" lg:flex mx-auto text-center  h-fit py-4 w-full min-h-fit hover:bg-opacity-5 min-w-fit ">
-                        <div className="pb-4  w-full">
+                      <p className="text-sm mb-2 text-center text-primary-red font-semibold -mt-1">
+                        {item.liga}
+                      </p>
+                      <div className=" lg:flex mx-auto text-center  h-fit w-full min-h-fit hover:bg-opacity-5 min-w-fit ">
+                        <div className="w-full">
                           <div className="flex justify-center items-center gap-4">
                             <p className="font-semibold text-red-500 text-lg capitalize">
                               {item.name_tim1}
@@ -56,9 +52,17 @@ const MatchCard = () => {
                               height={100}
                               className="h-12 w-fit"
                             />
-                            <p className="bg-gray-200 text-lg rounded-lg px-2 py-1 font-semibold">
-                              {item.time}
-                            </p>
+
+                            {item.score_tim_1 || item.score_tim_2 ? (
+                              <p className="bg-primary-red text-lg rounded-lg px-2 text-white py-1 font-semibold">
+                                {item.score_tim_1} - {item.score_tim_2}
+                              </p>
+                            ) : (
+                              <p className="bg-gray-200 text-lg rounded-lg px-2 py-1 font-semibold">
+                                {item.time}
+                              </p>
+                            )}
+
                             <Image
                               key={item.id}
                               src={item.tim_2}
@@ -71,34 +75,19 @@ const MatchCard = () => {
                               {item.name_tim1}
                             </p>
                           </div>
-                          <div>
-                            <p className="text-sm font-bold text-gray-300">
-                              score
-                            </p>
-
-                            {item.score_tim_1 || item.score_tim_2 ? (
-                              <h1 className="text-lg font-poppins font-bold text-red-600">
-                                {item.score_tim_1} - {item.score_tim_2} : W
-                              </h1>
-                            ) : (
-                              <h1 className="text-sm font-poppins  text-gray-400">
-                                Belum bertanding
-                              </h1>
-                            )}
-                          </div>
+                          <div></div>
                         </div>
                       </div>
-                      <div className=" text-center pb-4 capitalize">
-                        <p className="text-xs text-gray-500 -mt-1">
-                          {item.liga}
-                        </p>
-                        <p className="text-xs font-semibold mt-2">
-                          {item.date}
-                        </p>
-                        <p className="text-xs font-semibold">
-                          {item.time} <span>{item.place}</span>
-                        </p>
-                      </div>
+                      {item.score_tim_1 || item.score_tim_2 ? (
+                        ""
+                      ) : (
+                        <div className=" justify-center w-full mt-4 flex  gap-4 text-center pb-4 capitalize">
+                          <p className="text-xs font-semibold ">{item.date}</p>
+                          <p className="text-xs font-semibold">
+                            {item.time} <span>{item.place}</span>
+                          </p>
+                        </div>
+                      )}
                     </Link>
                   </div>
                 </div>
@@ -106,7 +95,6 @@ const MatchCard = () => {
             );
           })}
         </div>
-        
       </div>
     </>
   );
