@@ -22,12 +22,35 @@ const LatestNews = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 6000,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 920,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
-    <div className="max-w-7xl mb-10 mx-auto  w-full font-poppins font-semibold h-full">
+    <div className="md:max-w-7xl mb-10 mx-auto px-2 sm:px-10 md:mx-auto  w-full font-poppins font-semibold h-full">
       <div className="flex justify-between items-center ">
         <div>
-          <h2 className="uppercase font-bold text-2xl text-black-main">
+          <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
             Latest News
           </h2>
           <Link href={"/News"}>

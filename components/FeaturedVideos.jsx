@@ -1,6 +1,6 @@
 "use client";
+import React, { useRef } from "react";
 import { CgArrowLongRight } from "react-icons/cg";
-import React from "react";
 import CardVideos from "./Card/CardVideos";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -74,7 +74,11 @@ const Video = [
   },
 ];
 
-const FeaturedVideos = ({ item }) => {
+const FeaturedVideos = () => {
+  const sliderRef = useRef(null);
+  const next = () => sliderRef.current.slickNext(+1);
+  const prev = () => sliderRef.current.slickPrev(-1);
+
   const settings = {
     infinite: true,
     slidesToShow: 4,
@@ -83,28 +87,54 @@ const FeaturedVideos = ({ item }) => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 920,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div id="video" className="w-screen font-poppins font-semibold h-full">
+    <div id="video" className="h-fit pb-10 w-full px-2 sm:px-10 md:mx-auto">
       <div className="flex text-black-main justify-between mb-10 items-center mx-auto  max-w-7xl z-10 w-full ">
         <div>
-          <h2 className="uppercase font-bold text-2xl">Featured videos</h2>
+          <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">Featured videos</h2>
         </div>
         <div className=" flex divide-x-2 divide-gray-400  text-2xl">
-          <button className="">
+          <button onClick={prev}>
             <h1 className="rotate-180 hover:bg-slate-100 rounded-r-lg py-4 px-2 text-gray-400">
               <CgArrowLongRight />
             </h1>
           </button>
-          <button className="px-2 hover:bg-slate-100 rounded-r-lg py-4 text-gray-400  ">
+          <button
+            onClick={next}
+            className="px-2 hover:bg-slate-100 rounded-r-lg py-4 text-gray-400  "
+          >
             <CgArrowLongRight />
           </button>
         </div>
       </div>
       <div className="w-full">
         <div></div>
-        <Slider {...settings} className="w-full h-fit">
+        <Slider {...settings} ref={sliderRef} className="w-full h-fit">
           {Video.map((item) => (
             <>
               <div className="">

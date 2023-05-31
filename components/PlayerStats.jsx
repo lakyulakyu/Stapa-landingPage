@@ -1,5 +1,5 @@
 import React from "react";
-import Shorting from "./Card/CardPlayerStats";
+import Shorting from "./Card/CardPlayer";
 
 const PlayerStats = () => {
   return (

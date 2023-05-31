@@ -42,6 +42,86 @@ const data = [
       },
     ],
   },
+  {
+    id: 2,
+    position: "Gkp",
+    name: "A.windartono",
+    number: "5",
+    menute: "23",
+    switched: [
+      { id: 1, in: "30", status: true },
+      {
+        id: 2,
+        time: "",
+        status: false,
+      },
+    ],
+
+    red: [
+      {
+        time: "",
+        status: false,
+      },
+    ],
+    yellow: [
+      {
+        time: "20",
+        status: true,
+      },
+    ],
+    goal: [
+      {
+        id: 1,
+        time: "40",
+        status: true,
+      },
+      {
+        id: 2,
+        time: "38",
+        status: true,
+      },
+    ],
+  },
+  {
+    id: 3,
+    position: "Gkp",
+    name: "A.windartono",
+    number: "5",
+    menute: "23",
+    switched: [
+      { id: 1, in: "30", status: true },
+      {
+        id: 2,
+        time: "",
+        status: false,
+      },
+    ],
+
+    red: [
+      {
+        time: "",
+        status: false,
+      },
+    ],
+    yellow: [
+      {
+        time: "20",
+        status: true,
+      },
+    ],
+    goal: [
+      {
+        id: 1,
+        time: "40",
+        status: true,
+      },
+      {
+        id: 2,
+        time: "38",
+        status: true,
+      },
+    ],
+  },
 ];
 
 const MatchReport = () => {
@@ -92,13 +172,6 @@ const MatchReport = () => {
                     <td>{item.position}</td>
                     <td>{item.name}</td>
                     <td>
-                      {filteredData.map((item) => (
-                        <>
-                          <div key={item.switched.id}>
-                            <p>{item.switched.time}</p>
-                          </div>
-                        </>
-                      ))}
                     </td>
                     <td>25</td>
                     <td>Jakarta</td>

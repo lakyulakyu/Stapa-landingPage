@@ -7,24 +7,27 @@ import DataMatch from "../../Json/Match";
 export default function AllTeam() {
   return (
     <>
-      <div className="w-full mt-28 max-w-6xl mx-auto h-fit">
+      <div className="w-full mt-28 lg:max-w-6xl md:px-20 sm:px-10 px-2 mb-10 lg:mx-auto h-fit">
         <h2 className="uppercase font-bold pb-10 text-2xl text-black-main">
           All TEAM
         </h2>
-        <div className=" grid grid-cols-4">
+        <div className=" grid grid-cols-1 sm:divide-y-0 divide-y-2 divide-slate-300 sm:gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {DataMatch.map((item) => {
             return (
               <>
-                <div className="hover:scale-105 h-96 divide-x-8 divide-primary-red ">
+                <div
+                  className="hover:scale-105 h-28 shadow-xl rounded-lg
+               sm:max-w-none flex sm:flex-col max-w-md sm:h-72 lg:h-96 divide-x-8 divide-primary-red mb-8 mx-auto sm:mx-0 sm:mb-10 lg:mb-0 "
+                >
                   <div>
                     <Image
                       alt=""
                       height={1000}
                       width={1000}
                       src={item.tim_1 || "/Logo-default.png"}
-                      className="w-full aspect-[3/2] object-contain mix-blend-color-burn"
+                      className="sm:w-full mx-auto  aspect-[3/2] object-contain w-44 sm:h-32 lg:h-52 h-fit mix-blend-color-burn"
                     />
-                    <h1 className="text-center mt-5 text-lg text-primary-red uppercase font-semibold tracking-widest">
+                    <h1 className="text-center mt-2 sm:mt-5 text-lg text-primary-red uppercase font-semibold tracking-widest">
                       {item.name_tim1}
                     </h1>
                   </div>

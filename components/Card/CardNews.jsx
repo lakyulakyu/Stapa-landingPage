@@ -19,14 +19,17 @@ const NewsCard = ({ item, index }) => {
   return (
     <div className={`card w-fit  ${isLargeCard ? "large-card" : ""}`}>
       <Link href={`/News/${item.id}`}>
-        <div key={item.id} className="max-h-96 divide-x-2  mb-4 max-w-[40vh] ">
-          <div className=" h-full min-h-full w-[40vh] bg-slate-100">
+        <div
+          key={item.id}
+          className="max-h-96 divide-x-2  flex sm:flex-col mb-4 max-w-[40vh] "
+        >
+          <div className=" h-full min-h-full sm:w-[40vh] bg-slate-100">
             <Image
               src={item.bg_img}
               height={1000}
               width={1000}
               alt={item.tittle}
-              className="object-cover  max-h-[25vh] h-full w-full"
+              className="object-cover  sm:max-h-[25vh] h-full w-full"
             />
           </div>
           <div className="w-full px-2 pt-4 text-black-main  h-full max-h-[180px] min-h-[170px]">
@@ -66,7 +69,7 @@ const NewsCard = ({ item, index }) => {
       </Link>
 
       {isLargeCard && (
-        <div className="h-[50vh] max-h-96  max-w-5xl justify-between w-screen flex ">
+        <div className="h-[50vh] max-h-96 max-w-5xl justify-between w-screen flex ">
           <div className="mx-auto w-full">
             <div className=" h-[50vh] w-[60vh]  ">
               <Image

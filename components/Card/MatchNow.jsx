@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { GiSoccerField } from "react-icons/gi";
 import DataMatch from "../../Json/Match";
 
 function MatchNow() {
@@ -65,7 +66,7 @@ function MatchNow() {
                   >
                     <h1>{liga}</h1>
                     <div
-                      className={`match grid grid-cols-5 items-center  object-center`}
+                      className={`match w-full  grid justify-center sm:grid-cols-5 items-center  object-center`}
                     >
                       <p className="font-semibold capitalize text-xl ">
                         {name_tim1}
@@ -73,13 +74,13 @@ function MatchNow() {
                       <div className="h-full w-full left-5 ">
                         <Image
                           alt=""
-                          src={"/Logo-default.png"}
+                          src={tim_1}
                           height={100}
                           width={100}
                           className=" object-contain mr-0 mx-auto h-full py-auto"
                         />
                       </div>
-                      <p className=" py-1 rounded-md text-xl  w-20 font-semibold text-light-grey mx-auto bg-red-600 ">
+                      <p className=" py-1 rounded-md text-xl w-full  sm:w-20 font-semibold text-light-grey mx-auto bg-red-600 ">
                         Vs
                       </p>
                       <Image
@@ -94,7 +95,11 @@ function MatchNow() {
                       </p>
                     </div>
                     <p>{matchTime}</p>
-                    <p className="w-fit px-8 py-2 mt-3 font-semibold capitalize rounded-lg   mx-auto bg-slate-300">
+                    <p className="w-fit flex items-center gap-2 px-4 py-2 mt-3 font-semibold capitalize rounded-lg   mx-auto bg-slate-300">
+                      <span className="text-2xl">
+                        {" "}
+                        <GiSoccerField />
+                      </span>{" "}
                       {place}
                     </p>
                   </div>

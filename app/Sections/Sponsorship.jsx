@@ -4,8 +4,6 @@ import React from "react";
 import { IoMdAdd } from "react-icons/io";
 import Slider from "react-slick";
 
-
-
 const Sponsorship = () => {
   const settings = {
     infinite: true,
@@ -15,6 +13,22 @@ const Sponsorship = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const imageSponsor = [
@@ -52,9 +66,9 @@ const Sponsorship = () => {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto mt-12 w-full font-poppins font-semibold h-fit">
+    <div className="max-w-7xl mx-auto px-2 sm:px-10 md:mx-auto mt-12 w-full font-poppins font-semibold h-fit">
       <div>
-        <h2 className="uppercase font-bold text-2xl text-black-main">
+        <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
           Sponsorship
         </h2>
         <p className="text-base text-zinc-500 font-medium flex items-center gap-x-1 mt-1 cursor-pointer">

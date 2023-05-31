@@ -129,7 +129,7 @@ const NavBar_ = () => {
                   scrollPosition > 10 ? "border-black-main" : "border-white"
                 } hover:border-b-2 focus:borderb-2 bg-opacity-5 pb-3 pr-4 hover:bg-slate-300  uppercase flex font-normal`}
               >
-                <p className=" hover:bg-slate-200 text-center">{item.name}</p>
+                <p className="  text-center">{item.name}</p>
               </Link>
             ))}
           </div>

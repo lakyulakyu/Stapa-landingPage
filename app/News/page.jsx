@@ -8,11 +8,11 @@ const NewsList = () => {
   return (
     <>
       <div className="pt-24 max-w-5xl  mx-auto ">
-        <div className="scale-50 -my-7">
+        <div className="lg:scale-50 md:-my-7">
           <Advers />
         </div>
         <h1 className="uppercase font-bold text-2xl text-black-main">News</h1>
-        <div className="news-list gap-4 mt-4  grid grid-cols-4">
+        <div className="news-list gap-4 mt-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3  grid lg:grid-cols-4">
           {NewsData.map((item, index) => (
             <NewsCard key={index} item={item} index={index} />
           ))}

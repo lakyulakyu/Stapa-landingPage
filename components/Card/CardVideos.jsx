@@ -3,15 +3,15 @@ import { MdPlayCircleOutline } from "react-icons/md";
 
 const CardVideos = ({ item }) => {
   return (
-    <div className="max-w-xs w-full mx-auto px-4  bg-slate-100 bg-cover h-fit">
-      <div className="w-full bg-opacity-40  flex">
+    <div className="sm:max-w-xs w-full mx-auto px-4  bg-slate-100 bg-cover h-fit">
+      <div className="w-full bg-opacity-40 max-w-xs mx-auto flex">
         <div className="max-w-xs object-cover text-black-main  mb-14">
           <iframe
             src={item.url}
             width={1000}
             height={700}
             uk-video="automute: true"
-            className="w-full h-48 aspect-video "
+            className="w-full h-fit  sm:h-48 aspect-video "
           ></iframe>
           <h1 className="capitalize font-semibold mt-4 font-poppins text-start">
             {item.headline}
@@ -22,7 +22,9 @@ const CardVideos = ({ item }) => {
               {item.time} <span>mins</span>
             </p>
           </div>
-          <p className=" text-xs font-normal text-primary-red mt-3">{item.liga}</p>
+          <p className=" text-xs font-normal text-primary-red mt-3">
+            {item.liga}
+          </p>
         </div>
       </div>
     </div>

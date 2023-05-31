@@ -41,7 +41,7 @@ const Advers = () => {
         <Slider {...settings} className="w-full h-fit">
           {dataNews.map((item) => (
             <div key={item.id} className="w-full object-cover ">
-              <div className="object-cover h-52">
+              <div className="object-cover h-[20vh]">
                 <Image
                   src={item.url}
                   alt=""

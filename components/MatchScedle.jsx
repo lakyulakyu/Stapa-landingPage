@@ -24,14 +24,37 @@ const Match = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
-      <div className="h-fit pb-10 w-full  mx-auto">
+      <div className="h-fit pb-10 w-full px-2 sm:px- md:mx-auto">
         <div className="max-w-7xl mx-auto mt-10 w-full font-poppins font-semibold">
           <div className="flex justify-between items-center ">
             <div>
-              <h2 className="uppercase font-bold text-2xl text-black-main">
+              <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
                 Match shcedule
               </h2>
               <Link href={"/Matched"}>
@@ -69,9 +92,9 @@ const Match = () => {
               };
               return (
                 <>
-                  <div className="h-fit  py-8 w-full min-h-fit hover:bg-black hover:bg-opacity-5 max-w-xs min-w-fit px-6 divide-red-600">
-                    <div className="flex justify-between items-end pb-4">
-                      <div className="flex gap-2">
+                  <div className="h-fi py-8 w-full min-h-fit hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6 divide-red-600">
+                    <div className="md:flex justify-between items-end pb-4">
+                      <div className="flex  justify-evenly sm:justify-normal sm:gap-2">
                         {" "}
                         <Image
                           key={item.id}
@@ -92,8 +115,9 @@ const Match = () => {
                       </div>
 
                       {item.score_tim_1 || item.score_tim_2 ? (
-                        <h1 className="text-lg font-poppins font-bold text-red-600">
-                          {item.score_tim_1} - {item.score_tim_2} : W
+                        <h1 className="text-lg sm:text-start text-center  font-poppins font-bold text-red-600">
+                          <span className="sm:hidden block text-sm text-black-main font-medium uppercase">score</span>
+                          {item.score_tim_1} - {item.score_tim_2} 
                         </h1>
                       ) : (
                         ""
