@@ -7,223 +7,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import DataMatch from "../../Json/Match";
 
-const dataMatch = [
-  {
-    id: 1,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-template-design-93f3fef7ae758aa9e7b00f6fb51b1b1a.jpg?ts=1622728687",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "moklet",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-  {
-    id: 2,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/football-logo-design-template-7105c52c1baf3854faab4569a78781fb.jpg?ts=1601226564",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/soccer-logo-design-template-3acde993fbfd39118553cb59aabc3143.jpg?ts=1599278651",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "moklet",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-
-  {
-    id: 3,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-template-design-93f3fef7ae758aa9e7b00f6fb51b1b1a.jpg?ts=1622728687",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "arema",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-
-  {
-    id: 4,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-template-design-93f3fef7ae758aa9e7b00f6fb51b1b1a.jpg?ts=1622728687",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "arsnenal",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-
-  {
-    id: 5,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/soccer-logo-design-template-3acde993fbfd39118553cb59aabc3143.jpg?ts=1599278651",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "moklet",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-  {
-    id: 6,
-    tim_1: "",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "jaura tim",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-
-  {
-    id: 7,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-template-design-93f3fef7ae758aa9e7b00f6fb51b1b1a.jpg?ts=1622728687",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "bagasse",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-  {
-    id: 8,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-template-design-93f3fef7ae758aa9e7b00f6fb51b1b1a.jpg?ts=1622728687",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "moklet hhhhh",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-
-  {
-    id: 9,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-template-design-93f3fef7ae758aa9e7b00f6fb51b1b1a.jpg?ts=1622728687",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "moklet",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-
-  {
-    id: 10,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-template-design-93f3fef7ae758aa9e7b00f6fb51b1b1a.jpg?ts=1622728687",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "arjuna",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-
-  {
-    id: 11,
-    tim_1:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-template-design-93f3fef7ae758aa9e7b00f6fb51b1b1a.jpg?ts=1622728687",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-107473826d277deffdb2783d08297b7f.jpg?ts=1654928984",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "malang solo club",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-
-  {
-    id: 12,
-    tim_1: "",
-    tim_2:
-      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/football-logo-design-template-7105c52c1baf3854faab4569a78781fb.jpg?ts=1601226564",
-    tittle: "Pertandingan di lapangan ngarep kos kossan",
-    name_tim1: "telkom club",
-    name_tim2: "arsenal",
-    score_tim_1: 1,
-    score_tim_2: 6,
-    liga: "kampung tanahan",
-    date: "1-3-2023",
-    time: 20.3,
-    place: "anfield",
-  },
-];
-
-export default function AllTeam () {
-  // const [activeIndex, setActiveIndex] = useState(null);
-
-  // const handleMouseEnter = (id) => {
-  //   setActiveIndex(id);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setActiveIndex(null);
-  // };
-
-  // const handleClick = (id) => {
-  //   setActiveIndex(id);
-  // };
-
+export default function AllTeam() {
   const settings = {
     infinite: true,
     slidesToShow: 5,
@@ -242,7 +28,7 @@ export default function AllTeam () {
           All TEAM
         </h2>
         <div className=" grid grid-cols-4">
-          {dataMatch.map((item) => {
+          {DataMatch.map((item) => {
             return (
               <>
                 <div className=" h-96 divide-x-8 divide-primary-red ">
@@ -274,13 +60,11 @@ export default function AllTeam () {
                       </button>
                     </Link>
                   </div>
-                
                 </div>
               </>
             );
           })}
         </div>
-       
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { BsArrowBarRight, BsDownload } from "react-icons/bs";
+import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
 
 const page = () => {

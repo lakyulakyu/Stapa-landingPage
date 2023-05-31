@@ -62,66 +62,65 @@ const Match = () => {
             className="w-full h-full md:mt-10 translate-x-7 "
           >
             {DataMatch.map((item) => {
-                const handleClick = (e) => {
-                  if (! (item.score_tim_1 || item.score_tim_2) ) {
-                    e.preventDefault();
-                  }
-                };
+              const handleClick = (e) => {
+                if (!(item.score_tim_1 || item.score_tim_2)) {
+                  e.preventDefault();
+                }
+              };
               return (
                 <>
                   <div className="h-fit  py-8 w-full min-h-fit hover:bg-black hover:bg-opacity-5 max-w-xs min-w-fit px-6 divide-red-600">
-                      <div className="flex justify-between items-end pb-4">
-                        <div className="flex gap-2">
-                          {" "}
-                          <Image
-                            key={item.id}
-                            alt={item.name_tim1}
-                            src={item.tim_1}
-                            width={100}
-                            height={100}
-                            className="h-16 w-16"
-                          />
-                          <Image
-                            key={item.id}
-                            src={item.tim_2}
-                            alt="logo"
-                            width={100}
-                            height={100}
-                            className="h-16 w-16"
-                          />
-                        </div>
-
-                        {(item.score_tim_1 || item.score_tim_2) ? (
-                          <h1 className="text-lg font-poppins font-bold text-red-600">
-                            {item.score_tim_1} - {item.score_tim_2} : W
-                          </h1>
-                        ) : (
-                          <h1 className="text-lg font-poppins font-bold text-gray-400">
-                        W
-                          </h1>
-                        )}
+                    <div className="flex justify-between items-end pb-4">
+                      <div className="flex gap-2">
+                        {" "}
+                        <Image
+                          key={item.id}
+                          alt={item.name_tim1}
+                          src={item.tim_1}
+                          width={100}
+                          height={100}
+                          className="h-16 w-16"
+                        />
+                        <Image
+                          key={item.id}
+                          src={item.tim_2}
+                          alt="logo"
+                          width={100}
+                          height={100}
+                          className="h-16 w-16"
+                        />
                       </div>
-                      <div className=" text-start pt-4 capitalize">
-                        <h1 className="text-base font-semibold capitalize"></h1>
-                        <p className="text-xs text-gray-500 -mt-1">
-                          {item.liga}
-                        </p>
-                        <p className="text-xs font-semibold mt-2">
-                          {item.date}
-                        </p>
-                        <p className="text-xs font-semibold">
-                          {item.time} <span>{item.place}</span>
-                        </p>
-                        {(item.score_tim_1 && item.score_tim_2) ? (
-                        <Link href={"/detail"} onClick={handleClick}>
+
+                      {item.score_tim_1 || item.score_tim_2 ? (
+                        <h1 className="text-lg font-poppins font-bold text-red-600">
+                          {item.score_tim_1} - {item.score_tim_2} : W
+                        </h1>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                    <div className=" text-start pt-4 capitalize">
+                      <h1 className="text-base font-semibold capitalize"></h1>
+                      <p className="text-xs text-gray-500 -mt-1">{item.liga}</p>
+                      <p className="text-xs font-semibold mt-2">{item.date}</p>
+                      <p className="text-xs font-semibold">
+                        {item.time} <span>{item.place}</span>
+                      </p>
+                      {item.score_tim_1 && item.score_tim_2 ? (
+                        <Link
+                          href={`/Matched/${item.id}`}
+                          onClick={handleClick}
+                        >
                           <button className="bg-primary-red font-poppins text-white font-semibold justify-between text-sm flex items-center gap-2 px-2 py-1 mt-6 w-24">
                             More <IoMdArrowDropright />
                           </button>
-                        </Link> ) : (
-                          <button className="bg-slate-400 font-poppins text-white font-semibold justify-between text-sm flex items-center gap-2 px-2 py-1 mt-6 w-24">
+                        </Link>
+                      ) : (
+                        <button className="bg-slate-400 font-poppins text-white font-semibold justify-between text-sm flex items-center gap-2 px-2 py-1 mt-6 w-24">
                           More <IoMdArrowDropright />
-                        </button>)}
-                      </div>
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </>
               );
