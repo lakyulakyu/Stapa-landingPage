@@ -23,19 +23,16 @@ const NavBar_ = () => {
       const targetElement = document.querySelector(targetId);
       targetElement.scrollIntoView({ behavior: "smooth" });
     };
-
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach((link) => {
       link.addEventListener("click", smoothScroll);
     });
-
     return () => {
       links.forEach((link) => {
         link.removeEventListener("click", smoothScroll);
       });
     };
   }, []);
-
   useEffect(() => {
     function handleScroll() {
       const position = window.pageYOffset;
@@ -46,25 +43,20 @@ const NavBar_ = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 830) {
+      if (window.innerWidth > 870) {
         setIsOpen(false);
       }
     };
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <nav className="fixed w-full z-50 top-0">
       <div

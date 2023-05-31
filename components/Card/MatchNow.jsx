@@ -1,6 +1,7 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import DataMatch from "../../Json/Match"
+import DataMatch from "../../Json/Match";
 
 function MatchNow() {
   const [schedule, setSchedule] = useState([]);
@@ -21,7 +22,7 @@ function MatchNow() {
 
     updateSchedule();
 
-    const interval = setInterval(updateSchedule, 60000); 
+    const interval = setInterval(updateSchedule, 60000);
 
     return () => {
       clearInterval(interval);
@@ -34,7 +35,20 @@ function MatchNow() {
       {schedule.length > 0 ? (
         <div className="w-screen">
           {schedule.map(
-            ({ id, name_tim1, name_tim2, date, tim_1, tim_2, liga, time,place },index) => {
+            (
+              {
+                id,
+                name_tim1,
+                name_tim2,
+                date,
+                tim_1,
+                tim_2,
+                liga,
+                time,
+                place,
+              },
+              index
+            ) => {
               const matchDateTime = new Date(`${date}T${time}`);
               const matchTime = matchDateTime.toLocaleTimeString("en-US", {
                 hour: "numeric",
@@ -43,41 +57,48 @@ function MatchNow() {
               });
               const isEven = index % 2 === 0; // Memeriksa apakah index genap
               return (
-                <div key={id} className='max-w-3xl mx-auto text-black-main  '>
-                    <div className={` ${isEven ? "bg-slate-50":"bg-white"} hover:bg-slate-100 py-4`}>
-                  <h1>{liga}</h1>
-                  <div className={`match grid grid-cols-5 items-center  object-center`}>
-                    <p className="font-semibold capitalize text-xl ">
-                      {name_tim1}
-                    </p>
-                    <div className="h-full w-full left-5 ">
+                <div key={id} className="max-w-3xl mx-auto text-black-main  ">
+                  <div
+                    className={` ${
+                      isEven ? "bg-slate-50" : "bg-white"
+                    } hover:bg-slate-100 py-4`}
+                  >
+                    <h1>{liga}</h1>
+                    <div
+                      className={`match grid grid-cols-5 items-center  object-center`}
+                    >
+                      <p className="font-semibold capitalize text-xl ">
+                        {name_tim1}
+                      </p>
+                      <div className="h-full w-full left-5 ">
+                        <Image
+                          alt=""
+                          src={"/Logo-default.png"}
+                          height={100}
+                          width={100}
+                          className=" object-contain mr-0 mx-auto h-full py-auto"
+                        />
+                      </div>
+                      <p className=" py-1 rounded-md text-xl  w-20 font-semibold text-light-grey mx-auto bg-red-600 ">
+                        Vs
+                      </p>
                       <Image
                         alt=""
-                        src={'/Logo-default.png'}
+                        src={tim_2}
                         height={100}
                         width={100}
-                        className=" object-contain mr-0 mx-auto h-full py-auto"
+                        className=" object-contain ml-0 mx-auto h-full py-auto"
                       />
+                      <p className="font-semibold capitalize text-xl ">
+                        {name_tim2}
+                      </p>
                     </div>
-                    <p className=" py-1 rounded-md text-xl  w-20 font-semibold text-light-grey mx-auto bg-red-600 ">
-                      Vs
-                    </p>
-                    <Image
-                      alt=""
-                      src={tim_2}
-                      height={100}
-                      width={100}
-                      className=" object-contain ml-0 mx-auto h-full py-auto"
-                    />
-                    <p className="font-semibold capitalize text-xl ">
-                      {name_tim2}
+                    <p>{matchTime}</p>
+                    <p className="w-fit px-8 py-2 mt-3 font-semibold capitalize rounded-lg   mx-auto bg-slate-300">
+                      {place}
                     </p>
                   </div>
-                  <p>{matchTime}</p>
-                  <p className="w-fit px-8 py-2 mt-3 font-semibold capitalize rounded-lg   mx-auto bg-slate-300">{place}</p>
                 </div>
-                </div>
-
               );
             }
           )}

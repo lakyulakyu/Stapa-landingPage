@@ -5,11 +5,6 @@ import Image from "next/image";
 import MatchReport from "@/components/Card/MatchReport";
 
 const page = () => {
-  const [showDetail, setShowDetail] = useState(false);
-
-  const handleButtonClick = () => {
-    setShowDetail(!showDetail);
-  };
   return (
     <div className="pt-32 h-full mb-10 ">
       <div className=" text-end max-w-4xl mx-auto">
@@ -21,25 +16,9 @@ const page = () => {
               <BsDownload />
             </span>
           </button>
-
-          <button
-            onClick={handleButtonClick}
-            className={` px-4 py-2 w-fit text-xl justify-between rounded-lg text-white font-semibold flex items-center ${
-              showDetail ? "bg-red-500" : "bg-green-500"
-            } `}
-          >
-            {showDetail ? "Close" : "Detail"}
-          </button>
         </div>
       </div>
 
-      <div>
-        {showDetail && (
-          <div className="max-w-3xl h-fit py-10 my-10 px-4 mx-auto bg-slate-200">
-            <MatchReport />
-          </div>
-        )}
-      </div>
       <div id="print-area" className="mt-10">
         <div className="bg-primary-red text-center mb-10 rounded-b-xl rounded-t-full font-medium text-white   mx-auto text-3xl max-w-4xl items-center grid grid-cols-3 w-full h-16 ">
           <p className="text-end  ">Tim 2 </p>
@@ -166,6 +145,7 @@ const page = () => {
           />
         </div>
       </div>
+      <MatchReport />
     </div>
   );
 };

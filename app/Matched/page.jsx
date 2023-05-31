@@ -1,9 +1,9 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { IoMdAdd } from "react-icons/io";
 import Image from "next/image";
 import DataMatch from "../../Json/Match";
+import MatchNow from "@/components/Card/MatchNow";
 
 const MatchCard = () => {
   return (
@@ -23,6 +23,7 @@ const MatchCard = () => {
             </div>
           </div>
         </div>
+        <MatchNow/>
         <div className="w-full divide-y-2 divide-gray-300 mt-10 h-fit">
           {DataMatch.map((item, index) => {
             const isEven = index % 2 === 0;
