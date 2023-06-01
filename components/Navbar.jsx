@@ -39,104 +39,62 @@ const NavBar_ = () => {
       const position = window.pageYOffset;
       setScrollPosition(position);
     }
-    window.addEventListener("scroll", handleScroll);
+    typeof window != undefined ? window.addEventListener("scroll", handleScroll) : undefined;
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      typeof window != undefined ? window.removeEventListener("scroll", handleScroll) : undefined;
     };
   }, []);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 870) {
+      const innerWidth = typeof window != undefined ? window.innerWidth : undefined;
+      if (innerWidth > 870) {
         setIsOpen(false);
       }
     };
-    window.addEventListener("resize", handleResize);
+    typeof window != undefined ? window.addEventListener("resize", handleResize) : undefined;
     return () => {
-      window.removeEventListener("resize", handleResize);
+      typeof window != undefined ? window.removeEventListener("resize", handleResize) : undefined;
     };
   }, []);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // const currentPath = window.location.pathname;
-  // const isDetailPage = currentPath.includes('/Input')
-  // if (isDetailPage) {
-  //   return null;
-  // }
+
+  const isDetailPage = typeof window !== "undefined" ? window.location.pathname.includes("/Input") : undefined;
+  if (isDetailPage) {
+    return null;
+  }
+
 
   return (
     <nav className="fixed w-full  z-50 top-0">
       <div
         className={`flex z-50 md:max-w-6xl  md:mx-auto xl:w-full lg:max-w-none py-4 justify-between items-center px-6 duration-200 ${
-          scrollPosition > 10
-            ? "text-black-main shadow-2xl bg-white"
-            : "text-white bg-transparent  hover:bg-black-main hover:text-white "
+          scrollPosition > 10 ? "text-black-main shadow-2xl bg-white" : "text-white bg-transparent  hover:bg-black-main hover:text-white "
         }`}
       >
         <div>
-          <Image
-            src="/Logo-Web.png"
-            alt="logo"
-            width={100}
-            height={100}
-            className="md:h-20 h-10 w-fit bg-slate-50 rounded-full p-2"
-          />
+          <Image src="/Logo-Web.png" alt="logo" width={100} height={100} className="md:h-20 h-10 w-fit bg-slate-50 rounded-full p-2" />
         </div>
         <div className="max-md:hidden">
           {navigation.map((item) => (
-            <Link
-              key={item}
-              href={item.href}
-              className={` ${
-                scrollPosition > 10 ? "border-black-main" : "border-white"
-              } hover:border-b-2 focus:borderb-2 bg-opacity-5 pb-3  uppercase mx-3 font-normal`}
-            >
+            <Link key={item} href={item.href} className={` ${scrollPosition > 10 ? "border-black-main" : "border-white"} hover:border-b-2 focus:borderb-2 bg-opacity-5 pb-3  uppercase mx-3 font-normal`}>
               {item.name}
             </Link>
           ))}
         </div>
         <div className="flex md:hidden">
-          <button
-            onClick={toggleMenu}
-            type="button"
-            className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
+          <button onClick={toggleMenu} type="button" className="text-gray-300 hover:text-white focus:outline-none focus:text-white" aria-label="Toggle menu">
+            <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {isOpen ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
             </svg>
           </button>
         </div>
         {isOpen && (
           <div className="divide-y-2 divi">
             {navigation.map((item) => (
-              <Link
-                key={item}
-                href={item.href}
-                className={` ${
-                  scrollPosition > 10 ? "border-black-main" : "border-white"
-                } hover:border-b-2 focus:borderb-2 bg-opacity-5 mb-3 pr-4 hover:bg-slate-300  uppercase flex font-normal`}
-              >
+              <Link key={item} href={item.href} className={` ${scrollPosition > 10 ? "border-black-main" : "border-white"} hover:border-b-2 focus:borderb-2 bg-opacity-5 mb-3 pr-4 hover:bg-slate-300  uppercase flex font-normal`}>
                 <p className=" text-2xl  text-center">{item.name}</p>
               </Link>
             ))}
