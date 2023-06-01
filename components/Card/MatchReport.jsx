@@ -139,7 +139,7 @@ const MatchReport = () => {
       <div className="max-w-3xl mx-auto">
         <button
           onClick={handleButtonClick}
-          className={`  py-2 w-fit px-20 text-center uppercase mx-auto text-xl justify-between rounded-lg font-normal flex items-center ${
+          className={`  py-2 w-fit px-20 text-center uppercase mx-auto text-lg justify-between rounded-lg font-normal flex items-center ${
             showDetail
               ? "text-primary-red  font-medium hover:bg-gray-100 "
               : "text-gray-400"
@@ -154,41 +154,9 @@ const MatchReport = () => {
       <div>
         {showDetail && (
           <>
-            <div className="flex justify-evenly max-w-3xl mx-auto ">
-              <p>Dimas</p>
-              <p className="flex gap-2 justify-center">
-                <GiSoccerField />
-                Lapangan solo raya
-              </p>
-              <p>
-                {total_match}({match_1} + {match_2})
-              </p>
-            </div>
-            {data.map((item) => {
-              <table key={item.id}>
-                <tbody>
-                  <tr>
-                    <td>{item.number}</td>
-                    <td>{item.position}</td>
-                    <td>{item.name}</td>
-                    <td>
-                    </td>
-                    <td>25</td>
-                    <td>Jakarta</td>
-                  </tr>
-                  <tr>
-                    <td>Jane Smith</td>
-                    <td>30</td>
-                    <td>Bandung</td>
-                  </tr>
-                  <tr>
-                    <td>David Johnson</td>
-                    <td>35</td>
-                    <td>Surabaya</td>
-                  </tr>
-                </tbody>
-              </table>;
-            })}
+            <h1 className="text-2xl text-gray-400 text-center font-light ">
+              Halaman ini masih dalam proses pengembangan
+            </h1>
           </>
         )}
       </div>

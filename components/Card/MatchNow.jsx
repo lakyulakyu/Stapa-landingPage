@@ -61,7 +61,7 @@ function MatchNow() {
                 <div key={id} className="max-w-3xl mx-auto text-black-main  ">
                   <div
                     className={` ${
-                      isEven ? "bg-slate-50" : "bg-white"
+                      isEven ? "bg-slate-100" : "bg-white"
                     } hover:bg-slate-100 py-4`}
                   >
                     <h1>{liga}</h1>
@@ -77,10 +77,10 @@ function MatchNow() {
                           src={tim_1}
                           height={100}
                           width={100}
-                          className=" object-contain mr-0 mx-auto h-full py-auto"
+                          className=" object-contain mr-0 h-10 ml-0 mx-auto sm:h-full py-auto"
                         />
                       </div>
-                      <p className=" py-1 rounded-md text-xl w-full  sm:w-20 font-semibold text-light-grey mx-auto bg-red-600 ">
+                      <p className=" py-1 rounded-md sm:text-xl w-full text-sm  sm:w-20 font-semibold text-light-grey mx-auto bg-red-600 ">
                         Vs
                       </p>
                       <Image
@@ -88,18 +88,17 @@ function MatchNow() {
                         src={tim_2}
                         height={100}
                         width={100}
-                        className=" object-contain ml-0 mx-auto h-full py-auto"
+                        className="object-contain  h-10 ml-0 mx-auto sm:h-full py-auto"
                       />
                       <p className="font-semibold capitalize text-xl ">
                         {name_tim2}
                       </p>
                     </div>
                     <p>{matchTime}</p>
-                    <p className="w-fit flex items-center gap-2 px-4 py-2 mt-3 font-semibold capitalize rounded-lg   mx-auto bg-slate-300">
-                      <span className="text-2xl">
-                        {" "}
+                    <p className="w-fit flex items-center gap-2 px-4 py-2 mt-3 font-semibold capitalize rounded-lg text-sm mx-auto sm:bg-slate-300">
+                      <span className="text-2xl ">
                         <GiSoccerField />
-                      </span>{" "}
+                      </span>
                       {place}
                     </p>
                   </div>

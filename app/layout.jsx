@@ -38,7 +38,7 @@ const sourceSerifPro = Source_Serif_Pro({
 });
 
 export const metadata = {
-  title: "STAPA | Statistic Player",
+  title: "STAPA",
   description: "Website for ",
 };
 

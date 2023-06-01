@@ -10,17 +10,17 @@ const page = () => {
   const item = Data.find((item) => item.id === 2);
 
   return (
-    <Layout path={"/News"}>
+    <Layout tittle="News">
       <div className="z-50 bg-slate-100">
-        <div className="scale-50 -my-9 pt-32">
+        <div className="md:scale-50 md:-my-9 pt-16 sm:pt-32">
           <Advers />
         </div>
         <div className="mx-auto">
-          <p className="h-24  text-3xl font-semibold text-center capitalize my-auto">
+          <p className="h-24 text-3xl hidden sm:block font-semibold text-center capitalize my-auto">
             {item.headline}
           </p>
 
-          <div className="h-[70vh]  bg-slate-200 w-full z-0 max-w-3xl mx-auto">
+          <div className="sm:h-[70vh] h-40 mt-6 sm:mt-0  bg-slate-200 w-full z-0 max-w-3xl mx-auto">
             <Image
               alt=""
               src={item.bg_img}
@@ -29,7 +29,7 @@ const page = () => {
               className=" object-cover z-0 rounded-lg  w-full h-full"
             />
           </div>
-          <div className="-mt-10 shadow-md pb-20 relative px-4 rounded-3xl bg-white z-40 max-w-2xl text-justify mx-auto ">
+          <div className="sm:-mt-10 shadow-md pb-20 relative sm:px-4 px-2 rounded-3xl bg-white z-40 max-w-2xl text-justify mx-auto ">
             <p className="pt-8 text-xl text-black-main capitalize font-semibold">
               {item.headline}
             </p>
@@ -49,12 +49,12 @@ const page = () => {
               </p>
             </div>
 
-            <p className="mt-10 px-12 tracking-wider leading-6  text-black-main font-semibold ">
+            <p className="mt-10 sm:px-12 px-4 tracking-wider leading-6  text-black-main font-semibold ">
               {item.tittle}
             </p>
           </div>
         </div>
-        <div className="w-full min-h-fit h-full ">
+        <div className="w-full min-h-fit mt-4 sm:mt-0 h-full ">
           <LatestNews />
         </div>
       </div>

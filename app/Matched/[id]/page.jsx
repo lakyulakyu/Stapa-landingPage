@@ -1,136 +1,159 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
+import { printHTMLToPNG } from "@/components/PrintDetailTeam";
 import MatchReport from "@/components/Card/MatchReport";
 
 const page = () => {
+ 
+  const handlePrint = () => {
+    const element = document.getElementById('htmlElement');
+    printHTMLToPNG(element);
+  };
   return (
     <div className="pt-32 h-full mb-10 ">
       <div className=" text-end max-w-4xl mx-auto">
         <div className="text-base flex gap-4  max-w-sm text-center text-gray-400">
           {/* Print login only */}
-          <button className="bg-blue-500 px-4 py-2 w-40 text-xl justify-between rounded-lg text-white font-semibold flex items-center  ">
-            Download
-            <span>
-              <BsDownload />
-            </span>
+          <button
+            onClick={handlePrint}
+            className="bg-blue-500 px-4 py-2  text-xl justify-between rounded-lg text-white font-semibold flex items-center  "
+          >
+            <BsDownload />
           </button>
         </div>
       </div>
 
-      <div id="print-area" className="mt-10">
-        <div className="bg-primary-red text-center mb-10 rounded-b-xl rounded-t-full font-medium text-white   mx-auto text-3xl max-w-4xl items-center grid grid-cols-3 w-full h-16 ">
-          <p className="text-end  ">Tim 2 </p>
-          <div className="flex bg-black-main text-light-grey text-4xl rounded-xl  scale-150 w-full px-5  justify-between items-center max-w-[150px] gap-6 font-bold py-2 mx-auto">
-            <p className="">14</p>
-            <p className="-mt-2">:</p>
-            <p className=" ">0</p>
+      <div id="htmlElement" className="min-[500px]:mt-10 mt-4">
+        <div className="flex  justify-around max-[500px]:mx-3">
+          <Image
+            alt=""
+            width={1000}
+            height={10000}
+            src={"/Logo-web.png"}
+            className="h-12 w-fit md:hidden block mt-4  object-contain"
+          />
+          <div className="bg-primary-red mb-2 min-[500px]:mb-10 min-[500px]:w-60 w-32  rounded-md md:rounded-t-full font-medium text-white  mx-auto text-sm md:text-3xl max-w-4xl items-center grid grid-cols-3 text-center max-[500px]:grid-cols-1 md:w-full min-[500px]:h-16 h-fit py-3 ">
+            <p className="min[500px]:text-end max-[500px]:mb-2 ">Tim 2 </p>
+            <div className="flex bg-black-main text-light-grey max-[500px]:text-sm md:text-4xl rounded-xl  md:scale-150 w-full md:px-5 px-1  justify-between items-center max-w-[70px] md:max-w-[150px] gap-2 md:gap-6 font-bold py-2 mx-auto">
+              <p className="">14</p>
+              <p className="-mt-2">:</p>
+              <p className=" ">0</p>
+            </div>
+            <p className="min[500px]:text-start">Tim 1 raya pening </p>
           </div>
-          <p className="text-start">Tim 1</p>
+          <Image
+            alt=""
+            width={1000}
+            height={10000}
+            src={"/Logo-web.png"}
+            className="h-12 w-fit md:hidden block  mt-4 object-contain"
+          />
         </div>
+
         <div className="flex  max-w-4xl mx-auto items-center ">
           <Image
             alt=""
             width={1000}
             height={10000}
             src={"/Logo-web.png"}
-            className="h-36 w-fit  object-contain"
+            className="h-36 w-fit md:block hidden object-contain"
           />
 
           <div className="uppercase w-full  ">
-            <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full border-primary-red rounded-t-full py-1  max-w-[120px] ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">
+              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
                 Shoot
               </p>
-              <p className="bg-blue-200 py-1 rounded-t-full w-full max-w-[120px]">
+              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 {" "}
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full rounded-t-full py-1  max-w-[120px] ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">
+              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
                 Shoot On Target
               </p>
-              <p className="bg-blue-200 py-1 rounded-t-full w-full max-w-[120px]">
+              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 {" "}
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full rounded-t-full py-1  max-w-[120px] ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">
-                fouls committed
+              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
+                Fouls commited
               </p>
-              <p className="bg-blue-200 py-1 rounded-t-full w-full max-w-[120px]">
+              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 {" "}
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full rounded-t-full py-1  max-w-[120px] ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">
-                yellow caeds
+              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
+                yellow cards
               </p>
-              <p className="bg-blue-200 py-1 rounded-t-full w-full max-w-[120px]">
+              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 {" "}
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full rounded-t-full py-1  max-w-[120px] ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">
-                red cards
+              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
+                Red cards
               </p>
-              <p className="bg-blue-200 py-1 rounded-t-full w-full max-w-[120px]">
+              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 {" "}
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full rounded-t-full py-1  max-w-[120px] ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">
-                offsides
+              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
+                Offsides
               </p>
-              <p className="bg-blue-200 py-1 rounded-t-full w-full max-w-[120px]">
+              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 {" "}
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full rounded-t-full py-1  max-w-[120px] ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">
-                corners
+              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
+                Corners
               </p>
-              <p className="bg-blue-200 py-1 rounded-t-full w-full max-w-[120px]">
+              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 {" "}
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center mb-6  flex font-medium text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 w-full rounded-t-full py-1  max-w-[120px] ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white text-xl font-semibold py-2 scale-125 mt-1 rounded-b-2xl">
-                possession
+              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
+                Posession
               </p>
-              <p className="bg-blue-200 py-1 rounded-t-full w-full max-w-[120px]">
+              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 {" "}
                 3
               </p>
@@ -141,9 +164,10 @@ const page = () => {
             width={1000}
             height={1000}
             src={"/Logo.png"}
-            className="h-36 w-fit object-contain"
+            className="h-36 w-fit md:block hidden object-contain"
           />
         </div>
+      
       </div>
       <MatchReport />
     </div>

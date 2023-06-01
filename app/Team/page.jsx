@@ -11,7 +11,7 @@ export default function AllTeam() {
         <h2 className="uppercase font-bold pb-10 text-2xl text-black-main">
           All TEAM
         </h2>
-        <div className=" grid grid-cols-1 sm:divide-y-0 divide-y-2 divide-slate-300 sm:gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className=" grid grid-cols-1 sm:divide-y-0 sm:gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {DataMatch.map((item) => {
             return (
               <>
@@ -32,14 +32,14 @@ export default function AllTeam() {
                     </h1>
                   </div>
                   <div className=" w-full hover:bg-slate-200 shadow-sm  px-3 container mx-auto ">
-                    <div className="text-center text-sm justify-between flex pt-8 text-overflow-ellipsis overflow-ellipsis break-all max-w-[300px]  overflow-clip capitalize font-semibold  bottom-0">
-                      <h2 className="text-black-main text-xl uppercase font-medium">
+                    <div className="text-center text-sm justify-between flex sm:pt-8 pt-2 text-overflow-ellipsis overflow-ellipsis break-all max-w-[300px]  overflow-clip capitalize font-semibold  bottom-0">
+                      <h2 className="text-black-main sm:text-xl text-lg uppercase font-medium">
                         Total Player
                       </h2>
                       <p className="text-primary-red ">30</p>
                     </div>
                     <Link href={`/Team/${item.id}`}>
-                      <button className="bg-primary-red hover:-translate-y-1 active:duration-200 ease-out  focus:bg-yellow-200 flex px-2 mt-6 pt-0.5 w-24 justify-between items-center text-light-grey font-semibold text-xs  uppercase tracking-widest">
+                      <button className="bg-primary-red hover:-translate-y-1 active:duration-200 ease-out  focus:bg-yellow-200 flex px-2 sm:mt-6 mt-4 sm:pt-0.5 rounded-sm w-24 justify-between items-center text-light-grey font-semibold text-xs  uppercase tracking-widest">
                         <p>Detail</p>
                         <span className="text-2xl ">
                           <MdArrowRight />

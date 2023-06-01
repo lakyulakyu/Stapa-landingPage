@@ -3,7 +3,7 @@ import CardPlayer from "@/components/Card/CardPlayer";
 const PlayerStats = () => {
   return (
     <div className="max-w-7xl pt-32 mx-auto  w-full font-poppins font-semibold h-fit">
-      <h1 className="pl-10   h-16 text-4xl font-normal pt-1 uppercase">
+      <h1 className="pl-10 text-xl  h-16 sm:text-4xl font-normal pt-1 uppercase">
         Players of Team
       </h1>
       <div className="flex-col justify-center items-center ">

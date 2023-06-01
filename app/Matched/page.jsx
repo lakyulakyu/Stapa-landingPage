@@ -9,21 +9,14 @@ const MatchCard = () => {
   return (
     <>
       <div className="h-full pb-10 ">
-        <div className="max-w-7xl  mx-auto mt-8 w-full font-poppins font-semibold">
-          <div className="flex justify-between items-center ">
-            <div>
-              <h2 className="uppercase font-bold text-2xl text-black-main">
-                Match shcedule
-              </h2>
-              <Link href={"/#"}>
-                <p className="text-base text-zinc-500 font-medium flex items-center gap-x-1 mt-1 cursor-pointer">
-                  View all matches <IoMdAdd />
-                </p>
-              </Link>
-            </div>
+        <MatchNow />
+        <div className="max-w-7xl  mx-auto sm:mt-8 w-full mt-20 font-poppins font-semibold">
+          <div className="max-[350px]:mx-auto">
+            <p className="uppercase sm:font-semibold  max-[350px]:mx-auto font-normal text-lg sm:text-2xl text-black-main">
+              Match shcedule
+            </p>
           </div>
         </div>
-        <MatchNow/>
         <div className="w-full divide-y-2 divide-gray-300 mt-10 h-fit">
           {DataMatch.map((item, index) => {
             const isEven = index % 2 === 0;
@@ -41,7 +34,7 @@ const MatchCard = () => {
                       </p>
                       <div className=" lg:flex mx-auto text-center  h-fit w-full min-h-fit hover:bg-opacity-5 min-w-fit ">
                         <div className="w-full">
-                          <div className="flex justify-center items-center gap-4">
+                          <div className="max-[350px]:flex-col flex justify-center items-center gap-4">
                             <p className="font-semibold text-red-500 text-lg capitalize">
                               {item.name_tim1}
                             </p>
@@ -51,15 +44,15 @@ const MatchCard = () => {
                               alt="logo"
                               width={100}
                               height={100}
-                              className="h-12 w-fit"
+                              className="h-12 max-[350px]:mx-auto w-fit"
                             />
 
                             {item.score_tim_1 || item.score_tim_2 ? (
-                              <p className="bg-primary-red text-lg rounded-lg px-2 text-white py-1 font-semibold">
+                              <p className="bg-primary-red text-lg rounded-lg sm:px-2 px-4 w-fit max-[350px]:mx-auto text-white py-1 font-semibold">
                                 {item.score_tim_1} - {item.score_tim_2}
                               </p>
                             ) : (
-                              <p className="bg-gray-200 text-lg rounded-lg px-2 py-1 font-semibold">
+                              <p className="bg-gray-200 text-lg rounded-lg sm:px-2 px-4 w-fit max-[350px]:mx-auto py-1 font-semibold">
                                 {item.time}
                               </p>
                             )}
@@ -70,7 +63,7 @@ const MatchCard = () => {
                               alt="logo"
                               width={100}
                               height={100}
-                              className="h-12 w-fit"
+                              className="h-12 max-[350px]:mx-auto w-fit"
                             />
                             <p className="font-semibold text-primary-red text-lg capitalize">
                               {item.name_tim1}
