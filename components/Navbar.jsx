@@ -16,6 +16,7 @@ const navigation = [
 const NavBar_ = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const smoothScroll = (event) => {
       event.preventDefault();
@@ -72,7 +73,7 @@ const NavBar_ = () => {
             alt="logo"
             width={100}
             height={100}
-            className="h-20 w-fit bg-slate-50 rounded-full p-2"
+            className="md:h-20 h-10 w-fit bg-slate-50 rounded-full p-2"
           />
         </div>
         <div className="max-md:hidden">
@@ -96,7 +97,7 @@ const NavBar_ = () => {
             aria-label="Toggle menu"
           >
             <svg
-              className="h-8 w-8"
+              className="h-10 w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -126,10 +127,10 @@ const NavBar_ = () => {
                 key={item}
                 href={item.href}
                 className={` ${
-                  scrollPosition > 10 ? "border-black-main"  : "border-white"
+                  scrollPosition > 10 ? "border-black-main" : "border-white"
                 } hover:border-b-2 focus:borderb-2 bg-opacity-5 mb-3 pr-4 hover:bg-slate-300  uppercase flex font-normal`}
               >
-                <p className=" text-xl  text-center">{item.name}</p>
+                <p className=" text-2xl  text-center">{item.name}</p>
               </Link>
             ))}
           </div>

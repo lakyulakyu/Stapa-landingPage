@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import "./globals.css";
-import NavBar_ from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 
 import {
   Bebas_Neue,
@@ -42,13 +42,16 @@ export const metadata = {
   description: "Website for ",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children,path }) {
+  const excludedPaths = ['/login', '/register','/News'];
+  const shouldShowNavbar = !excludedPaths.includes(path);
+
   return (
     <html lang="en">
       <body
         className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable} ${poppins.variable} overflow-x-hidden`}
       >
-        <NavBar_ />
+      {shouldShowNavbar && <Navbar />}
         {children}
         <div id="More" className="overflow-hidden">
           <Footer />
