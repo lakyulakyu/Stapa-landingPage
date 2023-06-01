@@ -5,7 +5,7 @@ import Image from "next/image";
 import { printHTMLToPNG } from "@/components/PrintDetailTeam";
 import MatchReport from "@/components/Card/MatchReport";
 
-const page = () => {
+const Page = () => {
  
   const handlePrint = () => {
     const element = document.getElementById('htmlElement');
@@ -174,4 +174,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

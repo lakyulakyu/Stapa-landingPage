@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Sponsorship from "./Sections/Sponsorship";
 
 import {
   Bebas_Neue,
@@ -54,6 +55,7 @@ export default function RootLayout({ children,path }) {
       {shouldShowNavbar && <Navbar />}
         {children}
         <div id="More" className="overflow-hidden">
+          <Sponsorship/>
           <Footer />
         </div>
       </body>

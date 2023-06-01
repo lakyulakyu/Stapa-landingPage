@@ -2,6 +2,7 @@
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import Link from "next/link";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { IoMdArrowDropright } from "react-icons/io";
@@ -45,23 +46,25 @@ const Hero = () => {
   ];
   return (
     <div className="w-screen ">
-      <Slider {...settings} className="w-full h-fit">
+      <Slider {...settings} className="w-full h-fi">
         {heroContent.map((item) => {
           return (
             <div
               key={item.id}
-              className="h-screen w-screen bg-cover bg-no-repeat"
+              className="lg:h-screen h-72 w-screen bg-cover bg-no-repeat"
             >
-              <div className="font-poppins relative md:top-1/4  lg:top-2/4 sm:top-1/2  lg:max-w-6xl md:mx-20 xl:max-w-7xl sm:mx-10  lg:mx-auto text-light-grey ">
+              <div className="font-poppins relative md:top-1/4  lg:top-2/4 top-1/4 sm:top-1/2  lg:max-w-6xl md:mx-20 xl:max-w-7xl px-2 sm:px-0 sm:mx-10  lg:mx-auto text-light-grey ">
                 <h4 className="text-lg uppercase font-semibold">
                   {item.number}
                 </h4>
-                <h1 className="lg:text-4xl md:text-2xl text-xl mt-2 font-bold w-1/2">
+                <h1 className="lg:text-4xl md:text-2xl text-sm sm:mt-2 font-bold w-2/3 sm:w-1/2">
                   {item.content}
                 </h1>
-                <button className="bg-primary-red mt-8 px-5 text-lg py-2 font-normal flex items-center gap-x-2">
-                  View Now <IoMdArrowDropright size={26} />
-                </button>
+                <Link href={'/#'}>
+                  <button className="bg-primary-red mt-8 px-5 text-lg py-2 font-normal flex items-center gap-x-2">
+                    View Now <IoMdArrowDropright size={26} />
+                  </button>
+                </Link>
               </div>
               <div className="absolute w-screen md: lg:h-full top-0 -z-10">
                 <div className="absolute opacity-30 sm:h-full lg:h-screen w-full bg-primary-red"></div>
@@ -70,7 +73,7 @@ const Hero = () => {
                   alt=""
                   width={1000}
                   height={1000}
-                  className="w-full"
+                  className="w-full "
                 />
               </div>
             </div>

@@ -82,7 +82,7 @@ const Match = () => {
           <Slider
             {...settings}
             ref={sliderRef}
-            className="w-full h-full md:mt-10 translate-x-7 "
+            className="w-full h-full md:mt-10 md:translate-x-7 "
           >
             {DataMatch.map((item) => {
               const handleClick = (e) => {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CgArrowLongRight } from "react-icons/cg";
 import { IoMdAdd } from "react-icons/io";
 import React, { useRef } from "react";
-import DataNews from "../Json/News";
+import DataNews from "../Json/News.json";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,8 +20,8 @@ const LatestNews = () => {
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    autoplay: true,
-    autoplaySpeed: 6000,
+    // autoplay: true,
+    // autoplaySpeed: 6000,
     responsive: [
       {
         breakpoint: 1100,

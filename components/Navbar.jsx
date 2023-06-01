@@ -58,13 +58,20 @@ const NavBar_ = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const currentPath = window.location.pathname;
+  const isDetailPage = currentPath.includes('/Admin')
+  if (isDetailPage) {
+    return null;
+  }
+
   return (
-    <nav className="fixed w-full z-50 top-0">
+    <nav className="fixed w-full  z-50 top-0">
       <div
-        className={`flex z-50 md:max-w-6xl md:mx-auto xl:w-full lg:max-w-none py-4 justify-between items-center px-6 duration-200 ${
+        className={`flex z-50 md:max-w-6xl  md:mx-auto xl:w-full lg:max-w-none py-4 justify-between items-center px-6 duration-200 ${
           scrollPosition > 10
-            ? "text-black-main bg-white"
-            : "text-white bg-transparent hover:bg-black-main hover:text-white "
+            ? "text-black-main shadow-2xl bg-white"
+            : "text-white bg-transparent  hover:bg-black-main hover:text-white "
         }`}
       >
         <div>

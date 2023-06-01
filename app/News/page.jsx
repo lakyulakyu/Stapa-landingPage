@@ -1,13 +1,12 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import NewsCard from "../../components/Card/CardNews";
 import NewsData from "../../Json/News";
 import Advers from "@/components/Card/Adsvers";
 
-const NewsList = () => {
+const ListNews = () => {
   return (
     <>
-      <div className="pt-24 max-w-5xl px-2  mx-auto ">
+      <div className="pt-24 lg:pt-32 max-w-7xl  mx-auto ">
         <div className="lg:scale-50 md:-my-7">
           <Advers />
         </div>
@@ -24,4 +23,4 @@ const NewsList = () => {
   );
 };
 
-export default NewsList;
+export default ListNews;

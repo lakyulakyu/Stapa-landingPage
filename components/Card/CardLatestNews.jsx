@@ -18,7 +18,7 @@ const CardLatestNews = ({ item }) => {
               {item.media}
             </h1>
             <p className="text-base mt-2 font-medium max-h-24 overflow-hidden ">
-              {item.tittle}
+              {item.headline}
             </p>
             <div className="flex gap-2 mt-4 items-center">
               <Image

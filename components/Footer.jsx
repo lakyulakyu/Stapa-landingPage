@@ -19,6 +19,15 @@ const Footer = () => {
       button.removeEventListener("click", handleClick);
     };
   }, []);
+  const currentPath = window.location.pathname;
+
+  // Menentukan halaman detail berdasarkan jalur URL
+  const isDetailPage = !isNaN(Number("/Admin"));
+
+  // Tampilkan navbar hanya pada halaman selain detail
+  if (isDetailPage) {
+    return null;
+  }
   return (
     <div id="More" className="bg-primary-red h-[40vh] py-8">
       <div className="max-w-7xl mx-auto flex h-full gap-x-16">

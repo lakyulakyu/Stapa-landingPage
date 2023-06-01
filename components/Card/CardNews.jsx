@@ -21,7 +21,7 @@ const NewsCard = ({ item, index }) => {
       <Link href={`/News/${item.id}`}>
         <div
           key={item.id}
-          className="max-h-96 divide-x-2 flex sm:flex-col sm:mb-4 sm:max-w-[40vh] "
+          className="max-h-96 divide-x-2 flex sm:flex-col sm:mb-4 max-sm:w-screen w-full sm:max-w-[40vh] "
         >
           <div className=" h-full min-h-full w-64 sm:w-[40vh] ">
             <Image
