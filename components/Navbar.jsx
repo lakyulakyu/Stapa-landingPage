@@ -60,7 +60,7 @@ const NavBar_ = () => {
   };
 
   const currentPath = window.location.pathname;
-  const isDetailPage = currentPath.includes('/Admin')
+  const isDetailPage = currentPath.includes('/Input')
   if (isDetailPage) {
     return null;
   }
