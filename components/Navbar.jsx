@@ -96,7 +96,7 @@ const NavBar_ = () => {
             aria-label="Toggle menu"
           >
             <svg
-              className="h-6 w-6"
+              className="h-8 w-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -120,16 +120,16 @@ const NavBar_ = () => {
           </button>
         </div>
         {isOpen && (
-          <div className="">
+          <div className="divide-y-2 divi">
             {navigation.map((item) => (
               <Link
                 key={item}
                 href={item.href}
                 className={` ${
-                  scrollPosition > 10 ? "border-black-main" : "border-white"
-                } hover:border-b-2 focus:borderb-2 bg-opacity-5 pb-3 pr-4 hover:bg-slate-300  uppercase flex font-normal`}
+                  scrollPosition > 10 ? "border-black-main"  : "border-white"
+                } hover:border-b-2 focus:borderb-2 bg-opacity-5 mb-3 pr-4 hover:bg-slate-300  uppercase flex font-normal`}
               >
-                <p className="  text-center">{item.name}</p>
+                <p className=" text-xl  text-center">{item.name}</p>
               </Link>
             ))}
           </div>
