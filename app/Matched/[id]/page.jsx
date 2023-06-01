@@ -1,25 +1,15 @@
-"use client";
+
 import React from "react";
 import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
-import { printHTMLToPNG } from "@/components/PrintDetailTeam";
 import MatchReport from "@/components/Card/MatchReport";
 
 const Page = () => {
- 
-  const handlePrint = () => {
-    const element = document.getElementById('htmlElement');
-    printHTMLToPNG(element);
-  };
   return (
     <div className="pt-32 h-full mb-10 ">
       <div className=" text-end max-w-4xl mx-auto">
         <div className="text-base flex gap-4  max-w-sm text-center text-gray-400">
-          {/* Print login only */}
-          <button
-            onClick={handlePrint}
-            className="bg-blue-500 px-4 py-2  text-xl justify-between rounded-lg text-white font-semibold flex items-center  "
-          >
+          <button className="bg-blue-500 px-4 py-2  text-xl justify-between rounded-lg text-white font-semibold flex items-center  ">
             <BsDownload />
           </button>
         </div>
@@ -167,7 +157,6 @@ const Page = () => {
             className="h-36 w-fit md:block hidden object-contain"
           />
         </div>
-      
       </div>
       <MatchReport />
     </div>

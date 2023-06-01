@@ -8,13 +8,7 @@ import { useState, useEffect } from "react";
 const NewsCard = ({ item, index }) => {
   const [items, setData] = useState([item]);
 
-  const isLargeCard = index === 0;
-  useEffect(() => {
-    const updatedData = [...items];
-    updatedData.splice(1, 1);
 
-    setData(updatedData);
-  }, []);
 
   return (
     <div className={`card w-fit  ${isLargeCard ? "large-card" : ""}`}>
@@ -67,52 +61,6 @@ const NewsCard = ({ item, index }) => {
           </div>
         </div>
       </Link>
-
-      {isLargeCard && (
-        <div className="hidden md:block">
-          <div className="h-[50vh]  max-h-96 max-w-5xl justify-between w-screen flex ">
-            <div className="mx-auto w-full">
-              <div className=" h-[50vh] w-[60vh]  ">
-                <Image
-                  alt=""
-                  src={item.bg_img}
-                  width={1000}
-                  height={1000}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            </div>
-            <div className="full py-5 px-10 ">
-              <p className="text-sm font-medium capitalize text-primary-red">
-                {item.liga}
-              </p>
-              <p className="text-black-main hover:underline font-semibold text-3xl capitalize">
-                {item.headline}
-              </p>
-              <p className="text-2xl   hover:underline mt-2 max-h-32 overflow-hidden font-normal tracking-wider">
-                {item.tittle}
-              </p>
-              <div className="flex gap-2 mt-4 items-center">
-                <Image
-                  src={item.person_img}
-                  alt=""
-                  width={1000}
-                  height={1000}
-                  className="w-8 h-8 object-cover rounded-full border-2"
-                />
-                <div className="flex gap-5 justify-between">
-                  <p className="text-xs hover:underline w-[100px] capitalize overflow-hidden truncate font-medium">
-                    {item.name_person}
-                  </p>
-                  <p className="text-xs text-gray-400">
-                    <TimeAgo date={item.date} time={item.time} />
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

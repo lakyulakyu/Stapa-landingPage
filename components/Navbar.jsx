@@ -59,11 +59,11 @@ const NavBar_ = () => {
     setIsOpen(!isOpen);
   };
 
-  const currentPath = window.location.pathname;
-  const isDetailPage = currentPath.includes('/Input')
-  if (isDetailPage) {
-    return null;
-  }
+  // const currentPath = window.location.pathname;
+  // const isDetailPage = currentPath.includes('/Input')
+  // if (isDetailPage) {
+  //   return null;
+  // }
 
   return (
     <nav className="fixed w-full  z-50 top-0">

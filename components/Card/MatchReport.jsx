@@ -1,6 +1,5 @@
+"use client";
 import React, { useState } from "react";
-import { GiSoccerField } from "react-icons/gi";
-
 const data = [
   {
     id: 1,
@@ -126,7 +125,6 @@ const data = [
 
 const MatchReport = () => {
   const [showDetail, setShowDetail] = useState(false);
-  const filteredData = data.filter((item) => typeof item.status === "boolean");
 
   const handleButtonClick = () => {
     setShowDetail(!showDetail);
