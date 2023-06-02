@@ -20,7 +20,7 @@ const Page = () => {
             alt=""
             width={1000}
             height={10000}
-            src={"/Logo-web.png"}
+            src={"/Logo.png"}
             className="h-12 w-fit md:hidden block mt-4  object-contain"
           />
           <div className="bg-primary-red mb-2 min-[500px]:mb-10 min-[500px]:w-60 w-32  rounded-md md:rounded-t-full font-medium text-white  mx-auto text-sm md:text-3xl max-w-4xl items-center grid grid-cols-3 text-center max-[500px]:grid-cols-1 md:w-full h-fit py-3 ">
@@ -36,7 +36,7 @@ const Page = () => {
             alt=""
             width={1000}
             height={10000}
-            src={"/Logo-web.png"}
+            src={"/Logo.png"}
             className="h-12 w-fit md:hidden block  mt-4 object-contain"
           />
         </div>
@@ -75,7 +75,7 @@ const Page = () => {
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
               <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
