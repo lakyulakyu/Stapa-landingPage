@@ -21,7 +21,7 @@ const Page = ({ params }) => {
       </div>
       <div className="mx-auto max-w-3xl">
         <Link href={"/News"}>
-          <button className="rotate-180 text-2xl text-red-400 ">
+          <button className="rotate-180 text-2xl text-red-500 ">
             <CgArrowLongRight />
           </button>
         </Link>
