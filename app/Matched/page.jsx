@@ -7,9 +7,9 @@ import MatchNow from "@/components/Card/MatchNow";
 const MatchCard = () => {
   return (
     <>
-      <div className="h-full pb-10 ">
+      <div className="h-full md:mt-32 pb-10 ">
         <MatchNow />
-        <div className="max-w-7xl  mx-auto sm:mt-8 w-full mt-20 font-poppins font-semibold">
+        <div className="max-w-7xl  mx-auto  sm:mt-8 w-full mt-20 font-poppins font-semibold">
           <div className="max-[350px]:mx-auto">
             <p className="uppercase sm:font-semibold  max-[350px]:mx-auto font-normal text-lg sm:text-2xl text-black-main">
               Match schedule

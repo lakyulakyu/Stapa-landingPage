@@ -51,10 +51,9 @@ export default function RootLayout({ children, path }) {
       >
         <Navbar />
         {children}
-        <div id="More" className="overflow-hidden">
+       
           <Sponsorship />
           <Footer />
-        </div>
       </body>
     </html>
   );
