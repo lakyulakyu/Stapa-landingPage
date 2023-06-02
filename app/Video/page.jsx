@@ -1,9 +1,8 @@
 import React from "react";
 import CardVideos from "@/components/Card/CardVideos";
-import Video from "../../Json/Video"
 
 
-const Video =[
+const Video = [
   {
     id: 1,
     url: "https://www.youtube.com/embed/1_f6EV2TtmA",
