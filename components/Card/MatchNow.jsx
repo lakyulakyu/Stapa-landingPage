@@ -34,7 +34,7 @@ function MatchNow() {
     <div className="text-center h-fit mt-10">
       <h2 className="text-lg uppercase font-semibold">Sedang berlangsung</h2>
       {schedule.length > 0 ? (
-        <div className="w-screen">
+        <div className="max-w-7xl">
           {schedule.map(
             (
               {

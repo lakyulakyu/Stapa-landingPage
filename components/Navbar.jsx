@@ -88,7 +88,7 @@ const toggleMenu = () => {
           </button>
         </div>
         {isOpen && (
-          <div className="divide-y-2 divi">
+          <div >
             {navigation.map((item) => (
               <Link key={item} href={item.href} className={` ${scrollPosition > 10 ? "border-black-main" : "border-white"} hover:border-b-2 focus:borderb-2 bg-opacity-5 mb-3 pr-4 hover:bg-slate-300  uppercase flex font-normal`}>
                 <p className=" text-2xl  text-center">{item.name}</p>

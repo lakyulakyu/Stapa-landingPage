@@ -46,7 +46,7 @@ const Page = () => {
             alt=""
             width={1000}
             height={10000}
-            src={"/Logo-web.png"}
+            src={"/Logo.png"}
             className="h-36 w-fit md:block hidden object-contain"
           />
 

@@ -11,7 +11,7 @@
     "liga": "kampung tanahan",
     "date": "2023-06-02",
     "time": "22:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
   {
@@ -26,7 +26,7 @@
     "liga": "kampung tanahan",
     "date": "2023-06-02",
     "time": "22:30",
-   "group":"A",
+    "group": "A",
     "place": "lapangan andalangu "
   },
 
@@ -42,10 +42,10 @@
     "liga": "kampung tanahan",
     "date": "2023-06-01",
     "time": "11:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
- 
+
   {
     "id": 4,
     "tim_1": "/Logo-default.png",
@@ -58,7 +58,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-31",
     "time": "21:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
 
@@ -74,7 +74,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-30",
     "time": "15:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
   {
@@ -89,7 +89,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-30",
     "time": "15:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
 
@@ -105,7 +105,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-30",
     "time": "15:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
   {
@@ -120,7 +120,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-30",
     "time": "15:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
 
@@ -136,7 +136,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-30",
     "time": "15:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
 
@@ -152,7 +152,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-30",
     "time": "15:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
 
@@ -168,7 +168,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-30",
     "time": "23:00",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   },
 
@@ -184,7 +184,7 @@
     "liga": "kampung tanahan",
     "date": "2023-05-30",
     "time": "23:14",
-   "group":"A",
+    "group": "A",
     "place": "anfield"
   }
 ]
