@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { MdArrowRight } from "react-icons/md";
 import Image from "next/image";
-import DataMatch from "../../Json/Match";
+import DataMatch from "../../Json/Match.json";
 
 export default function AllTeam() {
   return (

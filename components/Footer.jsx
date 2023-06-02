@@ -5,7 +5,6 @@ import Link from "next/link";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdWhatsapp } from "react-icons/md";
 const Footer = () => {
-
   const isDetailPage =
     typeof window !== "undefined"
       ? window.location.pathname.includes("/Admine")
@@ -37,7 +36,7 @@ const Footer = () => {
             <p>Help</p>
             <div>
               <p>Contact Us</p>
-              <Link target="_blank" href="https://wa.me/081333717212">
+              <Link target="_blank" href="https://wa.me/+62 812-9693-9020">
                 <button className="w-full mt-1  bg-green-500 p-2">
                   <div className="flex justify-between items-center">
                     <p className="text-xl">

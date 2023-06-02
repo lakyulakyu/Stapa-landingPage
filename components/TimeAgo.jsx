@@ -7,7 +7,6 @@ function TimeAgo({ date, time }) {
     const interval = setInterval(() => {
       const currentDate = new Date();
       const uploadedDate = new Date(`${date} ${time}`);
-
       const timeDifference = currentDate.getTime() - uploadedDate.getTime();
       const seconds = Math.floor(timeDifference / 1000);
       const minutes = Math.floor(seconds / 60);
@@ -15,7 +14,6 @@ function TimeAgo({ date, time }) {
       const days = Math.floor(hours / 24);
       const months = Math.floor(days / 30);
       const years = Math.floor(months / 12);
-
       if (years > 0) {
         setTimeAgo(`${years} Year Ago`);
       } else if (months > 0) {
@@ -30,11 +28,9 @@ function TimeAgo({ date, time }) {
         setTimeAgo(`${seconds} Second Ago`);
       }
     }, 1000);
-
     return () => clearInterval(interval);
   }, [date, time]);
 
   return <span>{timeAgo}</span>;
 }
-
 export default TimeAgo;

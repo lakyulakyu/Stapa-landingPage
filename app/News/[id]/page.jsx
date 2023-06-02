@@ -26,7 +26,6 @@ const Page = () => {
         <p className="h-24 text-3xl hidden sm:block font-semibold text-center capitalize my-auto">
           {item.headline}
         </p>
-
         <div className="sm:h-[70vh] h-40 mt-6 sm:mt-0  bg-slate-200 w-full z-0 max-w-3xl mx-auto">
           <Image
             alt=""

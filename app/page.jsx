@@ -1,5 +1,4 @@
 import Hero from "./Sections/Hero";
-import Sponsorship from "./Sections/Sponsorship";
 import Match from "@/components/User/MatchSchedule";
 import FeaturedVideos from "@/components/User/FeaturedVideos";
 import LatestNews from "@/components/User/LatestNews";
@@ -15,7 +14,6 @@ export default function Home() {
       <LatestNews />
       <Adsvers />
       <LfcOnSosmed />
-      <Sponsorship />
     </div>
-  );
+  )
 }

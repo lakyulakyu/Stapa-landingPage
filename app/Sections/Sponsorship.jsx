@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { IoMdAdd } from "react-icons/io";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import imageSponsor from "../../Json/Sponsor";
 
 const Sponsorship = () => {
   const settings = {
@@ -31,48 +33,13 @@ const Sponsorship = () => {
     ],
   };
 
-  const imageSponsor = [
-    {
-      id: 1,
-      url: "https://www.freepnglogos.com/uploads/logo-tokopedia-png/tokopedia-apa-itu-startup-pengertian-cara-memulai-dan-1.png",
-    },
-    {
-      id: 2,
-      url: "https://www.freepnglogos.com/uploads/shopee-logo/logo-shopee-png-images-download-shopee-1.png",
-    },
-    {
-      id: 3,
-      url: "https://www.freepnglogos.com/uploads/red-netflix-logo-text-png-3.png",
-    },
-    {
-      id: 4,
-      url: "https://www.freepnglogos.com/uploads/starbucks-logo-png-1.png",
-    },
-    {
-      id: 5,
-      url: "https://www.freepnglogos.com/uploads/hoyoverse-logo-png/hoyoverse-logo-transparent-png-1.png",
-    },
-    {
-      id: 6,
-      url: "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-sva-scholarship-20.png",
-    },
-    {
-      id: 7,
-      url: "https://www.freepnglogos.com/uploads/toyota-logo-png/toyota-logos-download-4.png",
-    },
-    {
-      id: 8,
-      url: "https://www.freepnglogos.com/uploads/tupperware-png-logo/tupperware-culinary-stars-png-logo-9.png",
-    },
-  ];
-
   const isDetailPage =
-  typeof window !== "undefined"
-    ? window.location.pathname.includes("/Admine")
-    : undefined;
-if (isDetailPage) {
-  return null;
-}
+    typeof window !== "undefined"
+      ? window.location.pathname.includes("/Admine")
+      : undefined;
+  if (isDetailPage) {
+    return null;
+  }
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-10 md:mx-auto mt-12 w-full font-poppins font-semibold h-fit">
       <div>
