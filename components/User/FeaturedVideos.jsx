@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { CgArrowLongRight } from "react-icons/cg";
-import CardVideos from "./Card/CardVideos";
+import CardVideos from "../Card/CardVideos";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -113,10 +113,12 @@ const FeaturedVideos = () => {
   };
 
   return (
-    <div id="video" className="h-fit pb-10 w-full px-2 sm:px-10 md:mx-auto">
-      <div className="flex text-black-main justify-between mb-10 items-center mx-auto  max-w-7xl z-10 w-full ">
+    <div className="h-fit pb-10 w-full px-2 sm:px-10 max-w-7xl md:mx-auto">
+      <div className="flex text-black-main justify-between mb-10 items-center mx-auto   z-10 w-full ">
         <div>
-          <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">Featured videos</h2>
+          <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
+            Featured videos
+          </h2>
         </div>
         <div className=" flex divide-x-2 divide-gray-400  text-2xl">
           <button onClick={prev}>

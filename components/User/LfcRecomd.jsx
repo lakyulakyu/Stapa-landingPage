@@ -1,9 +1,8 @@
 "use client";
 import Link from "next/link";
-import { CgArrowLongRight } from "react-icons/cg";
-import { IoMdAdd } from "react-icons/io";
 import React from "react";
-import CardLfcRecomd from "./Card/CardLfcRecomd";
+import { IoMdAdd } from "react-icons/io";
+import CardLfcRecomd from "../Card/CardLfcRecomd";
 const LfcRecomd = () => {
   return (
     <div className="max-w-7xl mx-auto mb-10  w-full font-poppins font-semibold h-full">

@@ -43,19 +43,16 @@ export const metadata = {
   description: "Website for ",
 };
 
-export default function RootLayout({ children,path }) {
-  const excludedPaths = ['/login', '/register','/News'];
-  const shouldShowNavbar = !excludedPaths.includes(path);
-
+export default function RootLayout({ children, path }) {
   return (
     <html lang="en">
       <body
         className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable} ${poppins.variable} overflow-x-hidden`}
       >
-      {shouldShowNavbar && <Navbar />}
+        <Navbar />
         {children}
         <div id="More" className="overflow-hidden">
-          <Sponsorship/>
+          <Sponsorship />
           <Footer />
         </div>
       </body>

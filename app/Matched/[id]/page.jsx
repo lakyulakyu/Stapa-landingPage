@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
@@ -9,14 +8,14 @@ const Page = () => {
     <div className="pt-32 h-full mb-10 ">
       <div className=" text-end max-w-4xl mx-auto">
         <div className="text-base flex gap-4  max-w-sm text-center text-gray-400">
-          <button className="bg-blue-500 px-4 py-2  text-xl justify-between rounded-lg text-white font-semibold flex items-center  ">
+          <button className="border px-6 hover:bg-blue-400 py-2 hover:text-white  text-xl justify-between rounded-lg text-slate-300 font-semibold flex items-center  ">
             <BsDownload />
           </button>
         </div>
       </div>
 
       <div id="htmlElement" className="min-[500px]:mt-10 mt-4">
-        <div className="flex  justify-around max-[500px]:mx-3">
+        <div className="flex max-[778px]:mx-10  max-[500px]:mx-3">
           <Image
             alt=""
             width={1000}
@@ -24,7 +23,7 @@ const Page = () => {
             src={"/Logo-web.png"}
             className="h-12 w-fit md:hidden block mt-4  object-contain"
           />
-          <div className="bg-primary-red mb-2 min-[500px]:mb-10 min-[500px]:w-60 w-32  rounded-md md:rounded-t-full font-medium text-white  mx-auto text-sm md:text-3xl max-w-4xl items-center grid grid-cols-3 text-center max-[500px]:grid-cols-1 md:w-full min-[500px]:h-16 h-fit py-3 ">
+          <div className="bg-primary-red mb-2 min-[500px]:mb-10 min-[500px]:w-60 w-32  rounded-md md:rounded-t-full font-medium text-white  mx-auto text-sm md:text-3xl max-w-4xl items-center grid grid-cols-3 text-center max-[500px]:grid-cols-1 md:w-full h-fit py-3 ">
             <p className="min[500px]:text-end max-[500px]:mb-2 ">Tim 2 </p>
             <div className="flex bg-black-main text-light-grey max-[500px]:text-sm md:text-4xl rounded-xl  md:scale-150 w-full md:px-5 px-1  justify-between items-center max-w-[70px] md:max-w-[150px] gap-2 md:gap-6 font-bold py-2 mx-auto">
               <p className="">14</p>

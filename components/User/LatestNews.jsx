@@ -3,11 +3,11 @@ import Link from "next/link";
 import { CgArrowLongRight } from "react-icons/cg";
 import { IoMdAdd } from "react-icons/io";
 import React, { useRef } from "react";
-import DataNews from "../Json/News.json";
+import DataNews from "../../Json/News";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CardLatestNews from "./Card/CardLatestNews";
+import CardLatestNews from "../Card/CardLatestNews";
 
 const LatestNews = () => {
   const sliderRef = useRef(null);

@@ -15,53 +15,49 @@ const navigation = [
 ];
 const NavBar_ = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const smoothScroll = (event) => {
-      event.preventDefault();
-      const targetId = event.target.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    };
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach((link) => {
-      link.addEventListener("click", smoothScroll);
-    });
-    return () => {
-      links.forEach((link) => {
-        link.removeEventListener("click", smoothScroll);
-      });
-    };
-  }, []);
-  useEffect(() => {
-    function handleScroll() {
-      const position = window.pageYOffset;
-      setScrollPosition(position);
-    }
-    typeof window != undefined ? window.addEventListener("scroll", handleScroll) : undefined;
-    return () => {
-      typeof window != undefined ? window.removeEventListener("scroll", handleScroll) : undefined;
-    };
-  }, []);
-  useEffect(() => {
-    const handleResize = () => {
-      const innerWidth = typeof window != undefined ? window.innerWidth : undefined;
-      if (innerWidth > 870) {
-        setIsOpen(false);
-      }
-    };
-    typeof window != undefined ? window.addEventListener("resize", handleResize) : undefined;
-    return () => {
-      typeof window != undefined ? window.removeEventListener("resize", handleResize) : undefined;
-    };
-  }, []);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+useEffect(() => {
+  const smoothScroll = (event) => {
+    event.preventDefault();
+    const targetId = event.target.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    targetElement.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
 
-  const isDetailPage = typeof window !== "undefined" ? window.location.pathname.includes("/Input") : undefined;
+  const handleResize = () => {
+    const innerWidth = window.innerWidth;
+    if (innerWidth > 870) {
+      setIsOpen(false);
+    }
+  };
+
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener("click", smoothScroll);
+  });
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleResize);
+
+  return () => {
+    links.forEach((link) => {
+      link.removeEventListener("click", smoothScroll);
+    });
+    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("resize", handleResize);
+  };
+}, []);
+
+const toggleMenu = () => {
+  setIsOpen(!isOpen);
+};
+  const isDetailPage = typeof window !== "undefined" ? window.location.pathname.includes("/Admine") : undefined;
   if (isDetailPage) {
     return null;
   }

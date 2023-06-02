@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import DataStats from "../../Json/Player";
+import DataStats from "../../Json/Match"
 
 export default function CardPlayer({ category }) {
   return (

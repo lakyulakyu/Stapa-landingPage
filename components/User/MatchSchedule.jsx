@@ -8,8 +8,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import MatchNow from "./Card/MatchNow";
-import DataMatch from "../Json/Match";
+import MatchNow from "../Card/MatchNow";
+import DataMatch from "../../Json/Match"
 
 const Match = () => {
   const sliderRef = useRef(null);
@@ -50,8 +50,8 @@ const Match = () => {
   };
   return (
     <>
-      <div className="h-fit pb-10 w-full px-2 sm:px- md:mx-auto">
-        <div className="max-w-7xl mx-auto mt-10 w-full font-poppins font-semibold">
+      <div className="h-fit max-w-7xl pb-10 w-full px-2 sm:px- md:mx-auto">
+        <div className="mx-auto mt-10 w-full font-poppins font-semibold">
           <div className="flex justify-between items-center ">
             <div>
               <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
@@ -85,39 +85,41 @@ const Match = () => {
             className="w-full h-full md:mt-10 md:translate-x-7 "
           >
             {DataMatch.map((item) => {
-              const handleClick = (e) => {
-                if (!(item.score_tim_1 || item.score_tim_2)) {
-                  e.preventDefault();
-                }
-              };
               return (
                 <>
-                  <div className="h-fi py-8 w-full min-h-fit hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6 divide-red-600">
+                  <div className="h-full py-8 w-full min-h-fit hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6 divide-red-600">
                     <div className="md:flex justify-between items-end pb-4">
                       <div className="flex  justify-evenly sm:justify-normal sm:gap-2">
-                        {" "}
-                        <Image
-                          key={item.id}
-                          alt={item.name_tim1}
-                          src={item.tim_1}
-                          width={100}
-                          height={100}
-                          className="h-16 w-16"
-                        />
-                        <Image
-                          key={item.id}
-                          src={item.tim_2}
-                          alt="logo"
-                          width={100}
-                          height={100}
-                          className="h-16 w-16"
-                        />
+                        <div>
+                          <Image
+                            key={item.id}
+                            alt={item.name_tim1}
+                            src={item.tim_1}
+                            width={100}
+                            height={100}
+                            className="h-16 w-16"
+                          />
+                          <p className="w-10">{item.name_tim1}</p>
+                        </div>
+                        <div>
+                          <Image
+                            key={item.id}
+                            src={item.tim_2}
+                            alt="logo"
+                            width={100}
+                            height={100}
+                            className="h-16 w-16"
+                          />
+                          <p className="w-10">{item.name_tim2}</p>
+                        </div>
                       </div>
 
                       {item.score_tim_1 || item.score_tim_2 ? (
                         <h1 className="text-lg sm:text-start text-center  font-poppins font-bold text-red-600">
-                          <span className="sm:hidden block text-sm text-black-main font-medium uppercase">score</span>
-                          {item.score_tim_1} - {item.score_tim_2} 
+                          <span className="sm:hidden block text-sm text-black-main font-medium uppercase">
+                            score
+                          </span>
+                          {item.score_tim_1} - {item.score_tim_2}
                         </h1>
                       ) : (
                         ""
@@ -125,24 +127,24 @@ const Match = () => {
                     </div>
                     <div className=" text-start pt-4 capitalize">
                       <h1 className="text-base font-semibold capitalize"></h1>
-                      <p className="text-xs text-gray-500 -mt-1">{item.liga}</p>
+                      <p className="text-xs text-gray-500 -mt-1">
+                        {item.liga}{" "}
+                        <span className="text-primary-red ml-1 font-medium ">
+                          Group {item.group}
+                        </span>
+                      </p>
                       <p className="text-xs font-semibold mt-2">{item.date}</p>
                       <p className="text-xs font-semibold">
                         {item.time} <span>{item.place}</span>
                       </p>
                       {item.score_tim_1 && item.score_tim_2 ? (
-                        <Link
-                          href={`/Matched/${item.id}`}
-                          onClick={handleClick}
-                        >
+                        <Link href={`/Matched/${item.id}`}>
                           <button className="bg-primary-red font-poppins text-white font-semibold justify-between text-sm flex items-center gap-2 px-2 py-1 mt-6 w-24">
                             More <IoMdArrowDropright />
                           </button>
                         </Link>
                       ) : (
-                        <button className="bg-slate-400 font-poppins text-white font-semibold justify-between text-sm flex items-center gap-2 px-2 py-1 mt-6 w-24">
-                          More <IoMdArrowDropright />
-                        </button>
+                        ""
                       )}
                     </div>
                   </div>

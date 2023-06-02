@@ -3,41 +3,36 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import TimeAgo from "@/components/TimeAgo";
-import { useState, useEffect } from "react";
 
-const NewsCard = ({ item, index }) => {
-  const [items, setData] = useState([item]);
-
-
-
+const NewsCard = ({ item }) => {
   return (
-    <div className={`card w-fit  ${isLargeCard ? "large-card" : ""}`}>
+    <div className={"card w-fit "}>
       <Link href={`/News/${item.id}`}>
         <div
           key={item.id}
-          className="max-h-96 divide-x-2 flex sm:flex-col sm:mb-4 max-sm:w-screen w-full sm:max-w-[40vh] "
+          className="max-h-96 sm:max-w-3xl pt-2 lg:pl-4 sm:flex max-[639px]:flex-col lg:flex-col sm:pt-4 max-sm:w-screen w-full lg:max-w-[40vh] "
         >
-          <div className=" h-full min-h-full w-64 sm:w-[40vh] ">
+          <div className=" px-8 sm:px-0 h-full min-h-full max-[400px]:w-full sm:w-96 lg:w-full overflow-hidden  ">
             <Image
               src={item.bg_img}
               height={1000}
               width={1000}
               alt={item.tittle}
-              className="object-cover max-h-[25vh] h-full w-full"
+              className="object-cover max-h-32 sm:max-h-[25vh]  h-full w-full"
             />
           </div>
-          <div className="w-full px-2 pt-4 text-black-main  h-full max-h-[180px] min-h-[170px]">
+          <div className="w-full px-2 pt-4  text-black-main  h-full max-h-[180px] min-h-[170px]">
             <h1
-              className="text-[10px] w-full font-semibold uppercase
+              className="text-[10px] w-full font-semibold max-[400px]:bg-slate-300 uppercase
                text-primary-red"
             >
               {item.liga}
             </h1>
-            <p className="text-lg hover:underline font-semibold mt-1 capitalize max-w-xs w-full  max-h-14  overflow-hidden ">
+            <p className="text-lg hover:underline font-semibold mt-1 capitalize max-w-xs w-full  max-h-14 overflow-hidden ">
               {item.headline}
             </p>
 
-            <p className="text-xs line-clamp-3 w-52 hover:underline text-gray-400 max-h-8 overflow-hidden font-normal tracking-wider">
+            <p className="text-xs line-clamp-3 sm:w-52 md:w-full hover:underline text-gray-400 max-h-8 overflow-hidden font-normal tracking-wider">
               {item.tittle}
             </p>
 

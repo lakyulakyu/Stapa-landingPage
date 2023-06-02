@@ -65,15 +65,20 @@ const Sponsorship = () => {
       url: "https://www.freepnglogos.com/uploads/tupperware-png-logo/tupperware-culinary-stars-png-logo-9.png",
     },
   ];
+
+  const isDetailPage =
+  typeof window !== "undefined"
+    ? window.location.pathname.includes("/Admine")
+    : undefined;
+if (isDetailPage) {
+  return null;
+}
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-10 md:mx-auto mt-12 w-full font-poppins font-semibold h-fit">
       <div>
         <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
           Sponsorship
         </h2>
-        <p className="text-base text-zinc-500 font-medium flex items-center gap-x-1 mt-1 cursor-pointer">
-          View all sponsorship <IoMdAdd />
-        </p>
       </div>
       <div className="my-8">
         <Slider {...settings} className="w-full h-fit">

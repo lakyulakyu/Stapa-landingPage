@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import Data from "../../../Json/News.json";
-import Advers from "@/components/Card/Adsvers";
-import Image from "next/image";
-import LatestNews from "@/components/LatestNews";
 import Link from "next/link";
+import Image from "next/image";
 import { CgArrowLongRight } from "react-icons/cg";
+import Advers from "@/components/Card/Adsvers";
+import LatestNews from "@/components/User/LatestNews";
 import TimeAgo from "@/components/TimeAgo";
 
 const Page = () => {

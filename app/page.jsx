@@ -1,9 +1,9 @@
 import Hero from "./Sections/Hero";
 import Sponsorship from "./Sections/Sponsorship";
-import Match from "@/components/MatchScedle";
-import FeaturedVideos from "@/components/FeaturedVideos";
-import LatestNews from "@/components/LatestNews";
-import LfcOnSosmed from "@/components/LfcOnSosmed";
+import Match from "@/components/User/MatchSchedule";
+import FeaturedVideos from "@/components/User/FeaturedVideos";
+import LatestNews from "@/components/User/LatestNews";
+import LfcOnSosmed from "@/components/User/LfcOnSosmed";
 import Adsvers from "@/components/Card/Adsvers";
 
 export default function Home() {
