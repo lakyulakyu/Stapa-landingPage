@@ -15,7 +15,7 @@ const ListNews = () => {
         </h1>
         <div className="news-list  mt-4 grid-cols-1 lg:divide-x-2 divide-y-2 lg:divide-y-0  grid lg:grid-cols-3 max-[1199px]:grid-cols-3  xl:grid-cols-4">
           {NewsData.map((item, index) => (
-            <NewsCard key={index} item={item} index={index} />
+            <NewsCard key={index} item={item} id={item.id} />
           ))}
         </div>
       </div>
