@@ -80,7 +80,7 @@ if (isDetailPage) {
           Sponsorship
         </h2>
       </div>
-      <div className="my-8">
+      <div className="my-10">
         <Slider {...settings} className="w-full h-fit">
           {imageSponsor.map((item) => {
             return (
