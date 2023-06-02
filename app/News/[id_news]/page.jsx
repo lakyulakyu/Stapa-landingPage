@@ -8,9 +8,11 @@ import Advers from "@/components/Card/Adsvers";
 import LatestNews from "@/components/User/LatestNews";
 import TimeAgo from "@/components/TimeAgo";
 
-const Page = () => {
-  const id = window.location.pathname.match(/(\d+)/)?.[0];
+const Page = ({ params }) => {
+  const id = params.id_news;
   const item = Data.find((item) => item.id === parseInt(id));
+
+  console.log(item);
 
   return (
     <div className="z-50  bg-slate-100">
