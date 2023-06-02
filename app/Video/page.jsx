@@ -1,6 +1,6 @@
 import React from "react";
 import CardVideos from "@/components/Card/CardVideos";
-import Video from "../../Json/Video"
+import Video from "../../Json/Video.Json"
 
 const page = () => {
   return (
