@@ -75,7 +75,7 @@ const Page = () => {
                 3
               </p>
             </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-3 max-[500px]:max-w-xs flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
+            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
               <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
                 24
               </p>
