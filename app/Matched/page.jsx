@@ -39,7 +39,7 @@ const MatchCard = () => {
                             </p>
                             <Image
                               key={item.id}
-                              src={item.tim_1}
+                              src={item.tim_1 || "/Logo-default.png"}
                               alt="logo"
                               width={100}
                               height={100}
@@ -58,7 +58,7 @@ const MatchCard = () => {
 
                             <Image
                               key={item.id}
-                              src={item.tim_2}
+                              src={item.tim_1 || "/Logo-default.png"}
                               alt="logo"
                               width={100}
                               height={100}
