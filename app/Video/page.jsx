@@ -1,7 +1,6 @@
 import React from "react";
 import CardVideos from "@/components/Card/CardVideos";
 
-
 const Video = [
   {
     id: 1,
@@ -52,11 +51,9 @@ const Video = [
     url: "https://www.youtube.com/embed/1_f6EV2TtmA",
     headline: "Deddy corbuziez makan bersama andika lopes",
     time: "20.12",
-    liga: "solo premiere league"
+    liga: "solo premiere league",
   },
 ];
-
-
 
 const page = () => {
   return (
