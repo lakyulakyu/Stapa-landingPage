@@ -20,8 +20,8 @@ const LatestNews = () => {
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 6000,
+    autoplay: true,
+    autoplaySpeed: 6000,
     responsive: [
       {
         breakpoint: 1100,
