@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import { IoMdArrowDropright } from "react-icons/io";
 import { CgArrowLongRight } from "react-icons/cg";
+import { GiSoccerField } from "react-icons/gi";
 import { IoMdAdd } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -78,39 +79,39 @@ const Match = () => {
             </div>
           </div>
         </div>
-        <div className=" h-full md:mt-10  ">
+        <div className=" h-full md:mt-10 ">
           <Slider
             {...settings}
             ref={sliderRef}
-            className="w-full h-full md:mt-10 md:translate-x-7 "
+            className="w-full h-full divide-x-4 md:mt-10 md:translate-x-7 "
           >
             {DataMatch.map((item) => {
               return (
                 <>
-                  <div className="h-full py-8 w-full min-h-fit hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6 divide-red-600">
+                  <div className="h-64  py-8 w-full min-h-fit border-l border-black-main  hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6 divide-red-600">
                     <div className="md:flex justify-between items-end pb-4">
-                      <div className="flex  justify-evenly sm:justify-normal sm:gap-2">
+                      <div className="flex  justify-evenly w-full sm:justify-between">
                         <div>
                           <Image
                             key={item.id}
                             alt={item.name_tim1}
-                            src={item.tim_1}
+                            src={item.tim_1 || "/Logo-default.png"}
                             width={100}
                             height={100}
                             className="h-16 w-16"
                           />
-                          <p className="w-10">{item.name_tim1}</p>
+                          <p className="w-16 text-sm">{item.name_tim1}</p>
                         </div>
                         <div>
                           <Image
                             key={item.id}
-                            src={item.tim_2}
+                            src={item.tim_1 || "/Logo-default.png"}
                             alt="logo"
                             width={100}
                             height={100}
                             className="h-16 w-16"
                           />
-                          <p className="w-10">{item.name_tim2}</p>
+                          <p className="w-16 text-sm ">{item.name_tim2}</p>
                         </div>
                       </div>
 
@@ -134,8 +135,12 @@ const Match = () => {
                         </span>
                       </p>
                       <p className="text-xs font-semibold mt-2">{item.date}</p>
-                      <p className="text-xs font-semibold">
-                        {item.time} <span>{item.place}</span>
+                      <p className="text-xs font-semibold flex gap-2 mt-2 ">
+                        {item.time}{" "}
+                        <span className="border-l-2 border-black-main pl-2 flex gap-2" >
+                          <span className="text-lg"> <GiSoccerField /></span>
+                          {item.place} 
+                        </span>
                       </p>
                       {item.score_tim_1 && item.score_tim_2 ? (
                         <Link href={`/Matched/${item.id}`}>
