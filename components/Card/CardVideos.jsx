@@ -5,7 +5,7 @@ const CardVideos = ({ item }) => {
   return (
     <div className="sm:max-w-xs w-full mx-auto px-4 bg-cover h-fit">
       <div className="w-full bg-opacity-40 max-w-xs mx-auto flex">
-        <div className="max-w-xs object-cover text-black-main  mb-14">
+        {/* <div className="max-w-xs object-cover text-black-main  mb-14">
           <iframe
             src={item.url}
             width={1000}
@@ -25,7 +25,10 @@ const CardVideos = ({ item }) => {
           <p className=" text-xs font-normal text-primary-red mt-3">
             {item.liga}
           </p>
-        </div>
+        </div> */}
+        <h1 className="text-center px-5 bg-neutral-200 text-neutral-400 pt-10 h-32 max-w-3xl mx-auto">
+          belum ada berita terkini
+        </h1>
       </div>
     </div>
   );

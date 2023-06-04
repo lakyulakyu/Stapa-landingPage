@@ -11,9 +11,10 @@ const LfcOnSosmed = () => {
           </h2>
         </div>
       </div>
-      <div className="w-screen ">
-        <div className="mt-10 w-screen  lg:translate-x-12">
-          <CardLfcOnSosmed />
+      <div className="">
+        <div className="mt-10  ">
+          {/* <CardLfcOnSosmed /> */}
+          <h1 className="text-center bg-neutral-200 text-neutral-400 pt-10 h-32 max-w-3xl mx-auto">belum ada berita terkini</h1>
         </div>
       </div>
     </div>

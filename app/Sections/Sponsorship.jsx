@@ -4,7 +4,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import imageSponsor from "../../Json/Sponsor";
+import imageSponsor from "../../Json/Sponsor.Json";
 
 const Sponsorship = () => {
   const settings = {
@@ -47,24 +47,32 @@ const Sponsorship = () => {
           Sponsorship
         </h2>
       </div>
-      <div className="my-10">
-        <Slider {...settings} className="w-full h-fit">
+      <div className="my-10 ">
+        <Slider {...settings} className="w-full gap-7 h-fit">
           {imageSponsor.map((item) => {
             return (
-              <Image
-                key={item.id}
-                src={item.url}
-                alt=""
-                width={300}
-                height={300}
-                className="w-1/5 aspect-[3/2] object-contain mix-blend-color-burn px-6"
-              />
+              // <Image
+              //   key={item.id}
+              //   src={item.url}
+              //   alt=""
+              //   width={300}
+              //   height={300}
+              //   className="w-1/5 aspect-[3/2] object-contain mix-blend-color-burn px-6"
+              // />
+              <>
+                <h1
+                  key={item.id}
+                  className="bg-neutral-200 text-neutral-400 text-2xl font-normal h-24 w-full text-center pt-6"
+                >
+                  {item.tittel}
+                </h1>
+              </>
             );
           })}
         </Slider>
         <div className="flex w-full h-48 px-8 mt-4">
           <div className="w-1/2">
-            <Image
+            {/* <Image
               src={
                 "https://cdn.dribbble.com/users/2218729/screenshots/5726080/attachments/1236608/artboard_copy.png"
               }
@@ -72,10 +80,13 @@ const Sponsorship = () => {
               width={600}
               height={600}
               className="w-full h-full object-cover"
-            />
+            /> */}
+            <h1 className="bg-neutral-600 hidden sm:block text-white text-2xl font-normal h-full w-full text-center pt-16">
+              sponsor Space available
+            </h1>
           </div>
           <div className="w-1/2">
-            <Image
+            {/* <Image
               src={
                 "https://images.tokopedia.net/img/cache/730/kjjBfF/2023/1/24/2e4c6869-1fe1-4996-a249-9eb299025e40.jpg"
               }
@@ -83,7 +94,10 @@ const Sponsorship = () => {
               width={600}
               height={600}
               className="w-full h-full object-cover"
-            />
+            /> */}
+            <h1 className="bg-neutral-600 text-white text-2xl font-normal h-full w-full text-center pt-16">
+              sponsor Space available
+            </h1>
           </div>
         </div>
       </div>

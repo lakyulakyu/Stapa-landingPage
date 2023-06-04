@@ -58,10 +58,13 @@ const Video = [
 const page = () => {
   return (
     <>
-      <div className="grid grid-cols-4 pt-24 ">
-        {Video.map((item) => (
+      <div className="pt-24 ">
+        {/* {Video.map((item) => (
           <CardVideos key={item.id} item={item} />
-        ))}
+        ))} */}
+         <h1 className="text-center bg-neutral-200  text-neutral-400 pt-20 h-52 mx-auto">
+          
+          belum ada berita terkini   </h1>
       </div>
     </>
   );

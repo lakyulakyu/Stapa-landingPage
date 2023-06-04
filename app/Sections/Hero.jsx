@@ -53,7 +53,7 @@ const Hero = () => {
               key={item.id}
               className="lg:h-screen h-72 w-screen bg-cover bg-no-repeat"
             >
-              <div className="font-poppins relative md:top-1/4  lg:top-2/4 top-1/4 sm:top-1/2  lg:max-w-6xl md:mx-20 xl:max-w-7xl px-2 sm:px-0 sm:mx-10  lg:mx-auto text-light-grey ">
+              {/* <div className="font-poppins relative md:top-1/4  lg:top-2/4 top-1/4 sm:top-1/2  lg:max-w-6xl md:mx-20 xl:max-w-7xl px-2 sm:px-0 sm:mx-10  lg:mx-auto text-light-grey ">
                 <h4 className="text-lg uppercase font-semibold">
                   {item.number}
                 </h4>
@@ -65,15 +65,15 @@ const Hero = () => {
                     View Now <IoMdArrowDropright size={26} />
                   </button>
                 </Link>
-              </div>
+              </div> */}
               <div className="absolute w-screen md: lg:h-full top-0 -z-10">
                 <div className="absolute opacity-30 sm:h-full lg:h-screen w-full bg-primary-red"></div>
                 <Image
-                  src={item.image}
+                  src={'/Logo.png'}
                   alt=""
                   width={1000}
                   height={1000}
-                  className="w-full "
+                  className="w-full h-full object-contain lg:p-20 p-5 "
                 />
               </div>
             </div>

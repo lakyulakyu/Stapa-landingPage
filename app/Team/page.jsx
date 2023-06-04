@@ -31,7 +31,7 @@ export default function AllTeam() {
                       {item.name_tim1}
                     </h1>
                   </div>
-                  <div className=" w-full hover:bg-slate-200 shadow-sm  px-3 container mx-auto ">
+                  {/* <div className=" w-full hover:bg-slate-200 shadow-sm  px-3 container mx-auto ">
                     <div className="text-center text-sm justify-between flex sm:pt-8 pt-2 text-overflow-ellipsis overflow-ellipsis break-all max-w-[300px]  overflow-clip capitalize font-semibold  bottom-0">
                       <h2 className="text-black-main sm:text-xl text-lg uppercase font-medium">
                         Total Player
@@ -46,7 +46,7 @@ export default function AllTeam() {
                         </span>
                       </button>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </>
             );

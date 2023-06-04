@@ -73,9 +73,9 @@ const LatestNews = () => {
           </button>
         </div>
       </div>
-      <div className="w-screen ">
-        <div className="mt-10 w-screen  lg:translate-x-12">
-          <Slider
+      <div className="">
+        <div className="mt-10 ">
+          {/* <Slider
             {...settings}
             ref={sliderRef}
             className="w-full min-h-fit h-full   "
@@ -83,7 +83,11 @@ const LatestNews = () => {
             {DataNews.map((item, index) => (
               <CardLatestNews key={index} item={item} index={index} />
             ))}
-          </Slider>
+           
+          </Slider> */}
+           <h1 className="text-center bg-neutral-200 text-neutral-400 pt-10 h-32 max-w-3xl mx-auto">
+              belum ada berita terkini
+            </h1>
         </div>
       </div>
     </div>

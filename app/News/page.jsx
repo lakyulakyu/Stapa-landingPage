@@ -13,11 +13,16 @@ const ListNews = () => {
         <h1 className="uppercase  sm:font-bold sm:text-2xl sm:pt-10 lg:pt-5 text-black-main">
           News
         </h1>
-        <div className="news-list  mt-4 grid-cols-1 lg:divide-x-2 divide-y-2 lg:divide-y-0  grid lg:grid-cols-3 max-[1199px]:grid-cols-3  xl:grid-cols-4">
-          {NewsData.map((item, index) => (
+        {/* <div className="news-list  mt-4 grid-cols-1 lg:divide-x-2 divide-y-2 lg:divide-y-0  grid lg:grid-cols-3 max-[1199px]:grid-cols-3  xl:grid-cols-4">
+         {NewsData.map((item, index) => (
             <NewsCard key={index} item={item} id={item.id} />
-          ))}
-        </div>
+          ))} 
+               
+
+        </div> */}
+        <h1 className="text-center bg-neutral-200 text-neutral-400 pt-16 h-52 mx-auto">
+          
+          belum ada berita terkini        </h1>
       </div>
     </>
   );

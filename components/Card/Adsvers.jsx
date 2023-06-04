@@ -38,7 +38,7 @@ const Advers = () => {
   return (
     <>
       <div className="max-w-7xl mx-auto h-fit ">
-        <Slider {...settings} className="w-full h-fit">
+        {/* <Slider {...settings} className="w-full h-fit">
           {dataNews.map((item) => (
             <div key={item.id} className="w-full object-cover ">
               <div className="object-cover h-[35vh] max-[md]:h-[20vh]">
@@ -52,7 +52,10 @@ const Advers = () => {
               </div>
             </div>
           ))}
-        </Slider>
+        </Slider> */}
+        <h1 className="text-center bg-neutral-200 text-neutral-400 pt-16 h-52 mx-auto">
+          sponsor space available
+        </h1>
       </div>{" "}
     </>
   );

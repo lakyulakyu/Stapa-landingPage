@@ -74,7 +74,7 @@ function MatchNow() {
                       <div className="h-full w-full left-5 ">
                         <Image
                           alt=""
-                          src={tim_1}
+                          src={tim_1 || "/Logo-default.png"}
                           height={100}
                           width={100}
                           className=" object-contain mr-0 h-10 ml-0 mx-auto sm:h-full py-auto"
@@ -85,7 +85,7 @@ function MatchNow() {
                       </p>
                       <Image
                         alt=""
-                        src={tim_2}
+                        src={tim_2 || "/Logo-default.png"}
                         height={100}
                         width={100}
                         className="object-contain  h-10 ml-0 mx-auto sm:h-full py-auto"
