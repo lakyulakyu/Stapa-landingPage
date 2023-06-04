@@ -1,156 +1,163 @@
 [
-    {
-      "id": 1,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"35",
-      "category":"goals"
-    },
-    {
-      "id": 2,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"4",
-      "category":"goals"
-    },
-    {
-      "id": 3,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"2",
-      "category":"goals"
-    },
-    {
-      "id": 4,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"5",
-      "category":"goals"
-    },
-    {
-      "id": 5,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"5",
-      "category":"goals"
-    },
-    {
-      "id": 6,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"5",
-      "category":"goals"
-    },
-    {
-      "id": 7,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"9",
-      "category":"goals"
-    },
-    {
-      "id": 8,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"5",
-      "category":"cleansheets"
-    },
-    {
-      "id": 9,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"5",
-      "category":"cleansheets"
-    },
-    {
-      "id": 10,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"5",
-      "category":"cleansheets"
-    },
-    {
-      "id": 11,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"75",
-      "category":"cleansheets"
-    },
-    {
-      "id": 12,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"4",
-      "category":"cleansheets"
-    },
-    {
-      "id": 13,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"5",
-      "category":"cleansheets"
-    },
-    {
-      "id": 14,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"3",
-      "category":"passes"
-    },
-    {
-      "id": 15,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"57",
-      "category":"passes"
-    },
-    {
-      "id": 16,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"19",
-      "category":"passes"
-    },
-    {
-      "id": 17,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"32",
-      "category":"passes"
-    },
-    {
-      "id": 18,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"38",
-      "category":"passes"
-    },
-    {
-      "id": 19,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"35",
-      "category":"passes"
-    },
-    {
-      "id": 20,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"0",
-      "category":"assist"
-    },
-    {
-      "id": 21,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"10",
-      "category":"assist"
-    },
-    {
-      "id": 22,
-      "img":"https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
-      "name":"zhidan marties alfareza",
-      "number":"53",
-      "category":"assist"
-    }
-  ]
+  {
+    "id": 1,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "35",
+    "category": "goals",
+    "position": "GKP",
+    "yellow_card": ["10", "78"],
+    "red_card": [],
+    "player_in": "0",
+    "player_out": "80",
+    "minutes_played": "90",
+    "goal": ["43", "91"]
+  },
+  {
+    "id": 2,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "4",
+    "category": "goals"
+  },
+  {
+    "id": 3,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "2",
+    "category": "goals"
+  },
+  {
+    "id": 4,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "5",
+    "category": "goals"
+  },
+  {
+    "id": 5,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "5",
+    "category": "goals"
+  },
+  {
+    "id": 6,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "5",
+    "category": "goals"
+  },
+  {
+    "id": 7,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "9",
+    "category": "goals"
+  },
+  {
+    "id": 8,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "5",
+    "category": "cleansheets"
+  },
+  {
+    "id": 9,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "5",
+    "category": "cleansheets"
+  },
+  {
+    "id": 10,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "5",
+    "category": "cleansheets"
+  },
+  {
+    "id": 11,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "75",
+    "category": "cleansheets"
+  },
+  {
+    "id": 12,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "4",
+    "category": "cleansheets"
+  },
+  {
+    "id": 13,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "5",
+    "category": "cleansheets"
+  },
+  {
+    "id": 14,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "3",
+    "category": "passes"
+  },
+  {
+    "id": 15,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "57",
+    "category": "passes"
+  },
+  {
+    "id": 16,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "19",
+    "category": "passes"
+  },
+  {
+    "id": 17,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "32",
+    "category": "passes"
+  },
+  {
+    "id": 18,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "38",
+    "category": "passes"
+  },
+  {
+    "id": 19,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "35",
+    "category": "passes"
+  },
+  {
+    "id": 20,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "0",
+    "category": "assist"
+  },
+  {
+    "id": 21,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "10",
+    "category": "assist"
+  },
+  {
+    "id": 22,
+    "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
+    "name": "Zhidan Marties Alfareza",
+    "number": "53",
+    "category": "assist"
+  }
+]

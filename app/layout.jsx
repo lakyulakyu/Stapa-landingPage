@@ -49,11 +49,11 @@ export default function RootLayout({ children, path }) {
       <body
         className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable} ${poppins.variable} overflow-x-hidden`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-       
-          <Sponsorship />
-          <Footer />
+
+        <Sponsorship />
+        <Footer />
       </body>
     </html>
   );
