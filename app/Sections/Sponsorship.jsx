@@ -85,7 +85,7 @@ const Sponsorship = () => {
               sponsor Space available
             </h1>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-full ">
             {/* <Image
               src={
                 "https://images.tokopedia.net/img/cache/730/kjjBfF/2023/1/24/2e4c6869-1fe1-4996-a249-9eb299025e40.jpg"
