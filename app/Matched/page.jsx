@@ -11,7 +11,7 @@ const MatchCard = () => {
         <MatchNow />
         <div className="max-w-7xl  mx-auto  sm:mt-8 w-full mt-20 font-poppins font-semibold">
           <div className="max-[350px]:mx-auto">
-            <p className="uppercase sm:font-semibold  max-[350px]:mx-auto font-normal text-lg sm:text-2xl text-black-main">
+            <p className="uppercase sm:font-semibold text-center bg-neutral-200  max-[350px]:mx-auto font-normal text-lg sm:text-xl max-w-3xl mx-auto text-neutral-500 py-2">
               Match schedule
             </p>
           </div>

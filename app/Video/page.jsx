@@ -58,10 +58,11 @@ const Video = [
 const page = () => {
   return (
     <>
-      <div className="grid grid-cols-4 pt-24 ">
-        {Video.map((item) => (
+      <div className=" w-full h-screen  mt-32  text-center ">
+        {/* {Video.map((item) => (
           <CardVideos key={item.id} item={item} />
-        ))}
+        ))} */}
+        <h1 className=" absolute top-1/3 text-center w-full text-neutral-600 ">Belum ada video</h1>
       </div>
     </>
   );

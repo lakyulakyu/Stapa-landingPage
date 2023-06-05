@@ -137,9 +137,12 @@ const Match = () => {
                       <p className="text-xs font-semibold mt-2">{item.date}</p>
                       <p className="text-xs font-semibold flex gap-2 mt-2 ">
                         {item.time}{" "}
-                        <span className="border-l-2 border-black-main pl-2 flex gap-2" >
-                          <span className="text-lg"> <GiSoccerField /></span>
-                          {item.place} 
+                        <span className="border-l-2 border-black-main pl-2 flex gap-2">
+                          <span className="text-lg">
+                            {" "}
+                            <GiSoccerField />
+                          </span>
+                          {item.place}
                         </span>
                       </p>
                       {item.score_tim_1 && item.score_tim_2 ? (
