@@ -23,8 +23,8 @@ const Match = () => {
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    autoplay: true,
-    autoplaySpeed: 5000,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1100,
@@ -88,8 +88,8 @@ const Match = () => {
             {DataMatch.map((item) => {
               return (
                 <>
-                  <div className="h-64  py-8 w-full min-h-fit border-l border-black-main  hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6 divide-red-600">
-                    <div className="md:flex justify-between items-end pb-4">
+                  <div className="h-80 py-8 w-full min-h-fit border-l border-black-main  hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6 divide-red-600">
+                    <div className="pb-4">
                       <div className="flex  justify-evenly w-full sm:justify-between">
                         <div>
                           <Image
@@ -100,7 +100,7 @@ const Match = () => {
                             height={100}
                             className="h-16 w-16"
                           />
-                          <p className="w-16 text-sm">{item.name_tim1}</p>
+                          <p className="w-20 text-sm h-10 overflow-hidden">{item.name_tim1}</p>
                         </div>
                         <div>
                           <Image
@@ -111,17 +111,14 @@ const Match = () => {
                             height={100}
                             className="h-16 w-16"
                           />
-                          <p className="w-16 text-sm ">{item.name_tim2}</p>
+                          <p className="w-20 text-sm h-10 overflow-hidden ">{item.name_tim2}</p>
                         </div>
                       </div>
 
                       {item.score_tim_1 || item.score_tim_2 ? (
-                        <h1 className="text-lg sm:text-start text-center  font-poppins font-bold text-red-600">
-                          <span className="sm:hidden block text-sm text-black-main font-medium uppercase">
-                            score
-                          </span>
-                          {item.score_tim_1} - {item.score_tim_2}
-                        </h1>
+                        <div className="text-lg sm:text-start  text-center flex justify-evenly mt-1 w-full font-poppins font-bold text-red-600">
+                          <p>{item.score_tim_1}</p> - <p>{item.score_tim_2}</p>
+                        </div>
                       ) : (
                         ""
                       )}
@@ -137,9 +134,12 @@ const Match = () => {
                       <p className="text-xs font-semibold mt-2">{item.date}</p>
                       <p className="text-xs font-semibold flex gap-2 mt-2 ">
                         {item.time}{" "}
-                        <span className="border-l-2 border-black-main pl-2 flex gap-2" >
-                          <span className="text-lg"> <GiSoccerField /></span>
-                          {item.place} 
+                        <span className="border-l-2 border-black-main pl-2 flex gap-2">
+                          <span className="text-lg">
+                            {" "}
+                            <GiSoccerField />
+                          </span>
+                          {item.place}
                         </span>
                       </p>
                       {item.score_tim_1 && item.score_tim_2 ? (

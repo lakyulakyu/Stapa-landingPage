@@ -66,8 +66,9 @@ const Hero = () => {
                   </button>
                 </Link>
               </div> */}
-              <div className="absolute w-screen md: lg:h-full top-0 -z-10">
+              <div className="absolute w-screen lg:h-full top-0 -z-10">
                 <div className="absolute opacity-30 sm:h-full lg:h-screen w-full bg-primary-red"></div>
+                <div className="flex lg:h-96 h-32 mx-auto lg:mt-40 mt-20  w-fit">
                 <Image
                   src={'/Logo.png'}
                   alt=""
@@ -75,6 +76,15 @@ const Hero = () => {
                   height={1000}
                   className="w-full h-full object-contain lg:p-20 p-5 "
                 />
+                 <Image
+                  src={'/Logo_libra.png'}
+                  alt=""
+                  width={1000}
+                  height={1000}
+                  className="w-full h-full object-contain lg:p-20 p-5 "
+                />
+                </div>
+               
               </div>
             </div>
           );
