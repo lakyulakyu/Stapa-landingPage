@@ -172,7 +172,6 @@ const Sponsorship = () => {
             </h1>
           </div>
           <div className="md:w-1/2 w-full ">
-<<<<<<< HEAD
             {/* <Image
               src={
                 "https://images.tokopedia.net/img/cache/730/kjjBfF/2023/1/24/2e4c6869-1fe1-4996-a249-9eb299025e40.jpg"
@@ -182,10 +181,7 @@ const Sponsorship = () => {
               height={600}
               className="w-full h-full object-cover"
             /> */}
-            <h1 className="bg-neutral-600 text-white text-2xl font-normal h-full w-full text-center pt-16">
-=======
             <h1 className="bg-neutral-100 text-2xl text-neutral-400 uppercase font-normal h-full w-full text-center pt-20">
->>>>>>> 3b49b18e4652c28da84e0fc12141909bdf1e1699
               sponsor Space available
             </h1>
           </div>

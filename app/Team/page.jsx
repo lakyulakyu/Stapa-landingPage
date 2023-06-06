@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { MdArrowRight } from "react-icons/md";
 import CardTeam from "@/components/Card/CardTeam";
-import Tim from "../../Json/Tim.json"
+import Tim from "../../Json/Team";
 
 export default function AllTeam() {
   return (
@@ -16,17 +16,17 @@ export default function AllTeam() {
             return (
               <>
                 <div className="flex items-center gap-4">
-                  <p className="text-lg">  {index + 1}</p>
-            
+                  <p className="text-lg"> {index + 1}</p>
+
                   <div className="flex justify-between w-full items-center">
                     <CardTeam key={item.id} item={item} />
                     {/* <Link href={`/Team/${item.id}`}> */}
-                      <button className="bg-neutral-400  active:duration-200 ease-out flex px-2 sm:mt-6 mt-4 sm:pt-0.5 rounded-sm  sm:w-24 justify-between items-center text-light-grey font-semibold text-xs  uppercase tracking-widest">
-                        <p className="hidden sm:block">Detail</p>
-                        <span className="text-2xl rotate-90 sm:rotate-0  ">
-                          <MdArrowRight />
-                        </span>
-                      </button>
+                    <button className="bg-neutral-400  active:duration-200 ease-out flex px-2 sm:mt-6 mt-4 sm:pt-0.5 rounded-sm  sm:w-24 justify-between items-center text-light-grey font-semibold text-xs  uppercase tracking-widest">
+                      <p className="hidden sm:block">Detail</p>
+                      <span className="text-2xl rotate-90 sm:rotate-0  ">
+                        <MdArrowRight />
+                      </span>
+                    </button>
                     {/* </Link> */}
                   </div>
                 </div>
