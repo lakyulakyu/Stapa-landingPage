@@ -166,8 +166,8 @@ const Sponsorship = () => {
           })}
         </Slider>
         <div className="flex w-full h-48 px-8 mt-4">
-          <div className="w-1/2">
-            <h1 className="bg-neutral-100 hidden sm:block text-neutral-400 uppercase text-2xl font-normal h-full w-full text-center pt-20">
+          <div className=" hidden sm:block w-1/2">
+            <h1 className="bg-neutral-100  text-neutral-400 uppercase text-2xl font-normal h-full w-full text-center pt-20">
               sponsor Space available
             </h1>
           </div>

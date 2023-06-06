@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { CgArrowLongRight } from "react-icons/cg";
-import CardVideos from "../Card/CardVideos";
+import CardVideos from "../../components/Card/CardVideos";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

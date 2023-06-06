@@ -1,9 +1,9 @@
 import Hero from "./Sections/Hero";
-import Match from "@/components/User/MatchSchedule";
-import FeaturedVideos from "@/components/User/FeaturedVideos";
-import LatestNews from "@/components/User/LatestNews";
-import LfcOnSosmed from "@/components/User/LfcOnSosmed";
-import Adsvers from "@/components/Card/Adsvers";
+import Match from "./Sections/MatchSchedule";
+import FeaturedVideos from "./Sections/FeaturedVideos";
+import LatestNews from "./Sections/LatestNews";
+import Advers from "@/components/Card/Adsvers";
+import LfcOnSosmed from "./Sections/LfcOnSosmed";
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
       <Match />
       <FeaturedVideos />
       <LatestNews />
-      <Adsvers />
+      <Advers />
       <LfcOnSosmed />
     </div>
-  )
+  );
 }

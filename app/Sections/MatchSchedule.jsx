@@ -9,7 +9,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import MatchNow from "../Card/MatchNow";
+import MatchNow from "@/components/Card/MatchNow";
 import DataMatch from "../../Json/Match";
 
 const Match = () => {
@@ -23,8 +23,8 @@ const Match = () => {
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1100,

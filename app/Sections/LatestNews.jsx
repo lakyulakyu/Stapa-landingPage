@@ -7,45 +7,45 @@ import DataNews from "../../Json/News";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CardLatestNews from "../Card/CardLatestNews";
+import CardLatestNews from "@/components/Card/CardLatestNews";
 
 const LatestNews = () => {
   const sliderRef = useRef(null);
   const next = () => sliderRef.current.slickNext(+1);
   const prev = () => sliderRef.current.slickPrev(-1);
 
-  var settings = {
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 920,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 680,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // var settings = {
+  //   infinite: true,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   dots: false,
+  //   arrows: false,
+  //   autoplay: true,
+  //   autoplaySpeed: 6000,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1100,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 920,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 680,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
   return (
     <div className="md:max-w-7xl mb-10 mx-auto px-2 sm:px-10 md:mx-auto  w-full font-poppins font-semibold h-full">
       <div className="flex justify-between items-center ">
