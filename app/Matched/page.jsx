@@ -64,7 +64,7 @@ const MatchCard = () => {
                               height={100}
                               className="h-12 max-[350px]:mx-auto w-fit"
                             />
-                            <p className="font-semibold text-primary-red text-lg capitalize">
+                            <p className="font-medium text-primary-red text-lg capitalize">
                               {item.name_tim1}
                             </p>
                           </div>
