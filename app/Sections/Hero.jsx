@@ -74,14 +74,14 @@ const Hero = () => {
                     alt=""
                     width={1000}
                     height={1000}
-                    className="sm:w-full sm:h-full h-24 w-fit  object-contain lg:p-20 p-3 "
+                    className="sm:w-full sm:h-full h-24 w-fit  object-contain lg:p-20 p-3 block "
                   />
                   <Image
                     src={"/Logo_libra.png"}
                     alt=""
                     width={1000}
                     height={1000}
-                    className="sm:w-full sm:h-full h-24 w-fit object-contain lg:p-20 p-3 "
+                    className="sm:w-full sm:h-full h-24 w-fit object-contain lg:p-20 p-3 block "
                   />
                   <Image
                     src={"/Logo-Web.png"}
