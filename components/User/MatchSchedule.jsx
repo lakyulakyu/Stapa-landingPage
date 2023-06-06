@@ -98,18 +98,18 @@ const Match = () => {
                             src={item.tim_1 || "/Logo-default.png"}
                             width={100}
                             height={100}
-                            className="h-16 w-16"
+                            className="h-16 object-contain w-16"
                           />
                           <p className="w-16 text-sm">{item.name_tim1}</p>
                         </div>
                         <div>
                           <Image
                             key={item.id}
-                            src={item.tim_1 || "/Logo-default.png"}
+                            src={item.tim_2 || "/Logo-default.png"}
                             alt="logo"
                             width={100}
                             height={100}
-                            className="h-16 w-16"
+                            className="h-16 object-contain w-16"
                           />
                           <p className="w-16 text-sm ">{item.name_tim2}</p>
                         </div>

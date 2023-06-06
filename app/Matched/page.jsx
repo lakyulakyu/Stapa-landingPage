@@ -27,7 +27,7 @@ const MatchCard = () => {
                       isEven ? "bg-slate-100" : "bg-white"
                     } hover:bg-slate-100 py-4`}
                   >
-                    <Link href={`/Matched/${item.id}`}>
+                    {/* <Link href={`/Matched/${item.id}`}> */}
                       <p className="text-sm mb-2 text-center text-primary-red font-semibold -mt-1">
                         {item.liga}
                       </p>
@@ -58,14 +58,14 @@ const MatchCard = () => {
 
                             <Image
                               key={item.id}
-                              src={item.tim_1 || "/Logo-default.png"}
+                              src={item.tim_2 || "/Logo-default.png"}
                               alt="logo"
                               width={100}
                               height={100}
                               className="h-12 max-[350px]:mx-auto w-fit"
                             />
                             <p className="font-semibold text-primary-red text-lg capitalize">
-                              {item.name_tim1}
+                              {item.name_tim2}
                             </p>
                           </div>
                           <div></div>
@@ -81,7 +81,7 @@ const MatchCard = () => {
                           </p>
                         </div>
                       )}
-                    </Link>
+                    {/* </Link> */}
                   </div>
                 </div>
               </>

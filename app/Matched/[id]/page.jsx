@@ -1,165 +1,178 @@
-import React from "react";
-import { BsDownload } from "react-icons/bs";
 import Image from "next/image";
+import React from "react";
 import MatchReport from "@/components/Card/MatchReport";
+// import DetailMatch from "../../../Json/DetailMatch";
 
-const Page = () => {
+const MatchedRev = () => {
   return (
-    <div className="pt-32 h-full mb-10 ">
-      <div className=" text-end max-w-4xl mx-auto">
-        <div className="text-base flex gap-4  max-w-sm text-center text-gray-400">
-          <button className="border px-6 hover:bg-blue-400 py-2 hover:text-white  text-xl justify-between rounded-lg text-slate-300 font-semibold flex items-center  ">
-            <BsDownload />
-          </button>
-        </div>
-      </div>
-
-      <div id="htmlElement" className="min-[500px]:mt-10 mt-4">
-        <div className="flex max-[778px]:mx-10  max-[500px]:mx-3">
+    <div className="h-fit">
+      <div className="max-w-4xl mx-auto font-poppins">
+        <div className="grid grid-cols-3 mb-4 mt-24 mx-auto bg-white py-2 rounded-md shadow-xl items-center max-w-[200px] ">
           <Image
             alt=""
-            width={1000}
-            height={10000}
             src={"/Logo.png"}
-            className="h-12 w-fit md:hidden block mt-4  object-contain"
+            className="h-8 w-fit mx-auto"
+            width={100}
+            height={100}
           />
-          <div className="bg-primary-red mb-2 min-[500px]:mb-10 min-[500px]:w-60 w-32  rounded-md md:rounded-t-full font-medium text-white  mx-auto text-sm md:text-3xl max-w-4xl items-center grid grid-cols-3 text-center max-[500px]:grid-cols-1 md:w-full h-fit py-3 ">
-            <p className="min[500px]:text-end max-[500px]:mb-2 ">Tim 2 </p>
-            <div className="flex bg-black-main text-light-grey max-[500px]:text-sm md:text-4xl rounded-xl  md:scale-150 w-full md:px-5 px-1  justify-between items-center max-w-[70px] md:max-w-[150px] gap-2 md:gap-6 font-bold py-2 mx-auto">
-              <p className="">14</p>
-              <p className="-mt-2">:</p>
-              <p className=" ">0</p>
-            </div>
-            <p className="min[500px]:text-start">Tim 1 raya pening </p>
-          </div>
           <Image
             alt=""
-            width={1000}
-            height={10000}
-            src={"/Logo.png"}
-            className="h-12 w-fit md:hidden block  mt-4 object-contain"
+            src={"/Logo-Web.png"}
+            className="h-8 w-fit mx-auto"
+            width={100}
+            height={100}
+          />
+          <Image
+            alt=""
+            src={"/Logo_Libra.png"}
+            className="h-8 w-fit mx-auto"
+            width={100}
+            height={100}
           />
         </div>
 
-        <div className="flex  max-w-4xl mx-auto items-center ">
-          <Image
-            alt=""
-            width={1000}
-            height={10000}
-            src={"/Logo.png"}
-            className="h-36 w-fit md:block hidden object-contain"
-          />
-
-          <div className="uppercase w-full  ">
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                24
-              </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
-                Shoot
-              </p>
-              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                {" "}
-                3
-              </p>
-            </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                24
-              </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
-                Shoot On Target
-              </p>
-              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                {" "}
-                3
-              </p>
-            </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                24
-              </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
-                Fouls commited
-              </p>
-              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                {" "}
-                3
-              </p>
-            </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                24
-              </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
-                yellow cards
-              </p>
-              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                {" "}
-                3
-              </p>
-            </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                24
-              </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
-                Red cards
-              </p>
-              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                {" "}
-                3
-              </p>
-            </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                24
-              </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
-                Offsides
-              </p>
-              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                {" "}
-                3
-              </p>
-            </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                24
-              </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
-                Corners
-              </p>
-              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                {" "}
-                3
-              </p>
-            </div>
-            <div className=" max-w-lg items-center min-[500px]:mb-6 mb-2 max-[500px]:max-w-xs   flex font-medium max-[500px]: sm:text-2xl justify-around w-full  mx-auto text-center ">
-              <p className="bg-red-200 rounded-l-lg  w-24 py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                24
-              </p>
-              <p className="w-80 border-x-8 border-black-main bg-primary-red text-white min-[500px]:text-xl text-sm font-semibold max-[500px]:py-2 py-1 min-[500px]:scale-125 mt-1 rounded-b-2xl">
-                Posession
-              </p>
-              <p className="bg-blue-200 w-24 rounded-r-lg py-1 min-[500px]:rounded-t-full min-[500px]:w-full max-w-[120px]">
-                {" "}
-                3
-              </p>
+        <div className="wrapper text-sm flex  md:flex-row">
+          <div className="w-full ">
+            <div className="flex flex-col items-center">
+              <Image
+                src={"/Emha.jpeg"}
+                alt=""
+                width={300}
+                height={300}
+                className="lg:w-40 lg:h-fit h-12 w-fit"
+              />
+              <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
+                Mutiara Solo
+              </h3>
             </div>
           </div>
-          <Image
-            alt=""
-            width={1000}
-            height={1000}
-            src={"/Logo.png"}
-            className="h-36 w-fit md:block hidden object-contain"
-          />
+          <div className="flex items-center flex-col uppercase w-full ">
+            <div className="sm:text-xl text-xs text-center flex items-center content-center flex-col">
+              <h6>03/06/2017</h6>
+              <h6 className="w-40 items-center ">Solo Premiere League</h6>
+            </div>
+            <h2 className="md:text-5xl text-lg mt-2 font-medium ">1 - 4</h2>
+          </div>
+          <div className="w-full ">
+            <div className="flex flex-col items-center">
+              <Image
+                src={"/mutiara.jpeg"}
+                alt=""
+                width={300}
+                height={300}
+                className="lg:w-40 lg:h-fit h-12 w-fit"
+              />
+              <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
+                EM HA RSU
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 sm:mx-12 mx-12 flex flex-col gap-y-3">
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>3</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Shoot Off Target</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>8</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>4</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Shoot on Target</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>8</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>1</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Yellow Cards</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>1</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Red Cards</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Offsides</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>2</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Corners</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>2</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Pinalti</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>1</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Free kick</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>4</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>40%</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Possession</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>60%</h6>
+            </div>
+          </div>
+          <MatchReport />
         </div>
       </div>
-      <MatchReport />
     </div>
   );
 };
 
-export default Page;
+export default MatchedRev;
