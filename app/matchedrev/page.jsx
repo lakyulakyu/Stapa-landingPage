@@ -34,11 +34,11 @@ const MatchedRev = () => {
           <div className="w-full ">
             <div className="flex flex-col items-center">
               <Image
-                src={"/Emha.jpeg"}
+                src={"/mutiara.jpeg"}
                 alt=""
                 width={300}
                 height={300}
-                className="lg:w-40 lg:h-fit h-12 w-fit"
+                className="lg:w-32 lg:h-fit h-12 w-fit"
               />
               <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
                 Mutiara Solo
@@ -55,11 +55,11 @@ const MatchedRev = () => {
           <div className="w-full ">
             <div className="flex flex-col items-center">
               <Image
-                src={"/mutiara.jpeg"}
                 alt=""
+                src={"/Emha.jpeg"}
                 width={300}
                 height={300}
-                className="lg:w-40 lg:h-fit h-12 w-fit"
+                className="lg:w-32 lg:h-fit h-12 w-fit"
               />
               <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
                 EM HA RSU
