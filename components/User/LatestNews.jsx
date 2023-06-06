@@ -85,9 +85,9 @@ const LatestNews = () => {
             ))}
            
           </Slider> */}
-           <h1 className="text-center bg-neutral-200 text-neutral-400 pt-10 h-32 max-w-3xl mx-auto">
-              belum ada berita terkini
-            </h1>
+          <h1 className="text-center px-5 font-normal bg-neutral-200 text-neutral-400 pt-12 uppercase h-32 max-w-3xl mx-auto">
+          belum ada berita terkini
+        </h1>
         </div>
       </div>
     </div>

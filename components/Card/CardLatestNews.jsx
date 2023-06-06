@@ -12,8 +12,7 @@ const CardLatestNews = ({ item }) => {
         >
           <div className="max-w-[200px] absolute px-5 bottom-10 text-white z-10  ">
             <h1
-              className="text-xs font-semibold uppercase bg-white
-  px-2 py-1 bg-opacity-70 w-fit text-primary-red"
+              className="text-xs font-semibold uppercase bg-white px-2 py-1 bg-opacity-70 w-fit text-primary-red"
             >
               {item.media}
             </h1>

@@ -53,8 +53,8 @@ const Advers = () => {
             </div>
           ))}
         </Slider> */}
-        <h1 className="text-center bg-neutral-200 text-neutral-400 pt-16 h-52 mx-auto">
-          sponsor space available
+        <h1 className="text-center px-5 font-normal bg-neutral-200 text-neutral-400 pt-20 uppercase h-44 w-full mx-auto">
+          Sponsor Available
         </h1>
       </div>{" "}
     </>

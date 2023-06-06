@@ -58,13 +58,11 @@ const Video = [
 const page = () => {
   return (
     <>
-      <div className="pt-24 ">
+      <div className=" w-full h-screen  mt-32  text-center ">
         {/* {Video.map((item) => (
           <CardVideos key={item.id} item={item} />
         ))} */}
-         <h1 className="text-center bg-neutral-200  text-neutral-400 pt-20 h-52 mx-auto">
-          
-          belum ada berita terkini   </h1>
+        <h1 className=" absolute top-1/3 text-center w-full text-neutral-600 ">Belum ada video</h1>
       </div>
     </>
   );

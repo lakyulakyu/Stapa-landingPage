@@ -1,137 +1,136 @@
 "use client";
 import React, { useState } from "react";
-const data = [
-  {
-    id: 1,
-    position: "Gkp",
-    name: "A.windartono",
-    number: "5",
-    menute: "23",
-    switched: [
-      { id: 1, in: "30", status: true },
-      {
-        id: 2,
-        time: "",
-        status: false,
-      },
-    ],
+import Image from "next/image";
 
-    red: [
-      {
-        time: "",
-        status: false,
-      },
-    ],
-    yellow: [
-      {
-        time: "20",
-        status: true,
-      },
-    ],
-    goal: [
-      {
-        id: 1,
-        time: "40",
-        status: true,
-      },
-      {
-        id: 2,
-        time: "38",
-        status: true,
-      },
-    ],
-  },
-  {
-    id: 2,
-    position: "Gkp",
-    name: "A.windartono",
-    number: "5",
-    menute: "23",
-    switched: [
-      { id: 1, in: "30", status: true },
-      {
-        id: 2,
-        time: "",
-        status: false,
-      },
-    ],
+// const data = [
+//   {
+//     id: 1,
+//     position: "Gkp",
+//     name: "A.windartono",
+//     number: "5",
+//     menute: "23",
+//     switched: [
+//       { id: 1, in: "30", status: true },
+//       {
+//         id: 2,
+//         time: "",
+//         status: false,
+//       },
+//     ],
 
-    red: [
-      {
-        time: "",
-        status: false,
-      },
-    ],
-    yellow: [
-      {
-        time: "20",
-        status: true,
-      },
-    ],
-    goal: [
-      {
-        id: 1,
-        time: "40",
-        status: true,
-      },
-      {
-        id: 2,
-        time: "38",
-        status: true,
-      },
-    ],
-  },
-  {
-    id: 3,
-    position: "Gkp",
-    name: "A.windartono",
-    number: "5",
-    menute: "23",
-    switched: [
-      { id: 1, in: "30", status: true },
-      {
-        id: 2,
-        time: "",
-        status: false,
-      },
-    ],
+//     red: [
+//       {
+//         time: "",
+//         status: false,
+//       },
+//     ],
+//     yellow: [
+//       {
+//         time: "20",
+//         status: true,
+//       },
+//     ],
+//     goal: [
+//       {
+//         id: 1,
+//         time: "40",
+//         status: true,
+//       },
+//       {
+//         id: 2,
+//         time: "38",
+//         status: true,
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     position: "Gkp",
+//     name: "A.windartono",
+//     number: "5",
+//     menute: "23",
+//     switched: [
+//       { id: 1, in: "30", status: true },
+//       {
+//         id: 2,
+//         time: "",
+//         status: false,
+//       },
+//     ],
 
-    red: [
-      {
-        time: "",
-        status: false,
-      },
-    ],
-    yellow: [
-      {
-        time: "20",
-        status: true,
-      },
-    ],
-    goal: [
-      {
-        id: 1,
-        time: "40",
-        status: true,
-      },
-      {
-        id: 2,
-        time: "38",
-        status: true,
-      },
-    ],
-  },
-];
+//     red: [
+//       {
+//         time: "",
+//         status: false,
+//       },
+//     ],
+//     yellow: [
+//       {
+//         time: "20",
+//         status: true,
+//       },
+//     ],
+//     goal: [
+//       {
+//         id: 1,
+//         time: "40",
+//         status: true,
+//       },
+//       {
+//         id: 2,
+//         time: "38",
+//         status: true,
+//       },
+//     ],
+//   },
+//   {
+//     id: 3,
+//     position: "Gkp",
+//     name: "A.windartono",
+//     number: "5",
+//     menute: "23",
+//     switched: [
+//       { id: 1, in: "30", status: true },
+//       {
+//         id: 2,
+//         time: "",
+//         status: false,
+//       },
+//     ],
+
+//     red: [
+//       {
+//         time: "",
+//         status: false,
+//       },
+//     ],
+//     yellow: [
+//       {
+//         time: "20",
+//         status: true,
+//       },
+//     ],
+//     goal: [
+//       {
+//         id: 1,
+//         time: "40",
+//         status: true,
+//       },
+//       {
+//         id: 2,
+//         time: "38",
+//         status: true,
+//       },
+//     ],
+//   },
+// ];
 
 const MatchReport = () => {
   const [showDetail, setShowDetail] = useState(false);
-
   const handleButtonClick = () => {
     setShowDetail(!showDetail);
   };
-  var match_1 = 47;
-  var match_2 = 51;
-  var total_match = match_1 + match_2;
+
   return (
     <>
       <div className="max-w-3xl mx-auto">
@@ -152,9 +151,15 @@ const MatchReport = () => {
       <div>
         {showDetail && (
           <>
-            <h1 className="text-2xl text-gray-400 text-center font-light ">
-              Halaman ini masih dalam proses pengembangan
-            </h1>
+            <div>
+              <Image
+                alt=""
+                src={tim_1 || "/Logo-default.png"}
+                height={100}
+                width={100}
+                className=" object-contain mr-0 h-10 ml-0 mx-auto sm:h-full py-auto"
+              />
+            </div>
           </>
         )}
       </div>

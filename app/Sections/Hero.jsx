@@ -69,6 +69,7 @@ const Hero = () => {
               <div className="absolute w-screen lg:h-full top-0 -z-10">
                 <div className="absolute opacity-30 sm:h-full lg:h-screen w-full bg-primary-red"></div>
                 <div className="flex lg:h-96 h-32 mx-auto lg:mt-40 mt-20  w-fit">
+<<<<<<< HEAD
                 <Image
                   src={'/Logo.png'}
                   alt=""
@@ -85,6 +86,30 @@ const Hero = () => {
                 />
                 </div>
                
+=======
+                  <Image
+                    src={"/Logo.png"}
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="sm:w-full sm:h-full h-24 w-fit  object-contain lg:p-20 p-3 "
+                  />
+                  <Image
+                    src={"/Logo_libra.png"}
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="sm:w-full sm:h-full h-24 w-fit object-contain lg:p-20 p-3 "
+                  />
+                  <Image
+                    src={"/Logo-Web.png"}
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="sm:w-full sm:h-full h-24 w-fit object-contain lg:p-20 p-3 "
+                  />
+                </div>
+>>>>>>> 3b49b18e4652c28da84e0fc12141909bdf1e1699
               </div>
             </div>
           );

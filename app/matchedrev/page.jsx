@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import MatchReport from "@/components/Card/MatchReport";
-// import DetailMatch from "../../../Json/DetailMatch";
 
 const MatchedRev = () => {
   return (

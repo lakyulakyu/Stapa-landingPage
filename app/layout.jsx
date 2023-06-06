@@ -51,9 +51,9 @@ export default function RootLayout({ children, path }) {
       >
         <Navbar />
         {children}
-       
-          <Sponsorship />
-          <Footer />
+
+        <Sponsorship />
+        <Footer />
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 function TimeAgo({ date, time }) {
   const [timeAgo, setTimeAgo] = useState("");
