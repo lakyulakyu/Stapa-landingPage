@@ -2,138 +2,16 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-// const data = [
-//   {
-//     id: 1,
-//     position: "Gkp",
-//     name: "A.windartono",
-//     number: "5",
-//     menute: "23",
-//     switched: [
-//       { id: 1, in: "30", status: true },
-//       {
-//         id: 2,
-//         time: "",
-//         status: false,
-//       },
-//     ],
-
-//     red: [
-//       {
-//         time: "",
-//         status: false,
-//       },
-//     ],
-//     yellow: [
-//       {
-//         time: "20",
-//         status: true,
-//       },
-//     ],
-//     goal: [
-//       {
-//         id: 1,
-//         time: "40",
-//         status: true,
-//       },
-//       {
-//         id: 2,
-//         time: "38",
-//         status: true,
-//       },
-//     ],
-//   },
-//   {
-//     id: 2,
-//     position: "Gkp",
-//     name: "A.windartono",
-//     number: "5",
-//     menute: "23",
-//     switched: [
-//       { id: 1, in: "30", status: true },
-//       {
-//         id: 2,
-//         time: "",
-//         status: false,
-//       },
-//     ],
-
-//     red: [
-//       {
-//         time: "",
-//         status: false,
-//       },
-//     ],
-//     yellow: [
-//       {
-//         time: "20",
-//         status: true,
-//       },
-//     ],
-//     goal: [
-//       {
-//         id: 1,
-//         time: "40",
-//         status: true,
-//       },
-//       {
-//         id: 2,
-//         time: "38",
-//         status: true,
-//       },
-//     ],
-//   },
-//   {
-//     id: 3,
-//     position: "Gkp",
-//     name: "A.windartono",
-//     number: "5",
-//     menute: "23",
-//     switched: [
-//       { id: 1, in: "30", status: true },
-//       {
-//         id: 2,
-//         time: "",
-//         status: false,
-//       },
-//     ],
-
-//     red: [
-//       {
-//         time: "",
-//         status: false,
-//       },
-//     ],
-//     yellow: [
-//       {
-//         time: "20",
-//         status: true,
-//       },
-//     ],
-//     goal: [
-//       {
-//         id: 1,
-//         time: "40",
-//         status: true,
-//       },
-//       {
-//         id: 2,
-//         time: "38",
-//         status: true,
-//       },
-//     ],
-//   },
-// ];
-
-const MatchReport = () => {
+const MatchReport = ({item}) => {
   const [showDetail, setShowDetail] = useState(false);
   const handleButtonClick = () => {
     setShowDetail(!showDetail);
   };
 
+  
   return (
     <>
-      <div className="max-w-3xl mx-auto">
+      <div className="w-full mx-auto">
         <button
           onClick={handleButtonClick}
           className={`  py-2 w-fit px-20 text-center uppercase mx-auto text-lg justify-between rounded-lg font-normal flex items-center ${
@@ -154,10 +32,10 @@ const MatchReport = () => {
             <div>
               <Image
                 alt=""
-                src={tim_1 || "/Logo-default.png"}
-                height={100}
-                width={100}
-                className=" object-contain mr-0 h-10 ml-0 mx-auto sm:h-full py-auto"
+                src={item.detail_match[0].detail_match}
+                height={1000}
+                width={1000}
+                className="object-contain mr-0 ml-0 mx-auto h-full py-auto"
               />
             </div>
           </>

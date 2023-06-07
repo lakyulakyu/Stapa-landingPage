@@ -12,7 +12,13 @@
     "date": "2023-06-04",
     "time": "08:00",
     "group": "A",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [
+      {
+        "detail": "/matched-1.png",
+        "detail_match": "/detail-matched-1.png"
+      }
+    ]
   },
   {
     "id": 2,
@@ -27,7 +33,13 @@
     "date": "2023-06-04",
     "time": "07:20",
     "group": "A",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [
+      {
+        "detail": "/matched-2.png",
+        "detail_match": "/detail-matched-2.png"
+      }
+    ]
   },
 
   {
@@ -39,12 +51,13 @@
     "name_tim2": "SURAKARTA UNITED",
     "score_tim_1": "",
     "score_tim_2": "",
-    "status":"Ditunda",
+    "status": "Ditunda",
     "liga": "soloraya premiere league",
     "date": "2023-06-04",
     "time": "10:40",
     "group": "A",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
 
   {
@@ -56,12 +69,13 @@
     "name_tim2": "GIRIMUDA FC",
     "score_tim_1": "",
     "score_tim_2": "",
-    "status":"Ditunda",
+    "status": "Ditunda",
     "liga": "soloraya premiere league",
     "date": "2023-06-4",
     "time": "12:00",
     "group": "A",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
 
   {
@@ -77,7 +91,8 @@
     "date": "2023-06-10",
     "time": "13:45",
     "group": "B",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 6,
@@ -92,7 +107,8 @@
     "date": "2023-06-10",
     "time": "15:15",
     "group": "B",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
 
   {
@@ -108,7 +124,8 @@
     "date": "2023-06-10",
     "time": "16:35",
     "group": "B",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 8,
@@ -123,7 +140,8 @@
     "date": "2023-05-30",
     "time": "13:45",
     "group": "B",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
 
   {
@@ -139,7 +157,8 @@
     "date": "2023-06-10",
     "time": "15:15",
     "group": "C",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
 
   {
@@ -155,7 +174,8 @@
     "date": "2023-06-10",
     "time": "16:35",
     "group": "C",
-    "place": "anfield"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
 
   {
@@ -171,7 +191,8 @@
     "date": "2023-06-11",
     "time": "07:30",
     "group": "C",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
 
   {
@@ -187,7 +208,8 @@
     "date": "2023-06-11",
     "time": "08:50",
     "group": "C",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 13,
@@ -202,7 +224,8 @@
     "date": "2023-06-11",
     "time": "10:10",
     "group": "D",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 14,
@@ -217,7 +240,8 @@
     "date": "2023-06-11",
     "time": "11:30",
     "group": "D",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 15,
@@ -232,7 +256,8 @@
     "date": "2023-06-11",
     "time": "12:50",
     "group": "D",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 16,
@@ -247,7 +272,8 @@
     "date": "2023-06-11",
     "time": "12:50",
     "group": "D",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 17,
@@ -262,7 +288,8 @@
     "date": "2023-06-17",
     "time": "13:45",
     "group": "D",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 18,
@@ -277,7 +304,8 @@
     "date": "2023-06-17",
     "time": "15:15",
     "group": "D",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 19,
@@ -292,7 +320,8 @@
     "date": "2023-06-17",
     "time": "16:35",
     "group": "D",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 20,
@@ -307,7 +336,8 @@
     "date": "2023-06-17",
     "time": "13:45",
     "group": "B",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 21,
@@ -322,7 +352,8 @@
     "date": "2023-06-17",
     "time": "13:45",
     "group": "B",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 22,
@@ -337,7 +368,8 @@
     "date": "2023-06-17",
     "time": "16:35",
     "group": "B",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 23,
@@ -352,7 +384,8 @@
     "date": "2023-06-18",
     "time": "07:30",
     "group": "C",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 24,
@@ -367,7 +400,8 @@
     "date": "2023-06-18",
     "time": "07:30",
     "group": "C",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 25,
@@ -382,7 +416,8 @@
     "date": "2023-06-18",
     "time": "08:50",
     "group": "C",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 26,
@@ -397,7 +432,8 @@
     "date": "2023-06-18",
     "time": "10:10",
     "group": "C",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 27,
@@ -412,7 +448,8 @@
     "date": "2023-06-18",
     "time": "11:30",
     "group": "C",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 28,
@@ -427,7 +464,8 @@
     "date": "2023-06-18",
     "time": "12:50",
     "group": "D",
-    "place": "UNS"
+    "place": "UNS",
+    "detail_match": [{}]
   },
   {
     "id": 29,
@@ -442,7 +480,8 @@
     "date": "2023-06-18",
     "time": "07:30",
     "group": "B",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 30,
@@ -457,7 +496,8 @@
     "date": "2023-06-18",
     "time": "08:50",
     "group": "A",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 31,
@@ -472,7 +512,8 @@
     "date": "2023-06-18",
     "time": "08:50",
     "group": "A",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 32,
@@ -487,7 +528,8 @@
     "date": "2023-06-18",
     "time": "10:10",
     "group": "A",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 33,
@@ -502,7 +544,8 @@
     "date": "2023-06-18",
     "time": "11:30",
     "group": "A",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   },
   {
     "id": 34,
@@ -517,6 +560,7 @@
     "date": "2023-06-18",
     "time": "12:50",
     "group": "A",
-    "place": "KOPASUS"
+    "place": "KOPASUS",
+    "detail_match": [{}]
   }
 ]

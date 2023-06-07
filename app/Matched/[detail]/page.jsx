@@ -1,9 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import MatchReport from "@/components/Card/MatchReport";
-// import DetailMatch from "../../../Json/DetailMatch";
-
-const MatchedRev = () => {
+import Match from "../../../Json/Match";
+import Link from "next/link";
+const MatchedRev = ({ params }) => {
+  const id = params.detail;
+  const item = Match.find((item) => item.id === parseInt(id));
+  console.log("item.detail_match.detail", item.detail_match[0].detail);
   return (
     <div className="h-fit">
       <div className="max-w-4xl mx-auto font-poppins">
@@ -30,7 +33,7 @@ const MatchedRev = () => {
             height={100}
           />
         </div>
-
+        {/* 
         <div className="wrapper text-sm flex  md:flex-row">
           <div className="w-full ">
             <div className="flex flex-col items-center">
@@ -67,9 +70,9 @@ const MatchedRev = () => {
               </h3>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="mt-4 sm:mx-12 mx-12 flex flex-col gap-y-3">
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+          {/* <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
             <div className="flex justify-center w-1/4">
               <h6>3</h6>
             </div>
@@ -167,8 +170,31 @@ const MatchedRev = () => {
             <div className="flex justify-center w-1/4">
               <h6>60%</h6>
             </div>
-          </div>
-          <MatchReport />
+          </div> */}
+          {item.detail_match[0].detail ? (
+            <>
+              <Image
+                src={item.detail_match[0].detail}
+                alt="hello"
+                width={1000}
+                height={1000}
+              />
+              <MatchReport item={item} key={item.id} />
+            </>
+          ) : (
+            <>
+              <div className="h-[20vh] items-center text-center">
+                <p className="items-cente mt-10 uppercase text-neutral-600">
+                  belum ada data
+                </p>
+                <Link href={"/Matched"}>
+                  <button className="h-8 bg-primary-red px-4 mt-5 rounded-md text-white uppercase">
+                    kebali ke halaman utama
+                  </button>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -100,7 +100,9 @@ const Match = () => {
                             height={100}
                             className="h-16 object-contain w-16"
                           />
-                          <p className="w-20 text-sm h-10 overflow-hidden">{item.name_tim1}</p>
+                          <p className="w-20 text-sm h-10 overflow-hidden">
+                            {item.name_tim1}
+                          </p>
                         </div>
                         <div>
                           <Image
@@ -111,7 +113,9 @@ const Match = () => {
                             height={100}
                             className="h-16 object-contain w-16"
                           />
-                          <p className="w-20 text-sm h-10 overflow-hidden ">{item.name_tim2}</p>
+                          <p className="w-20 text-sm h-10 overflow-hidden ">
+                            {item.name_tim2}
+                          </p>
                         </div>
                       </div>
 

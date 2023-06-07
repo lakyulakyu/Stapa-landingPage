@@ -19,7 +19,7 @@ const ListNews = () => {
           ))}
       
         </div> */}
-        <h1 className=" absolute top-1/3 text-center max-w-7xl w-full text-neutral-600 ">
+        <h1 className=" relative top-1/3 text-center max-w-3xl mx-auto w-full text-neutral-600 ">
           Belum ada berita terkini
         </h1>
       </div>
