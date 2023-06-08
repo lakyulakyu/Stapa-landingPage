@@ -12,7 +12,7 @@ export default function CardPlayer({ category }) {
           {DataStats.filter((product) => product.category === category).map(
             ({ name, number, img }) => (
               <>
-                <Link href={""}>
+                {/* <Link href={""}> */}
                   <div className="mb-4 sm:mb-0">
                     <div className="sm:flex  md:flex-col md:items-start md:h-fit md:py-2 h-20 sm:h-14 items-center text-base text-black-main font-poppins justify-between">
                       <h1 className="w-52 ">{name}</h1>
@@ -30,7 +30,7 @@ export default function CardPlayer({ category }) {
                       />
                     </div>
                   </div>
-                </Link>
+                {/* </Link> */}
               </>
             )
           )}

@@ -1,7 +1,7 @@
 import React from "react";
-import NewsCard from "../../components/Card/CardNews";
-import NewsData from "../../Json/News";
-import Advers from "@/components/Card/Adsvers";
+// import NewsCard from "../../components/Card/CardNews";
+// import NewsData from "../../Json/News";
+// import Advers from "@/components/Card/Adsvers";
 
 const ListNews = () => {
   return (

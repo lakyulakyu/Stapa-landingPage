@@ -128,7 +128,7 @@ const FeaturedVideos = () => {
           </button>
           <button
             onClick={next}
-            className="px-2 hover:bg-slate-100 rounded-r-lg py-4 text-gray-400  "
+            className="px-2 hover:bg-slate-100 rounded-r-lg py-4 text-primary-red  "
           >
             <CgArrowLongRight />
           </button>
