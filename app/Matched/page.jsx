@@ -27,7 +27,7 @@ const MatchCard = () => {
                       isEven ? "bg-slate-100" : "bg-white"
                     } hover:bg-slate-100 py-4`}
                   >
-                    <Link href={item.detail_match !==null ? (`/Matched/${item.id}`):(``)}>
+                    <Link href={`/Matched/${item.id}`}>
                       <p className="text-sm mb-2 text-center text-primary-red font-semibold -mt-1">
                         {item.liga}
                       </p>

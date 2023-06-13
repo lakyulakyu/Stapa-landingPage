@@ -39,8 +39,8 @@ const sourceSerifPro = Source_Serif_Pro({
 });
 
 export const metadata = {
-  title: "STAPA",
-  description: "Website for ",
+  title: "LMSS",
+  description: "Website for",
 };
 
 export default function RootLayout({ children, path }) {

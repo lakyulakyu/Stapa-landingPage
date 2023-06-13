@@ -59,15 +59,16 @@ const LatestNews = () => {
             </p>
           </Link>
         </div>
-        <div className=" flex divide-x-2  text-2xl">
+        <div className=" flex text-2xl">
           <button onClick={prev} className="">
-            <h1 className="rotate-180 hover:bg-slate-100 rounded-lg py-4 px-2 text-gray-400">
+          <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
+
               <CgArrowLongRight />
             </h1>
           </button>
           <button
             onClick={next}
-            className="px-2 text-red-500 hover:bg-slate-100 rounded-lg py-4  "
+            className="px-2 text-red-500 hover:bg-slate-100 py-4  "
           >
             <CgArrowLongRight />
           </button>

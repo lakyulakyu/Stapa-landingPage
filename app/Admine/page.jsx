@@ -6,6 +6,7 @@ import Sosmed from "@/components/Admine/Sosmed";
 import Video from "@/components/Admine/Video";
 import Sponsor from "@/components/Admine/Sponsor";
 import DetailMatch from "@/components/Admine/DetailMatch";
+import PlayerDetail from "@/components/Admine/playerDetail";
 const page = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const page = () => {
       <Sponsor />
       <Video />
       <DetailMatch />
+      <PlayerDetail/>
     </>
   );
 };

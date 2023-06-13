@@ -120,9 +120,10 @@ const FeaturedVideos = () => {
             Featured videos
           </h2>
         </div>
-        <div className=" flex divide-x-2 divide-gray-400  text-2xl">
+        <div className=" flex   text-2xl">
           <button onClick={prev}>
-            <h1 className="rotate-180 hover:bg-slate-100 rounded-r-lg py-4 px-2 text-gray-400">
+          <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
+
               <CgArrowLongRight />
             </h1>
           </button>

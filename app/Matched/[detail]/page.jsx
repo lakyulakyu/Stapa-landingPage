@@ -189,7 +189,7 @@ const MatchedRev = ({ params }) => {
                 </p>
                 <Link href={"/Matched"}>
                   <button className="h-8 bg-primary-red px-4 mt-5 rounded-md text-white uppercase">
-                    kebali ke halaman utama
+                    kembali
                   </button>
                 </Link>
               </div>

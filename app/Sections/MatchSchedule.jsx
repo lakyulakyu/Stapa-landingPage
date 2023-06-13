@@ -64,22 +64,22 @@ const Match = () => {
                 </p>
               </Link>
             </div>
-            <div className=" flex divide-x-2  text-2xl">
+            <div className=" flex  text-2xl">
               <button onClick={prev} className="">
-                <h1 className="rotate-180 hover:bg-slate-100 rounded-lg py-4 px-2 text-gray-400">
+                <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
                   <CgArrowLongRight />
                 </h1>
               </button>
               <button
                 onClick={next}
-                className="px-2 text-red-500 hover:bg-slate-100 rounded-lg py-4  "
+                className="px-2 text-red-500 hover:bg-slate-100  py-4  "
               >
                 <CgArrowLongRight />
               </button>
             </div>
           </div>
         </div>
-        <div className=" h-full md:mt-10 ">
+        <div className="h-full md:mt-10 ">
           <Slider
             {...settings}
             ref={sliderRef}
@@ -88,7 +88,7 @@ const Match = () => {
             {DataMatch.map((item) => {
               return (
                 <>
-                  <div className="h-80 py-8 w-full min-h-fit border-l border-black-main  hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6 divide-red-600">
+                  <div className="h-80 py-8 w-full min-h-fit border-l border-neutral-500  hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6">
                     <div className="pb-4">
                       <div className="flex  justify-evenly w-full sm:justify-between">
                         <div>
@@ -98,9 +98,9 @@ const Match = () => {
                             src={item.tim_1 || "/Logo-default.png"}
                             width={100}
                             height={100}
-                            className="h-16 object-contain w-16"
+                            className="h-16 object-contain mx-auto w-16"
                           />
-                          <p className="w-20 text-sm h-10 overflow-hidden">
+                          <p className="w-20 text-sm text-center h-10 overflow-hidden">
                             {item.name_tim1}
                           </p>
                         </div>
@@ -111,9 +111,9 @@ const Match = () => {
                             alt="logo"
                             width={100}
                             height={100}
-                            className="h-16 object-contain w-16"
+                            className="h-14 object-contain mx-auto w-14"
                           />
-                          <p className="w-20 text-sm h-10 overflow-hidden ">
+                          <p className="w-20 text-sm text-center h-10 overflow-hidden ">
                             {item.name_tim2}
                           </p>
                         </div>

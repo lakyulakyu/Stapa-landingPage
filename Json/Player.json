@@ -4,20 +4,15 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "35",
-    "category": "goals",
-    "position": "GKP",
-    "yellow_card": ["10", "78"],
-    "red_card": [],
-    "player_in": "0",
-    "player_out": "80",
-    "minutes_played": "90",
-    "goal": ["43", "91"]
+    "birthday":"2000-03-04",
+    "category": "goals"
   },
   {
     "id": 2,
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "4",
+    "birthday":"2000-03-04",
     "category": "goals"
   },
   {
@@ -25,6 +20,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "2",
+    "birthday":"2000-03-04",
     "category": "goals"
   },
   {
@@ -32,6 +28,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
+    "birthday":"2000-03-04",
     "category": "goals"
   },
   {
@@ -39,6 +36,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
+    "birthday":"2000-03-04",
     "category": "goals"
   },
   {
@@ -46,6 +44,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
+    "birthday":"2000-03-04",
     "category": "goals"
   },
   {
@@ -53,6 +52,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "9",
+    "birthday":"2000-03-04",
     "category": "goals"
   },
   {
@@ -60,6 +60,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
+    "birthday":"2000-03-04",
     "category": "cleansheets"
   },
   {
@@ -67,6 +68,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
+    "birthday":"2000-03-04",
     "category": "cleansheets"
   },
   {
@@ -74,6 +76,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
+    "birthday":"2000-03-04",
     "category": "cleansheets"
   },
   {
@@ -81,6 +84,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "75",
+    "birthday":"2000-03-04",
     "category": "cleansheets"
   },
   {
@@ -88,6 +92,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "4",
+    "birthday":"2000-03-04",
     "category": "cleansheets"
   },
   {
@@ -95,6 +100,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
+    "birthday":"2000-03-04",
     "category": "cleansheets"
   },
   {
@@ -102,6 +108,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "3",
+    "birthday":"2000-03-04",
     "category": "passes"
   },
   {
@@ -109,6 +116,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "57",
+    "birthday":"2000-03-04",
     "category": "passes"
   },
   {
@@ -116,6 +124,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "19",
+    "birthday":"2000-03-04",
     "category": "passes"
   },
   {
@@ -123,6 +132,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "32",
+    "birthday":"2000-03-04",
     "category": "passes"
   },
   {
@@ -130,6 +140,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "38",
+    "birthday":"2000-03-04",
     "category": "passes"
   },
   {
@@ -137,6 +148,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "35",
+    "birthday":"2000-03-04",
     "category": "passes"
   },
   {
@@ -144,6 +156,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "0",
+    "birthday":"2000-03-04",
     "category": "assist"
   },
   {
@@ -151,6 +164,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "10",
+    "birthday":"2000-03-04",
     "category": "assist"
   },
   {
@@ -158,6 +172,7 @@
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "53",
+    "birthday":"2000-03-04",
     "category": "assist"
   }
 ]

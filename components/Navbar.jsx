@@ -57,7 +57,7 @@ useEffect(() => {
 const toggleMenu = () => {
   setIsOpen(!isOpen);
 };
-  const isDetailPage = typeof window !== "undefined" ? window.location.pathname.includes("/Admine") : undefined;
+  const isDetailPage = typeof window !== "undefined" ? window.location.pathname.includes("/admine") : undefined;
   if (isDetailPage) {
     return null;
   }
