@@ -136,9 +136,10 @@ const LfcOnSosmed = () => {
     <div className="max-w-7xl mx-auto lg:h-[55vh] lg:mt-24 px-2 sm:px-10 md:mx-auto w-full font-poppins font-semibold h-full">
       <div className="flex justify-between items-center ">
         <div>
-          <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
+        <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
+
             LFC on Social media
-          </h2>
+          </h1>
         </div>
       </div>
       <div className="">

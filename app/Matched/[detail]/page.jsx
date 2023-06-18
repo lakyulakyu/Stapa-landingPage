@@ -33,44 +33,47 @@ const MatchedRev = ({ params }) => {
             height={100}
           />
         </div>
-        {/* 
         <div className="wrapper text-sm flex  md:flex-row">
           <div className="w-full ">
             <div className="flex flex-col items-center">
               <Image
-                src={"/Emha.jpeg"}
+                src={item.tim_1}
                 alt=""
                 width={300}
                 height={300}
-                className="lg:w-40 lg:h-fit h-12 w-fit"
+                className="lg:w-40 lg:h-fit h-12 w-fit mix-blend-color-burn"
               />
               <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
-                Mutiara Solo
+                {item.name_tim1}
               </h3>
             </div>
           </div>
           <div className="flex items-center flex-col uppercase w-full ">
             <div className="sm:text-xl text-xs text-center flex items-center content-center flex-col">
-              <h6>03/06/2017</h6>
-              <h6 className="w-40 items-center ">Solo Premiere League</h6>
+              <h6>{item.date}</h6>
+              <h6 className="w-40 items-center text-sm ">{item.liga}</h6>
             </div>
-            <h2 className="md:text-5xl text-lg mt-2 font-medium ">1 - 4</h2>
+            <h2 className="md:text-5xl text-lg mt-2 font-medium ">
+              <span>
+                {item.score_tim_1}-{item.score_tim_2}
+              </span>
+            </h2>
           </div>
           <div className="w-full ">
             <div className="flex flex-col items-center">
               <Image
-                src={"/mutiara.jpeg"}
+                src={item.tim_2}
                 alt=""
                 width={300}
                 height={300}
-                className="lg:w-40 lg:h-fit h-12 w-fit"
+                className="lg:w-40 lg:h-fit h-12 w-fit mix-blend-color-burn"
               />
               <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
-                EM HA RSU
+                {item.name_tim2}
               </h3>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="mt-4 sm:mx-12 mx-12 flex flex-col gap-y-3">
           {/* <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
             <div className="flex justify-center w-1/4">

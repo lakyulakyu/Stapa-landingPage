@@ -10,18 +10,17 @@ const ListNews = () => {
         <div className="lg:scale-75 md:-my-7">
           <Advers />
         </div>
-        <p className="uppercase mt-10 sm:font-semibold text-center bg-neutral-200  max-[350px]:mx-auto font-normal text-lg sm:text-xl max-w-3xl mx-auto text-neutral-500 py-2">
+        <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full bg-neutral-100 mx-auto font-normal text-black-main uppercase">
           News
-        </p>
-        {/* <div className="news-list  mt-4 grid-cols-1 lg:divide-x-2 divide-y-2 lg:divide-y-0  grid lg:grid-cols-3 max-[1199px]:grid-cols-3  xl:grid-cols-4">
+        </h1>
+        <div className="news-list  mt-4">
           {NewsData.map((item, index) => (
             <NewsCard key={index} item={item} id={item.id} />
           ))}
-      
-        </div> */}
-        <h1 className=" relative top-1/3 mt-20 text-center max-w-3xl mx-auto w-full text-neutral-600 ">
+        </div>
+        {/* <h1 className=" relative top-1/3 mt-20 text-center max-w-3xl mx-auto w-full text-neutral-600 ">
           Belum ada berita terkini
-        </h1>
+        </h1> */}
       </div>
     </>
   );

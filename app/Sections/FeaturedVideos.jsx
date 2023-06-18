@@ -116,9 +116,9 @@ const FeaturedVideos = () => {
     <div className="h-fit pb-10 w-full px-2 sm:px-10 max-w-7xl md:mx-auto">
       <div className="flex text-black-main justify-between mb-10 items-center mx-auto   z-10 w-full ">
         <div>
-          <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
-            Featured videos
-          </h2>
+        <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
+       Featured videos
+        </h1>
         </div>
         <div className=" flex   text-2xl">
           <button onClick={prev}>

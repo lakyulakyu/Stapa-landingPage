@@ -6,13 +6,13 @@ import TimeAgo from "@/components/TimeAgo";
 
 const NewsCard = ({ item }) => {
   return (
-    <div className={"card w-fit "}>
+    <div className={"card w-full "}>
       <Link href={`/News/${item.id}`}>
         <div
           key={item.id}
-          className="max-h-96 sm:max-w-3xl pt-2 lg:pl-4 sm:flex max-[639px]:flex-col lg:flex-col sm:pt-4 max-sm:w-screen w-full lg:max-w-[40vh] "
+          className="max-h-96 bg-slate-300 sm:max-w-3xl pt-2 lg:pl-4 sm:flex   w-full"
         >
-          <div className=" px-8 sm:px-0 h-full min-h-full max-[400px]:w-full sm:w-96 lg:w-full overflow-hidden  ">
+          <div className=" px-8 sm:px-0 h-full min-h-full max-[400px]:w-full w-1/3 sm:w-96 lg:w-full overflow-hidden  ">
             <Image
               src={item.bg_img}
               height={1000}
@@ -21,7 +21,7 @@ const NewsCard = ({ item }) => {
               className="object-cover max-h-32 sm:max-h-[25vh]  h-full w-full"
             />
           </div>
-          <div className="w-full px-2 pt-4  text-black-main  h-full max-h-[180px] min-h-[170px]">
+          <div className="w-full px-2 pt-4   text-black-main  h-full max-h-[180px] min-h-[170px]">
             <h1
               className="text-[10px] w-full font-semibold max-[400px]:bg-slate-300 uppercase
                text-primary-red"

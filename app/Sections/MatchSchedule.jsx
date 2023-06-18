@@ -55,9 +55,10 @@ const Match = () => {
         <div className="mx-auto mt-10 w-full font-poppins font-semibold">
           <div className="flex justify-between items-center ">
             <div>
-              <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
+            <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
+
                 Match shcedule
-              </h2>
+              </h1>
               <Link href={"/Matched"}>
                 <p className="text-base text-zinc-500 font-medium flex items-center gap-x-1 mt-1 cursor-pointer">
                   View all matches <IoMdAdd />

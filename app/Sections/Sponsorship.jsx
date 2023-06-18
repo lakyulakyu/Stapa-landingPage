@@ -137,11 +137,9 @@ const Sponsorship = () => {
   }
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-10 md:mx-auto mt-12 w-full font-poppins font-semibold h-fit">
-      <div>
-        <h2 className="uppercase font-normal text-lg md:font-bold md:text-2xl text-black-main">
+        <h1 className="text-xl h-fit sm:text-4xl mt-4  max-w-2xl w-full text-start font-normal text-black-main uppercase">
           Sponsorship
-        </h2>
-      </div>
+        </h1>
       <div className="my-10 ">
         <Slider {...settings} className="w-full divide-x-8 gap-7 h-fit">
           {imageSponsor.map((item) => {

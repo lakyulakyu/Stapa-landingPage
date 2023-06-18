@@ -38,7 +38,22 @@ const PlayerDetail = () => {
                 <button type="submit">Import Excel</button>
               </form>
 
-              <div></div>
+              <div className="flex w-ful divide-x-2">
+                <div className="flex divide-x-2 w-full">
+                  <div className=" bg-slate-200 w-full">halo</div>
+                  <div className=" bg-slate-400 w-40">halo</div>
+                  <div className=" bg-slate-400 w-40">halo</div>
+                  <div className=" bg-slate-400 w-40">halo</div>
+                  <div className=" bg-slate-400 w-40">halo</div>
+                </div>
+                <div className="grid grid-cols-5 divide-x-2 w-full">
+                  <div className=" bg-blue-200 w-full">halo</div>
+                  <div className=" bg-blue-400 w-40">halo</div>
+                  <div className=" bg-blue-400 w-40">halo</div>
+                  <div className=" bg-blue-400 w-40">halo</div>
+                  <div className=" bg-blue-400 w-40">halo</div>
+                </div>
+              </div>
             </>
           )}
         </div>

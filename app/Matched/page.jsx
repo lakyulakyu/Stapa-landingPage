@@ -11,9 +11,9 @@ const MatchCard = () => {
         <MatchNow />
         <div className="max-w-7xl mx-auto  sm:mt-8 w-full mt-20 font-poppins font-semibold">
           <div className="max-[350px]:mx-auto">
-            <p className="uppercase sm:font-semibold text-center bg-neutral-100  max-[350px]:mx-auto font-normal text-lg sm:text-xl max-w-3xl mx-auto text-neutral-500 py-2">
+            <h1 className="text-xl h-fit sm:text-4xl text-center max-w-2xl w-full bg-neutral-100 mx-auto font-normal text-black-main uppercase">
               Match schedule
-            </p>
+            </h1>
           </div>
         </div>
         <div className="w-full divide-y-2 divide-gray-300 mt-10 h-fit">
@@ -24,8 +24,8 @@ const MatchCard = () => {
                 <div className="w-full  mx-auto max-w-2xl  divide-black ">
                   <div
                     className={` ${
-                      isEven ? "bg-slate-100" : "bg-white"
-                    } hover:bg-slate-100 py-4`}
+                      isEven ? "bg-neutral-100" : "bg-white"
+                    } hover:bg-neutral-100 py-4`}
                   >
                     <Link href={`/Matched/${item.id}`}>
                       <p className="text-sm mb-2 text-center text-primary-red font-semibold -mt-1">
@@ -51,7 +51,7 @@ const MatchCard = () => {
                                 {item.score_tim_1} - {item.score_tim_2}
                               </p>
                             ) : (
-                              <p className="bg-gray-200 text-sm md:text-lg rounded-lg sm:px-2 px-2 w-fit max-[350px]:mx-auto py-1 font-semibold">
+                              <p className="bg-neutral-200 text-sm md:text-lg rounded-lg sm:px-2 px-2 w-fit max-[350px]:mx-auto py-1 font-semibold">
                                 {item.time}
                               </p>
                             )}

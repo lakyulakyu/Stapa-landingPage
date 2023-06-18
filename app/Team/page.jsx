@@ -26,9 +26,9 @@ export default async function AllTeam() {
           <MatchNow />
         </div>
 
-        <h2 className="uppercase font-bold pb-10 text-2xl text-black-main">
-         Semua Tim
-        </h2>
+        <h1 className="text-xl h-fit sm:text-4xl text-center w-full bg-neutral-100 mx-auto font-normal text-black-main uppercase">
+          All Team
+        </h1>
         <div className="divide-y-2 divide-neutral-300 sm:gap-2">
           {data.data.map((item, index) => {
             return (

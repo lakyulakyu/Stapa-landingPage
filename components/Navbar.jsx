@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
 import { useEffect, useState } from "react";
-import { MdArrowRight } from "react-icons/md";
+
 import Link from "next/link";
 import Image from "next/image";
+import LoginPopup from "./User/PopupLogin";
+import Example from "./User/PopupLogin";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -97,14 +99,15 @@ const toggleMenu = () => {
           </div>
         )}
 
-        {/* <div className="uppercase max-md:hidden flex items-center divide-x-2 divide-white gap-4">
+        <div className="uppercase max-md:hidden flex items-center divide-x-2 divide-white gap-4">
           <h1 className="flex items-center">
-            Id{" "}
-            <span className="rotate-90 text-xl">
-              <MdArrowRight />
+            Id
+            <span >
+            
+              <Example/>
             </span>
           </h1>
-        </div> */}
+        </div>
       </div>
     </nav>
   );
