@@ -4,15 +4,16 @@ import React from "react";
 import Link from "next/link";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdWhatsapp } from "react-icons/md";
+
 const Footer = () => {
   const isDetailPage =
     typeof window !== "undefined"
-      ? window.location.pathname.includes("/Admine")
+      ? window.location.pathname.includes(`/admine`) 
       : undefined;
   if (isDetailPage) {
     return null;
   }
-
+  
   return (
     <div
       id="More"
@@ -28,8 +29,13 @@ const Footer = () => {
         />
         <div className="w-4/5">
           <div className="flex text-light-grey text-2xl gap-x-4 mt-6">
-            <FaInstagram />
+            <Link href={"https://www.instagram.com/labmokletsport_science/"} rel="stylesheet" target="_blank" >
+            <FaInstagram /></Link>
+            
+
+            <Link href="https://youtube.com/@labmokletsportscience" rel="stylesheet" target="_blank" >
             <FaYoutube />
+            </Link>
             <button id="whatsappButton" alt="hubungi admin">
               <MdWhatsapp />
             </button>
@@ -39,6 +45,9 @@ const Footer = () => {
             <p>Help</p>
 
             <p>Contact Us</p>
+            <Link href={"/about"}>
+              <p>About Us</p>
+            </Link>
           </div>
           <div className="mt-4">
             <Link target="_blank" href="https://wa.me/+6281296939020">

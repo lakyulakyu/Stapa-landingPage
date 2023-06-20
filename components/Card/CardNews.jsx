@@ -10,7 +10,7 @@ const NewsCard = ({ item }) => {
       <Link href={`/News/${item.id}`}>
         <div
           key={item.id}
-          className="max-h-96 bg-slate-300 sm:max-w-3xl pt-2 lg:pl-4 sm:flex   w-full"
+          className="max-h-96 border-r sm:max-w-3xl pt-2 lg:pl-4 sm:flex   w-full"
         >
           <div className=" px-8 sm:px-0 h-full min-h-full max-[400px]:w-full w-1/3 sm:w-96 lg:w-full overflow-hidden  ">
             <Image
@@ -32,7 +32,7 @@ const NewsCard = ({ item }) => {
               {item.headline}
             </p>
 
-            <p className="text-xs line-clamp-3 sm:w-52 md:w-full hover:underline text-gray-400 max-h-8 overflow-hidden font-normal tracking-wider">
+            <p className="text-xs line-clamp-3 sm:w-52 md:w-full pr-20 hover:underline text-gray-400  overflow-hidden font-normal tracking-wider">
               {item.tittle}
             </p>
 

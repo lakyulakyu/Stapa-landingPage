@@ -14,38 +14,38 @@ const LatestNews = () => {
   const next = () => sliderRef.current.slickNext(+1);
   const prev = () => sliderRef.current.slickPrev(-1);
 
-  // var settings = {
-  //   infinite: true,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  //   dots: false,
-  //   arrows: false,
-  //   autoplay: true,
-  //   autoplaySpeed: 6000,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1100,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 920,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 680,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
+  var settings = {
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 920,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <div className="md:max-w-7xl mb-10 mx-auto px-2 sm:px-10 md:mx-auto  w-full font-poppins font-semibold h-full">
       <div className="flex justify-between items-center ">
@@ -61,7 +61,7 @@ const LatestNews = () => {
         </div>
         <div className=" flex text-2xl">
           <button
-            // onClick={prev}
+            onClick={prev}
             className=""
           >
             <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
@@ -69,7 +69,7 @@ const LatestNews = () => {
             </h1>
           </button>
           <button
-            // onClick={next}
+            onClick={next}
             className="px-2 text-red-500 hover:bg-slate-100 py-4  "
           >
             <CgArrowLongRight />
@@ -78,7 +78,7 @@ const LatestNews = () => {
       </div>
       <div className="">
         <div className="mt-10 ">
-          {/* <Slider
+          <Slider
             {...settings}
             ref={sliderRef}
             className="w-full min-h-fit h-full   "
@@ -87,10 +87,10 @@ const LatestNews = () => {
               <CardLatestNews key={index} item={item} index={index} />
             ))}
            
-          </Slider> */}
-          <h1 className="text-center px-5 font-normal bg-neutral-200 text-neutral-400 pt-12 uppercase h-32 max-w-3xl mx-auto">
+          </Slider>
+          {/* <h1 className="text-center px-5 font-normal bg-neutral-200 text-neutral-400 pt-12 uppercase h-32 max-w-3xl mx-auto">
             belum ada berita terkini
-          </h1>
+          </h1> */}
         </div>
       </div>
     </div>

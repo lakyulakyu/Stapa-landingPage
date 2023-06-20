@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "tim_1": "/Tim_logo/emha.jpeg",
+    "tim_1": "/Tim_logo/putra_gedangan.jpeg",
     "tim_2": "/Tim_logo/mutiara_solo.jpeg",
     "tittle": "Pertandingan di lapangan ngarep kos kossan",
     "name_tim1": "RSU MULIA HATI FC",
@@ -9,8 +9,8 @@
     "score_tim_1": "5",
     "score_tim_2": "0",
     "liga": "soloraya premiere league",
-    "date": "2023-06-04",
-    "time": "08:00",
+    "date": "2023-06-20",
+    "time": "20:00",
     "group": "A",
     "place": "UNS",
     "detail_match": [
@@ -30,8 +30,8 @@
     "score_tim_1": "1",
     "score_tim_2": "0",
     "liga": "soloraya premiere league",
-    "date": "2023-06-04",
-    "time": "07:20",
+    "date": "2023-06-20",
+    "time": "20:20",
     "group": "A",
     "place": "UNS",
     "detail_match": [
@@ -53,10 +53,10 @@
     "score_tim_2": "",
     "status": "Ditunda",
     "liga": "soloraya premiere league",
-    "date": "2023-06-04",
-    "time": "10:40",
+    "date": "2023-06-20",
+    "time": "20:40",
     "group": "A",
-    "place": "UNS",
+    "place": "KOPASUS",
     "detail_match": [{}]
   },
 

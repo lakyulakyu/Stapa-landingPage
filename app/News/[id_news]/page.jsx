@@ -57,7 +57,7 @@ const Page = ({ params }) => {
             </p>
           </div>
 
-          <p className="mt-10 sm:px-12 px-4 tracking-wider leading-6  text-black-main font-semibold ">
+          <p className="mt-10 indent-14 sm:px-12 px-4 tracking-wider leading-6  text-black-main font-semibold ">
             {item.tittle}
           </p>
         </div>

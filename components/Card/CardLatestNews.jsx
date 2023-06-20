@@ -11,9 +11,7 @@ const CardLatestNews = ({ item }) => {
           className="bg-black hover:bg-gray-700 overflow-hidden  shadow-xl divide-x-2 "
         >
           <div className="max-w-[200px] absolute px-5 bottom-10 text-white z-10  ">
-            <h1
-              className="text-xs font-semibold uppercase bg-white px-2 py-1 bg-opacity-70 w-fit text-primary-red"
-            >
+            <h1 className="text-xs font-semibold uppercase bg-white px-2 py-1 bg-opacity-70 w-fit text-primary-red">
               {item.media}
             </h1>
             <p className="text-base mt-2 font-medium max-h-24 overflow-hidden ">

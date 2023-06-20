@@ -55,8 +55,7 @@ const Match = () => {
         <div className="mx-auto mt-10 w-full font-poppins font-semibold">
           <div className="flex justify-between items-center ">
             <div>
-            <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
-
+              <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
                 Match shcedule
               </h1>
               <Link href={"/Matched"}>
@@ -67,14 +66,11 @@ const Match = () => {
             </div>
             <div className=" flex  text-2xl">
               <button onClick={prev} className="">
-                <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
+                <h1 className="rotate-180 border-l-2   py-4 px-2 text-gray-400">
                   <CgArrowLongRight />
                 </h1>
               </button>
-              <button
-                onClick={next}
-                className="px-2 text-red-500 hover:bg-slate-100  py-4  "
-              >
+              <button onClick={next} className="px-2 text-red-500  py-4  ">
                 <CgArrowLongRight />
               </button>
             </div>
@@ -84,55 +80,58 @@ const Match = () => {
           <Slider
             {...settings}
             ref={sliderRef}
-            className="w-full h-full divide-x-4 md:mt-10 md:translate-x-7 "
+            className="w-full h-full  md:mt-10 md:translate-x-7 "
           >
             {DataMatch.map((item) => {
               return (
                 <>
-                  <div className="h-80 py-8 w-full min-h-fit border-l border-neutral-500  hover:bg-black hover:bg-opacity-5 sm:max-w-xs min-w-fit px-6">
+                  <div className="h-80 py-8 w-full min-h-fit border-l-2  sm:max-w-xs min-w-fit px-6">
                     <div className="pb-4">
                       <div className="flex  justify-evenly w-full sm:justify-between">
-                        <div>
+                        <div className="border-2 py-2 px-1 rounded-s-3xl rounded-t-3xl hover:scale-125 hover:-translate-y-3 ease-out duration-300 ">
                           <Image
                             key={item.id}
                             alt={item.name_tim1}
                             src={item.tim_1 || "/Logo-default.png"}
                             width={100}
                             height={100}
-                            className="h-16 object-contain mx-auto w-16"
+                            className="h-10 object-contain mx-auto w-10 mix-blend-color-burn"
                           />
-                          <p className="w-20 text-sm text-center h-10 overflow-hidden">
+                          <p className="w-20 text-xs uppercase text-center h-10 overflow-hidden">
                             {item.name_tim1}
                           </p>
                         </div>
-                        <div>
+                        <div className="border-2 py-2 px-1 border-red-500 rounded-e-3xl rounded-t-3xl hover:scale-125 hover:-translate-y-3 duration-300">
                           <Image
                             key={item.id}
                             src={item.tim_2 || "/Logo-default.png"}
                             alt="logo"
                             width={100}
                             height={100}
-                            className="h-14 object-contain mx-auto w-14"
+                            className="h-10 object-contain  mx-auto w-10 "
                           />
-                          <p className="w-20 text-sm text-center h-10 overflow-hidden ">
+                          <p className="w-20 text-xs text-center items-center h-10 overflow-hidden ">
                             {item.name_tim2}
                           </p>
                         </div>
                       </div>
+                      <p className="text-center mt-1 text-primary-red border-b-2 pb-1 border-neutral-200 font-medium ">
+                        VS
+                      </p>
 
                       {item.score_tim_1 || item.score_tim_2 ? (
-                        <div className="text-lg sm:text-start  text-center flex justify-evenly mt-1 w-full font-poppins font-bold text-red-600">
+                        <div className="text-lg sm:text-start text-center flex justify-evenly -mb-2 mt-1  w-full font-poppins font-bold text-red-600">
                           <p>{item.score_tim_1}</p> - <p>{item.score_tim_2}</p>
                         </div>
                       ) : (
                         ""
                       )}
                     </div>
-                    <div className=" text-start pt-4 capitalize">
+                    <div className="text-start capitalize">
                       <h1 className="text-base font-semibold capitalize"></h1>
-                      <p className="text-xs text-gray-500 -mt-1">
+                      <p className="text-xs text-primary-red  -mt-1">
                         {item.liga}{" "}
-                        <span className="text-primary-red ml-1 font-medium ">
+                        <span className=" ml-1 font-medium  text-neutral-400">
                           Group {item.group}
                         </span>
                       </p>
@@ -149,7 +148,7 @@ const Match = () => {
                       </p>
                       {item.score_tim_1 && item.score_tim_2 ? (
                         <Link href={`/Matched/${item.id}`}>
-                          <button className="bg-primary-red font-poppins text-white font-semibold justify-between text-sm flex items-center gap-2 px-2 py-1 mt-6 w-24">
+                          <button className="bg-primary-red font-poppins text-white font-semibold justify-between text-sm flex items-center gap-2 px-2 py-1 mt-6 w-full">
                             More <IoMdArrowDropright />
                           </button>
                         </Link>
