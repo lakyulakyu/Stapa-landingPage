@@ -16,7 +16,7 @@ const CardVideos = ({ item }) => {
           <h1 className="capitalize font-semibold mt-4 hover:underline font-poppins text-start">
             {item.headline}
           </h1>
-          <div className="flex text-xl text-gray-500 mt-2 items-center gap-2">
+          <div className="flex text-xl text-gray-500 mt-2 items-center gap-1">
             <Link href={item.url} target="_blank">
               <p className="hover:scale-125 duration-200 ease-out">
                 <MdPlayCircleOutline />
