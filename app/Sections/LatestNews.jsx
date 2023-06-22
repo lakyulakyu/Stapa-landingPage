@@ -50,7 +50,7 @@ const LatestNews = () => {
     <div className="md:max-w-7xl mb-10 mx-auto px-2 sm:px-10 md:mx-auto  w-full font-poppins font-semibold h-full">
       <div className="flex justify-between items-center ">
         <div>
-          <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
+          <h1 className="md:text-2xl lg:text-4xl text-xl h-fit mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
             Latest News
           </h1>
           <Link href={"/News"}>
@@ -60,16 +60,15 @@ const LatestNews = () => {
           </Link>
         </div>
         <div className=" flex text-2xl">
-          <button
-            onClick={prev}
-            className=""
-          >
+          <button 
+          // onClick={prev} 
+          className="">
             <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
               <CgArrowLongRight />
             </h1>
           </button>
           <button
-            onClick={next}
+            // onClick={next}
             className="px-2 text-red-500 hover:bg-slate-100 py-4  "
           >
             <CgArrowLongRight />
@@ -78,16 +77,18 @@ const LatestNews = () => {
       </div>
       <div className="">
         <div className="mt-10 ">
-          <Slider
-            {...settings}
+          {/* <Slider */}
+          {/* {...settings}
             ref={sliderRef}
             className="w-full min-h-fit h-full   "
-          >
-            {DataNews.map((item, index) => (
-              <CardLatestNews key={index} item={item} index={index} />
-            ))}
-           
-          </Slider>
+          > */}
+          {/* {DataNews.map((item, index) => ( */}
+
+          <h1 className="text-center text-neutral-300 py-8">belum ada berita</h1>
+
+          {/* // <CardLatestNews key={index} item={item} index={index} /> */}
+          {/* //   ))} */}
+          {/* // </Slider> */}
           {/* <h1 className="text-center px-5 font-normal bg-neutral-200 text-neutral-400 pt-12 uppercase h-32 max-w-3xl mx-auto">
             belum ada berita terkini
           </h1> */}

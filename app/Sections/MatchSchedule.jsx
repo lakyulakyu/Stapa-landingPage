@@ -12,7 +12,7 @@ import Image from "next/image";
 import MatchNow from "@/components/Card/MatchNow";
 import DataMatch from "../../Json/Match";
 
-const Match = () => {
+const MatchSchedule = () => {
   const sliderRef = useRef(null);
   const next = () => sliderRef.current.slickNext(+1);
   const prev = () => sliderRef.current.slickPrev(-1);
@@ -55,7 +55,7 @@ const Match = () => {
         <div className="mx-auto mt-10 w-full font-poppins font-semibold">
           <div className="flex justify-between items-center ">
             <div>
-              <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
+              <h1 className="md:text-2xl lg:text-4xl text-xl h-fit  mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
                 Match shcedule
               </h1>
               <Link href={"/Matched"}>
@@ -66,7 +66,7 @@ const Match = () => {
             </div>
             <div className=" flex  text-2xl">
               <button onClick={prev} className="">
-                <h1 className="rotate-180 border-l-2   py-4 px-2 text-gray-400">
+                <h1 className="rotate-180 border-l-2  py-4 px-2 text-gray-400">
                   <CgArrowLongRight />
                 </h1>
               </button>
@@ -77,15 +77,14 @@ const Match = () => {
           </div>
         </div>
         <div className="h-full md:mt-10 ">
-          <Slider
-            {...settings}
-            ref={sliderRef}
-            className="w-full h-full  md:mt-10 md:translate-x-7 "
-          >
+          <Slider {...settings} ref={sliderRef} className="w-full h-full  divide-x-4 ">
             {DataMatch.map((item) => {
               return (
                 <>
-                  <div className="h-80 py-8 w-full min-h-fit border-l-2  sm:max-w-xs min-w-fit px-6">
+                  <div
+                    key={item.id}
+                    className="h-80 py-8 sm:border-r-2 w-full min-h-fit sm:max-w-xs min-w-fit px-6"
+                  >
                     <div className="pb-4">
                       <div className="flex  justify-evenly w-full sm:justify-between">
                         <div className="border-2 py-2 px-1 rounded-s-3xl rounded-t-3xl hover:scale-125 hover:-translate-y-3 ease-out duration-300 ">
@@ -168,4 +167,4 @@ const Match = () => {
   );
 };
 
-export default Match;
+export default MatchSchedule;

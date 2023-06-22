@@ -8,22 +8,19 @@ const NewsCard = ({ item }) => {
   return (
     <div className={"card w-full "}>
       <Link href={`/News/${item.id}`}>
-        <div
-          key={item.id}
-          className="max-h-96 border-r sm:max-w-3xl pt-2 lg:pl-4 sm:flex   w-full"
-        >
-          <div className=" px-8 sm:px-0 h-full min-h-full max-[400px]:w-full w-1/3 sm:w-96 lg:w-full overflow-hidden  ">
+        <div key={item.id} className="max-h-96 pt-2 lg:pl-4 sm:flex  w-full">
+          <div className=" px-8 sm:px-0 h-full min-h-full  sm:w-96 lg:w-full overflow-hidden  ">
             <Image
               src={item.bg_img}
               height={1000}
               width={1000}
               alt={item.tittle}
-              className="object-cover max-h-32 sm:max-h-[25vh]  h-full w-full"
+              className="object-cover max-h-32 rounded-xl sm:max-h-[25vh] h-full w-full"
             />
           </div>
-          <div className="w-full px-2 pt-4   text-black-main  h-full max-h-[180px] min-h-[170px]">
+          <div className="w-full px-2 pt-4 pl-8 text-black-main  h-full">
             <h1
-              className="text-[10px] w-full font-semibold max-[400px]:bg-slate-300 uppercase
+              className="text-[10px] w-full font-semibold  uppercase
                text-primary-red"
             >
               {item.liga}
@@ -44,11 +41,11 @@ const NewsCard = ({ item }) => {
                 height={1000}
                 className="w-8 h-8 object-cover rounded-full border-2"
               />
-              <div className="flex justify-between">
-                <p className="text-xs hover:underline w-[100px] capitalize overflow-hidden truncate font-medium">
+              <div className="flex justify-between items-center lg:w-full w-44  ">
+                <p className="text-xs hover:underline  capitalize lg:w-4/5 w-2/5 overflow-hidden truncate font-medium">
                   {item.name_person}
                 </p>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs w-2/5 text-end text-gray-400">
                   <TimeAgo date={item.date} time={item.time} />
                 </p>
               </div>

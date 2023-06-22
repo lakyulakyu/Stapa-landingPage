@@ -7,9 +7,10 @@ const MatchedRev = ({ params }) => {
   const id = params.detail;
   const item = Match.find((item) => item.id === parseInt(id));
   console.log("item.detail_match.detail", item.detail_match[0].detail);
+
   return (
     <div className="h-fit">
-      <div className="max-w-4xl mx-auto font-poppins">
+      <div className=" mx-auto font-poppins">
         <div className="grid grid-cols-3 mb-4 mt-24 mx-auto bg-white py-2 rounded-md shadow-xl items-center max-w-[200px] ">
           <Image
             alt=""
@@ -33,9 +34,9 @@ const MatchedRev = ({ params }) => {
             height={100}
           />
         </div>
-        <div className="wrapper text-sm flex  md:flex-row">
+        <div className="wrapper mx-auto text-sm flex max-w-4xl  md:flex-row">
           <div className="w-full ">
-            <div className="flex flex-col items-center">
+            <div className="flex  flex-col items-center">
               <Image
                 src={item.tim_1}
                 alt=""
@@ -66,7 +67,7 @@ const MatchedRev = ({ params }) => {
                 alt=""
                 width={300}
                 height={300}
-                className="lg:w-40 lg:h-fit h-12 w-fit mix-blend-color-burn"
+                className="lg:w-32 lg:h-32 h-12 w-fit object-contain mix-blend-color-burn"
               />
               <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
                 {item.name_tim2}
@@ -74,114 +75,110 @@ const MatchedRev = ({ params }) => {
             </div>
           </div>
         </div>
-        <div className="mt-4 sm:mx-12 mx-12 flex flex-col gap-y-3">
-          {/* <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>3</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Shoot Off Target</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>8</h6>
-            </div>
-          </div>
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>4</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Shoot on Target</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>8</h6>
-            </div>
-          </div>
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>1</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Yellow Cards</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>1</h6>
-            </div>
-          </div>
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>0</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Red Cards</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>0</h6>
-            </div>
-          </div>
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>0</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Offsides</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>2</h6>
-            </div>
-          </div>
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>0</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Corners</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>2</h6>
-            </div>
-          </div>
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>0</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Pinalti</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>0</h6>
-            </div>
-          </div>
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>1</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Free kick</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>4</h6>
-            </div>
-          </div>
-          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
-            <div className="flex justify-center w-1/4">
-              <h6>40%</h6>
-            </div>
-            <div className="flex justify-center uppercase w-2/4">
-              <h6>Possession</h6>
-            </div>
-            <div className="flex justify-center w-1/4">
-              <h6>60%</h6>
-            </div>
-          </div> */}
+        <div>
           {item.detail_match[0].detail ? (
             <>
-              <Image
-                src={item.detail_match[0].detail}
-                alt="hello"
-                width={1000}
-                height={1000}
-              />
+              <div className="mt-4 max-w-2xl mb-4 mx-auto flex flex-col gap-y-3">
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>3</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Shoot Off Target</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>8</h6>
+                  </div>
+                </div>
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>4</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Shoot on Target</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>8</h6>
+                  </div>
+                </div>
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>1</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Yellow Cards</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>1</h6>
+                  </div>
+                </div>
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>0</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Red Cards</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>0</h6>
+                  </div>
+                </div>
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>0</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Offsides</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>2</h6>
+                  </div>
+                </div>
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>0</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Corners</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>2</h6>
+                  </div>
+                </div>
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>0</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Pinalti</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>0</h6>
+                  </div>
+                </div>
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>1</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Free kick</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>4</h6>
+                  </div>
+                </div>
+                <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+                  <div className="flex justify-center w-1/4">
+                    <h6>40%</h6>
+                  </div>
+                  <div className="flex justify-center uppercase w-2/4">
+                    <h6>Possession</h6>
+                  </div>
+                  <div className="flex justify-center w-1/4">
+                    <h6>60%</h6>
+                  </div>
+                </div>
+              </div>
               <MatchReport item={item} key={item.id} />
             </>
           ) : (

@@ -2,7 +2,6 @@ import React from "react";
 import { MdArrowRight } from "react-icons/md";
 import Link from "next/link";
 import CardTeam from "@/components/Card/CardTeam";
-// import Tim from "../../Json/Team"
 import MatchNow from "@/components/Card/MatchNow";
 
 export async function getStaticProps() {

@@ -9,68 +9,29 @@ import "slick-carousel/slick/slick-theme.css";
 const Video = [
   {
     id: 1,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
+    url: "https://www.youtube.com/embed/7vs-Xz9uGwc",
+    headline: "HIGHLIGHT MULIA HATI VS MUTIARA SOLO 5-0",
+    time: "03:09",
   },
   {
     id: 2,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
+    url: "https://www.youtube.com/embed/ktBGuVsxTIQ",
+    headline: "HighLight Putra Gendangan vs Walisongo 1-0",
+    time: "04:07",
   },
 
   {
     id: 3,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
+    url: "https://www.youtube.com/embed/BevJqPWHtOg",
+    headline: "HIGHLIGHT SKM KRJAN VS PSHW ANDBOY FC 1-0",
+    time: "02:26",
   },
 
   {
     id: 4,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
-  },
-  {
-    id: 5,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    liga: "solo premiere league",
-    time: "20.12",
-  },
-  {
-    id: 6,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    liga: "solo premiere league",
-    time: "20.12",
-  },
-  {
-    id: 7,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
-  },
-  {
-    id: 8,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
-  },
-  {
-    id: 9,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
+    url: "https://www.youtube.com/embed/xwade8dZ-OY",
+    headline: "Technical Meeting ASKOT Batu bersama LabMokletScience",
+    time: "00.51",
   },
 ];
 
@@ -116,14 +77,13 @@ const FeaturedVideos = () => {
     <div className="h-fit pb-10 w-full px-2 sm:px-10 max-w-7xl md:mx-auto">
       <div className="flex text-black-main justify-between mb-10 items-center mx-auto   z-10 w-full ">
         <div>
-        <h1 className="text-xl h-fit sm:text-4xl mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
-       Featured videos
-        </h1>
+          <h1 className="md:text-2xl lg:text-4xl text-xl h-fit mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
+            Videos
+          </h1>
         </div>
         <div className=" flex   text-2xl">
           <button onClick={prev}>
-          <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
-
+            <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
               <CgArrowLongRight />
             </h1>
           </button>
@@ -136,13 +96,10 @@ const FeaturedVideos = () => {
         </div>
       </div>
       <div className="w-full">
-        <div></div>
         <Slider {...settings} ref={sliderRef} className="w-full h-fit">
           {Video.map((item) => (
             <>
-              <div className="">
-                <CardVideos key={item.id} item={item} />
-              </div>
+              <CardVideos   key={item.id} item={item} />
             </>
           ))}
         </Slider>

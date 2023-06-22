@@ -4,65 +4,38 @@ import CardVideos from "@/components/Card/CardVideos";
 const Video = [
   {
     id: 1,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
+    url: "https://www.youtube.com/embed/7vs-Xz9uGwc",
+    headline: "HIGHLIGHT MULIA HATI VS MUTIARA SOLO 5-0",
+    time: "03:09",
   },
   {
     id: 2,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
+    url: "https://www.youtube.com/embed/ktBGuVsxTIQ",
+    headline: "HighLight Putra Gendangan vs Walisongo 1-0",
+    time: "04:07",
   },
 
   {
     id: 3,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
+    url: "https://www.youtube.com/embed/BevJqPWHtOg",
+    headline: "HIGHLIGHT SKM KRJAN VS PSHW ANDBOY FC 1-0",
+    time: "02:26",
   },
 
   {
     id: 4,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
-  },
-  {
-    id: 7,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
-  },
-  {
-    id: 8,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
-  },
-  {
-    id: 9,
-    url: "https://www.youtube.com/embed/1_f6EV2TtmA",
-    headline: "Deddy corbuziez makan bersama andika lopes",
-    time: "20.12",
-    liga: "solo premiere league",
+    url: "https://www.youtube.com/embed/xwade8dZ-OY",
+    headline: "Technical Meeting ASKOT Batu bersama LabMokletScience",
+    time: "00.51",
   },
 ];
-
 const page = () => {
   return (
     <>
-      <div className=" w-full h-screen  mt-32  text-center ">
-        {/* {Video.map((item) => (
+      <div className=" w-full h-fit  mt-32 grid grid-cols-5  text-center ">
+        {Video.map((item) => (
           <CardVideos key={item.id} item={item} />
-        ))} */}
-        <h1 className=" absolute top-1/3 text-center w-full text-neutral-600 ">Belum ada video</h1>
+        ))}
       </div>
     </>
   );

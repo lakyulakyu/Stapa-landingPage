@@ -7,17 +7,19 @@ import Video from "@/components/Admine/Video";
 import Sponsor from "@/components/Admine/Sponsor";
 import DetailMatch from "@/components/Admine/DetailMatch";
 import PlayerDetail from "@/components/Admine/playerDetail";
+import AddUser from "@/components/Admine/AddUser";
 const page = () => {
   return (
     <>
       <NavAdmin />
       <News />
+      <AddUser />
       <Shedule />
       <Sosmed />
       <Sponsor />
       <Video />
       <DetailMatch />
-      <PlayerDetail/>
+      <PlayerDetail />
     </>
   );
 };

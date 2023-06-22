@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ReactPlayer from "react-player";
 
 const YouTubeLive = () => {
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -22,12 +21,12 @@ const YouTubeLive = () => {
         )}
       </button>
       {isFullScreen && (
-        <ReactPlayer
-          url="https://www.youtube.com/embed/qMnEmS9hDfk"
-          controls
+        <iframe
+          src="https://www.youtube.com/embed/qMnEmS9hDfk"
+          autoPlay
           width="100%"
-          height={isFullScreen ? "55vh" : "auto"}
-        />
+          height={isFullScreen ? "90vh" : "auto"}
+        ></iframe>
       )}
     </div>
   );

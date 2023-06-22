@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MdOutlineDoubleArrow } from "react-icons/md";
 import { AiOutlineInstagram } from "react-icons/ai";
 import DataStats from "../../../../Json/Player.json";
+import { CgArrowLongLeft } from "react-icons/cg";
 
 const detailIndividu = ({ params }) => {
   const id = params.detail;
@@ -21,8 +22,14 @@ const detailIndividu = ({ params }) => {
   };
 
   return (
-    <div className="h-screen text-black-main">
-      <div className="w-full h-full pt-32 flex">
+    <div className="h-screen text-black-main mt-32">
+      <Link href={`/Team/detail`}>
+        <button className="text-lg  gap-2 md:ml-10 ml-2 flex items-center border-2 p-2 rounded-lg text-red-500 ">
+          <CgArrowLongLeft />
+          <span className="-mt-0.5 text-sm">Kembali</span>
+        </button>
+      </Link>
+      <div className="w-full h-full pt-8 flex">
         <div className="mx-auto w-3/5 px-10">
           <div>
             <div className="flex justify-between items-center">

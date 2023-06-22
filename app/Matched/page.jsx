@@ -4,7 +4,7 @@ import Image from "next/image";
 import DataMatch from "../../Json/Match";
 import MatchNow from "@/components/Card/MatchNow";
 
-const MatchCard = () => {
+const Matched = () => {
   return (
     <>
       <div className="h-full md:mt-32 w-full  mx-auto max-w-2xl  pb-10 md:pt-0 pt-20">
@@ -116,4 +116,4 @@ const MatchCard = () => {
   );
 };
 
-export default MatchCard;
+export default Matched;

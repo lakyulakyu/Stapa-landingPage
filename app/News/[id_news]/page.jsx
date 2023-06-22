@@ -3,8 +3,7 @@ import React from "react";
 import Data from "../../../Json/News.json";
 import Link from "next/link";
 import Image from "next/image";
-import { CgArrowLongRight } from "react-icons/cg";
-import Advers from "@/components/Card/Adsvers";
+import { CgArrowLongLeft } from "react-icons/cg";
 import LatestNews from "@/app/Sections/LatestNews";
 import TimeAgo from "@/components/TimeAgo";
 
@@ -15,29 +14,27 @@ const Page = ({ params }) => {
   console.log(item);
 
   return (
-    <div className="z-50 ">
-      <div className="md:scale-50 md:-my-9 pt-16 sm:pt-32">
-        <Advers />
-      </div>
+    <div className="w-3/4 mt-4 ">
       <div className="mx-auto max-w-3xl">
         <Link href={"/News"}>
-          <button className="rotate-180 text-2xl text-red-500 ">
-            <CgArrowLongRight />
+          <button className="text-lg gap-2 flex items-center border-2 p-2 rounded-lg text-red-500 ">
+            <CgArrowLongLeft />
+            <span className="-mt-0.5 text-sm">Kembali</span>
           </button>
         </Link>
-        <p className="h-24 text-3xl hidden sm:block font-semibold text-center capitalize my-auto">
+        <p className="h-fit md:text-3xl text-xl hidden sm:block font-normal  py-4 text-start capitalize my-auto">
           {item.headline}
         </p>
-        <div className="sm:h-[70vh] h-40 mt-6 sm:mt-0 w-full z-0 max-w-3xl mx-auto">
+        <div className="sm:h-[50vh] h-40  mt-6 sm:mt-0 w-full max-w-3xl mx-auto">
           <Image
             alt=""
             src={item.bg_img}
             width={1000}
             height={1000}
-            className=" object-cover z-0 rounded-lg  w-full h-full"
+            className=" object-cover rounded-lg w-full h-full"
           />
         </div>
-        <div className="sm:-mt-10 shadow-md pb-20 relative sm:px-4 px-2 rounded-3xl bg-white z-40 max-w-2xl text-justify mx-auto ">
+        <div className="pb-20 relative sm:px-4 px-2 max-w-2xl  ">
           <p className="pt-8 text-xl text-black-main capitalize font-semibold">
             {item.headline}
           </p>

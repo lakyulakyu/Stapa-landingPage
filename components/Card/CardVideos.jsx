@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { MdPlayCircleOutline } from "react-icons/md";
 
 const CardVideos = ({ item }) => {
@@ -8,26 +9,24 @@ const CardVideos = ({ item }) => {
         <div className="max-w-xs object-cover text-black-main  mb-14">
           <iframe
             src={item.url}
-            autoplay
+            autoPlay
             width="100%"
-            className="w-full h-fit  aspect-video "
+            className="w-full h-fit rounded-lg aspect-video "
           ></iframe>
-          <h1 className="capitalize font-semibold mt-4 font-poppins text-start">
+          <h1 className="capitalize font-semibold mt-4 hover:underline font-poppins text-start">
             {item.headline}
           </h1>
           <div className="flex text-xl text-gray-500 mt-2 items-center gap-1">
-            <MdPlayCircleOutline />{" "}
+            <Link href={item.url} target="_blank">
+              <p className="hover:scale-125 duration-200 ease-out">
+                <MdPlayCircleOutline />
+              </p>
+            </Link>
             <p className="text-xs mt-1 font-medium">
               {item.time} <span>mins</span>
             </p>
           </div>
-          <p className=" text-xs font-normal text-primary-red mt-3">
-            {item.liga}
-          </p>
         </div>
-        {/* <h1 className="text-center px-5 animate-pulse bg-neutral-200 text-neutral-400 font-normal pt-12 uppercase h-32 max-w-3xl mx-auto">
-          belum ada berita terkini
-        </h1> */}
       </div>
     </div>
   );

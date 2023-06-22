@@ -142,7 +142,7 @@ const MatchReport = () => {
 
   return (
     <>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <button
           onClick={handleButtonClick}
           className={`  py-2 w-fit px-20 text-center uppercase mx-auto text-lg justify-between rounded-lg font-normal flex items-center ${
@@ -160,7 +160,7 @@ const MatchReport = () => {
       <div>
         {showDetail && (
           <>
-            <div className="h-screen max-w-7xl mx-auto">
+            <div className="h-screen mt-4 max-w-7xl mx-auto">
               <div className="wrapper grid grid-cols-2 font-poppins text-sm font-normal">
                 {/* Team One */}
                 <div>
