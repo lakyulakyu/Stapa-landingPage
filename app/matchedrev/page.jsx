@@ -1,21 +1,177 @@
 import MatchTable from "@/components/Match/MatchTable";
 import Image from "next/image";
 import React from "react";
-import TeamOne from "../../Json/PlayerResult.json";
-import TeamTwo from "../../Json/PlayerResult.json";
-import TeamResultSection from "./[id_team]/section/TeamSection";
+import MatchReport from "@/components/Card/MatchReport";
 
 const MatchedRev = () => {
   return (
-    // <div className="h-fit">
-    //   <div className="bg-zinc-200 border-b-2 border-zinc-400 py-16">
-    //     <TeamResultSection />
-    //   </div>
-    //   <div className="max-w-7xl mx-auto font-poppins mt-8">
-    //     <MatchTable TeamOne={TeamOne} TeamTwo={TeamTwo} />
-    //   </div>
-    // </div>
-    <h2>Hello world</h2>
+    <div className="h-fit">
+      <div className="max-w-4xl mx-auto font-poppins">
+        <div className="grid grid-cols-3 mb-4 mt-24 mx-auto bg-white py-2 rounded-md shadow-xl items-center max-w-[200px] ">
+          <Image
+            alt=""
+            src={"/Logo.png"}
+            className="h-8 w-fit mx-auto"
+            width={100}
+            height={100}
+          />
+          <Image
+            alt=""
+            src={"/Logo-Web.png"}
+            className="h-8 w-fit mx-auto"
+            width={100}
+            height={100}
+          />
+          <Image
+            alt=""
+            src={"/Logo_Libra.png"}
+            className="h-8 w-fit mx-auto"
+            width={100}
+            height={100}
+          />
+        </div>
+
+        <div className="wrapper text-sm flex  md:flex-row">
+          <div className="w-full ">
+            <div className="flex flex-col items-center">
+              <Image
+                src={"/mutiara.jpeg"}
+                alt=""
+                width={300}
+                height={300}
+                className="lg:w-32 lg:h-fit h-12 w-fit"
+              />
+              <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
+                Mutiara Solo
+              </h3>
+            </div>
+          </div>
+          <div className="flex items-center flex-col uppercase w-full ">
+            <div className="sm:text-xl text-xs text-center flex items-center content-center flex-col">
+              <h6>03/06/2017</h6>
+              <h6 className="w-40 items-center ">Solo Premiere League</h6>
+            </div>
+            <h2 className="md:text-5xl text-lg mt-2 font-medium ">1 - 4</h2>
+          </div>
+          <div className="w-full ">
+            <div className="flex flex-col items-center">
+              <Image
+                alt=""
+                src={"/Emha.jpeg"}
+                width={300}
+                height={300}
+                className="lg:w-32 lg:h-fit h-12 w-fit"
+              />
+              <h3 className="md:text-3xl uppercase mt-2 text-center font-medium">
+                EM HA RSU
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 sm:mx-12 mx-12 flex flex-col gap-y-3">
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>3</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Shoot Off Target</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>8</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>4</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Shoot on Target</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>8</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>1</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Yellow Cards</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>1</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Red Cards</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Offsides</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>2</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Corners</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>2</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Pinalti</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>0</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>1</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Free kick</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>4</h6>
+            </div>
+          </div>
+          <div className="flex bg-primary-red text-zinc-200 font-medium p-1">
+            <div className="flex justify-center w-1/4">
+              <h6>40%</h6>
+            </div>
+            <div className="flex justify-center uppercase w-2/4">
+              <h6>Possession</h6>
+            </div>
+            <div className="flex justify-center w-1/4">
+              <h6>60%</h6>
+            </div>
+          </div>
+          <MatchReport />
+        </div>
+      </div>
+    </div>
   );
 };
 

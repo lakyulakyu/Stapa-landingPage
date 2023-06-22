@@ -39,17 +39,17 @@ const sourceSerifPro = Source_Serif_Pro({
 });
 
 export const metadata = {
-  title: "STAPA",
-  description: "Website for ",
+  title: "LMSS",
+  description: "Website for",
 };
 
-export default function RootLayout({ children, path }) {
+export default function RootLayout({ children}) {
   return (
     <html lang="en">
       <body
         className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable} ${poppins.variable} overflow-x-hidden`}
       >
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
 
         <Sponsorship />

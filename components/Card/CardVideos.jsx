@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { MdPlayCircleOutline } from "react-icons/md";
 
 const CardVideos = ({ item }) => {
@@ -8,23 +9,23 @@ const CardVideos = ({ item }) => {
         <div className="max-w-xs object-cover text-black-main  mb-14">
           <iframe
             src={item.url}
-            width={1000}
-            height={700}
-            uk-video="automute: true"
-            className="w-full h-fit  sm:h-48 aspect-video "
+            autoPlay
+            width="100%"
+            className="w-full h-fit rounded-lg aspect-video "
           ></iframe>
-          <h1 className="capitalize font-semibold mt-4 font-poppins text-start">
+          <h1 className="capitalize font-semibold mt-4 hover:underline font-poppins text-start">
             {item.headline}
           </h1>
           <div className="flex text-xl text-gray-500 mt-2 items-center gap-1">
-            <MdPlayCircleOutline />{" "}
+            <Link href={item.url} target="_blank">
+              <p className="hover:scale-125 duration-200 ease-out">
+                <MdPlayCircleOutline />
+              </p>
+            </Link>
             <p className="text-xs mt-1 font-medium">
               {item.time} <span>mins</span>
             </p>
           </div>
-          <p className=" text-xs font-normal text-primary-red mt-3">
-            {item.liga}
-          </p>
         </div>
       </div>
     </div>

@@ -1,163 +1,279 @@
 [
   {
     "id": 1,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "35",
-    "category": "goals",
-    "position": "GKP",
-    "yellow_card": ["10", "78"],
-    "red_card": [],
-    "player_in": "0",
-    "player_out": "80",
-    "minutes_played": "90",
-    "goal": ["43", "91"]
+    "birthday": "2000-03-04",
+    "position": "goals"
   },
   {
     "id": 2,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/ciboox.id/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "4",
-    "category": "goals"
+    "birthday": "2000-03-04",
+    "position": "goals"
   },
   {
     "id": 3,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "2",
-    "category": "goals"
+    "birthday": "2000-03-04",
+    "position": "goals"
   },
   {
     "id": 4,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
-    "category": "goals"
+    "birthday": "2000-03-04",
+    "position": "goals"
   },
   {
     "id": 5,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
-    "category": "goals"
+    "birthday": "2000-03-04",
+    "position": "goals"
   },
   {
     "id": 6,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
-    "category": "goals"
+    "birthday": "2000-03-04",
+    "position": "goals"
   },
   {
     "id": 7,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/lab_moklet_sport_science/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "9",
-    "category": "goals"
+    "birthday": "2000-03-04",
+    "position": "goals"
   },
   {
     "id": 8,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
-    "category": "cleansheets"
+    "birthday": "2000-03-04",
+    "position": "cleansheets"
   },
   {
     "id": 9,
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
-    "category": "cleansheets"
+    "birthday": "2000-03-04",
+    "position": "cleansheets"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/lab_moklet_sport_science/",
     "id": 10,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
-    "category": "cleansheets"
+    "birthday": "2000-03-04",
+    "position": "cleansheets"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 11,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "75",
-    "category": "cleansheets"
+    "birthday": "2000-03-04",
+    "position": "cleansheets"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 12,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "4",
-    "category": "cleansheets"
+    "birthday": "2000-03-04",
+    "position": "cleansheets"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 13,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "5",
-    "category": "cleansheets"
+    "birthday": "2000-03-04",
+    "position": "cleansheets"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 14,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "3",
-    "category": "passes"
+    "birthday": "2000-03-04",
+    "position": "passes"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 15,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "57",
-    "category": "passes"
+    "birthday": "2000-03-04",
+    "position": "passes"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 16,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "19",
-    "category": "passes"
+    "birthday": "2000-03-04",
+    "position": "passes"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/lab_moklet_sport_science/",
     "id": 17,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "32",
-    "category": "passes"
+    "birthday": "2000-03-04",
+    "position": "passes"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 18,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "38",
-    "category": "passes"
+    "birthday": "2000-03-04",
+    "position": "passes"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 19,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "35",
-    "category": "passes"
+    "birthday": "2000-03-04",
+    "position": "passes"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 20,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "0",
-    "category": "assist"
+    "birthday": "2000-03-04",
+    "position": "assist"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 21,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "10",
-    "category": "assist"
+    "birthday": "2000-03-04",
+    "position": "assist"
   },
   {
+    "asal": "malang",
+    "height":"189",
+    "berat_badan":"78",
+    "link_sosmed":"https://www.instagram.com/__lakyulakyu/",
     "id": 22,
+
     "img": "https://www.telkomsel.com/sites/default/files/2023-03/w4%20nov-96.png",
     "name": "Zhidan Marties Alfareza",
     "number": "53",
-    "category": "assist"
+    "birthday": "2000-03-04",
+    "position": "assist"
   }
 ]

@@ -1,23 +1,18 @@
 import React from "react";
 import NewsCard from "../../components/Card/CardNews";
 import NewsData from "../../Json/News";
-import Advers from "@/components/Card/Adsvers";
-
 const ListNews = () => {
   return (
     <>
-      <div className="pt-24 lg:pt-32 xl:max-w-[1500px] lg:max-w-7xl sm:px-10 px-2  mx-auto">
-        <div className="lg:scale-75 md:-my-7">
-          <Advers />
-        </div>
-        <h1 className="uppercase  sm:font-bold sm:text-2xl sm:pt-10 lg:pt-5 text-black-main">
-          News
-        </h1>
-        <div className="news-list  mt-4 grid-cols-1 lg:divide-x-2 divide-y-2 lg:divide-y-0  grid lg:grid-cols-3 max-[1199px]:grid-cols-3  xl:grid-cols-4">
+      <div className=" h-fit px-2 w-3/4 mx-auto">
+        <div className="news-list  mt-4">
           {NewsData.map((item, index) => (
             <NewsCard key={index} item={item} id={item.id} />
           ))}
         </div>
+        {/* <h1 className=" relative top-1/3 mt-20 text-center max-w-3xl mx-auto w-full text-neutral-600 ">
+          Belum ada berita terkini
+        </h1> */}
       </div>
     </>
   );
