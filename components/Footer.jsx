@@ -6,20 +6,21 @@ import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdWhatsapp } from "react-icons/md";
 
 const Footer = () => {
-  const isDetailPage =
-    typeof window !== "undefined"
-      ? window.location.pathname.includes(`/admine`) 
-      : undefined;
-  if (isDetailPage) {
+  if (
+    (typeof window !== "undefined" &&
+      window.location.pathname.includes(`/admine`)||
+      window.location.pathname.includes(`/about`)||
+    window.location.pathname.includes(`/login`))
+  ) {
     return null;
   }
-  
+
   return (
     <div
       id="More"
-      className="bg-primary-red max-md:px-10 h-full md:h-[40vh] py-8"
+      className="bg-primary-red pb-10 max-md:px-10 h-full md:h-fit py-8"
     >
-      <div className="max-w-7xl mx-auto md:flex h-full gap-x-16">
+      <div className="max-w-7xl mx-auto md:flex items-center h-full gap-x-16">
         <Image
           src="/Logo-Web.png"
           alt=""
@@ -29,21 +30,27 @@ const Footer = () => {
         />
         <div className="w-4/5">
           <div className="flex text-light-grey text-2xl gap-x-4 mt-6">
-            <Link href={"https://www.instagram.com/labmokletsport_science/"} rel="stylesheet" target="_blank" >
-            <FaInstagram /></Link>
-            
-
-            <Link href="https://youtube.com/@labmokletsportscience" rel="stylesheet" target="_blank" >
-            <FaYoutube />
+            <Link
+              href={"https://www.instagram.com/labmokletsport_science/"}
+              rel="stylesheet"
+              target="_blank"
+            >
+              <FaInstagram />
             </Link>
-            <button id="whatsappButton" alt="hubungi admin">
-              <MdWhatsapp />
-            </button>
+            <Link
+              href="https://youtube.com/@labmokletsportscience"
+              rel="stylesheet"
+              target="_blank"
+            >
+              <FaYoutube />
+            </Link>
+            <Link target="_blank" href="https://wa.me/+6281296939020">
+              <button id="whatsappButton" alt="hubungi admin">
+                <MdWhatsapp />
+              </button>
+            </Link>
           </div>
           <div className="md:flex text-light-grey gap-x-6 mt-4 text-lg font-semibold opacity-90">
-            <p>Privacy Policy</p>
-            <p>Help</p>
-
             <p>Contact Us</p>
             <Link href={"/about"}>
               <p>About Us</p>
@@ -51,7 +58,7 @@ const Footer = () => {
           </div>
           <div className="mt-4">
             <Link target="_blank" href="https://wa.me/+6281296939020">
-              <button className="bg-green-600 py-3 px-6 text-zinc-100">
+              <button className="bg-green-500 py-3 px-6 rounded-xl text-zinc-100">
                 <div className="flex justify-between gap-x-3 items-center">
                   <p className="text-xl">
                     <MdWhatsapp />
@@ -64,8 +71,16 @@ const Footer = () => {
           <div className="mt-8 text-light-grey opacity-80">
             <p>©Copyright 2022 The Moklet Sport Science. All rights reserved</p>
             <p className="mt-1">
-              Developed and maintained by Ciboox Indonesia software and game
-              developers
+              Developed and maintained by{" "}
+              <Link
+                target="_blank"
+                href={"https://www.instagram.com/ciboox.id"}
+              >
+                <span className="hover:text-blue-600 hover:underline">
+                  @Ciboox Indonesia
+                </span>
+              </Link>{" "}
+              software and game developers
             </p>
           </div>
         </div>

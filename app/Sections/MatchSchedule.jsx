@@ -77,7 +77,11 @@ const MatchSchedule = () => {
           </div>
         </div>
         <div className="h-full md:mt-10 ">
-          <Slider {...settings} ref={sliderRef} className="w-full h-full  divide-x-4 ">
+          <Slider
+            {...settings}
+            ref={sliderRef}
+            className="w-full h-full  divide-x-4 "
+          >
             {DataMatch.map((item) => {
               return (
                 <>

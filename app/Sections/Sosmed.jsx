@@ -11,7 +11,7 @@ const Sosmed = () => {
           </h1>
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 ">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 ">
         <CardSosmed />
       </div>
     </div>

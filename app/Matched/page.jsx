@@ -1,14 +1,24 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import DataMatch from "../../Json/Match";
 import MatchNow from "@/components/Card/MatchNow";
 
 const Matched = () => {
+  // useEffect(() => {
+  //   const isLoggedIn = localStorage.getItem("token");
+
+  //   if (!isLoggedIn) {
+  //     window.history.back();
+  //   }
+  // }, []);
   return (
     <>
       <div className="h-full md:mt-32 w-full  mx-auto max-w-2xl  pb-10 md:pt-0 pt-20">
         <MatchNow />
+
+        <div></div>
         <div className="max-w-7xl mx-auto  sm:mt-8 w-full mt-20 font-poppins font-semibold">
           <div className="max-[350px]:mx-auto">
             <h1 className="text-xl h-fit sm:text-4xl text-center max-w-2xl w-full bg-neutral-100 mx-auto font-normal text-black-main uppercase">

@@ -1,8 +1,29 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { MdArrowRight } from "react-icons/md";
+import Link from "next/link";
 const CardTeam = ({ item }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [showDetail, setShowDetail] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(true);
+  };
+
+  const handleLeave = () => {
+    setIsHovered(false);
+  };
+
+  useEffect(() => {
+    setShowDetail(isHovered || window.innerWidth < 700);
+  }, [isHovered]);
   return (
-    <div className="flex pt-2 md:w-96">
+    <div
+      onMouseEnter={handleHover}
+      onMouseLeave={handleLeave}
+      className="flex w-full  pt-2 "
+    >
       <div className="h-20 w-full max-w-[70px]">
         <Image
           alt=""
@@ -25,6 +46,16 @@ const CardTeam = ({ item }) => {
           </div>
         </div>
       </div>
+      {isHovered && (
+        <Link href={`/Team/${item.uuid}`}>
+          <button className="bg-neutral-400  active:duration-200  ease-out flex px-2 sm:mt-6 mt-4 sm:pt-0.5 rounded-sm  sm:w-24 justify-between items-center text-light-grey font-semibold text-xs  uppercase tracking-widest">
+            <p className="hidden sm:block">Detail</p>
+            <span className="text-2xl rotate-90 sm:rotate-0  ">
+              <MdArrowRight />
+            </span>
+          </button>
+        </Link>
+      )}
     </div>
   );
 };

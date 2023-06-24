@@ -33,12 +33,12 @@ const Sponsorship = () => {
     ],
   };
 
-  const isDetailPage =
-    typeof window !== "undefined"
-      ? window.location.pathname.includes(`/admine`) ||
-        window.location.pathname.includes(`/about`)
-      : undefined;
-  if (isDetailPage) {
+  if (
+    (typeof window !== "undefined" &&
+      window.location.pathname.includes(`/admine`)||
+    window.location.pathname.includes(`/about`)||
+    window.location.pathname.includes(`/login`))
+  ) {
     return null;
   }
   return (
@@ -73,7 +73,7 @@ const Sponsorship = () => {
         </div>
         {/* </Slider> */}
         <div className="w-full h-fit mt-4">
-          <div className="md:grid-cols-2 grid-cols-1 gap-6 h-fit">
+          <div className="sm:grid-cols-2 grid grid-cols-1 gap-6 h-fit">
             {Array.from({ length: 2 }, (_, index) => {
               return (
                 <>

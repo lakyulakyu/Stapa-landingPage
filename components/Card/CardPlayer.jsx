@@ -10,7 +10,7 @@ export default function CardPlayer({ position,uuid }) {
       <div className=" mb-10">
         <div className=" grid grid-cols-1 divide-y-4  sm:divide-y-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  sm:gap-4 xl:gap-8  min-w-fit px-10">
           {DataStats.filter((player) => player.position === position).map(
-            ({ name, number, img, id }) => (
+            ({ name, number, img }) => (
               <>
                 <Link href={`/Team/detail/${uuid}`}>
                   <div className="mb-4 pt-2 sm:mb-0 hover:scale-105 duration-500 ease-out">
