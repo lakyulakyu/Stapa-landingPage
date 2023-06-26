@@ -8,9 +8,8 @@ import { MdWhatsapp } from "react-icons/md";
 const Footer = () => {
   if (
     (typeof window !== "undefined" &&
-      window.location.pathname.includes(`/admine`)||
-      window.location.pathname.includes(`/about`)||
-    window.location.pathname.includes(`/login`))
+      window.location.pathname.includes(`/admine`)) ||
+    window.location.pathname.includes(`/login`) 
   ) {
     return null;
   }

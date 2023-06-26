@@ -30,15 +30,13 @@ const UserDatas = [
   },
 ];
 
-const Navbar = (window) => {
+const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [UserData, setUserData] = useState(null);
-  const [Window, setWindow] = useState(null);
-
 
   const handleLogin = () => {
     setIsLoggedIn();
@@ -98,8 +96,7 @@ const Navbar = (window) => {
   if (
     typeof window !== "undefined" &&
     (window.location.pathname.includes(`/admine`) ||
-      window.location.pathname.includes(`/login`) ||
-      window.location.pathname.includes(`/page-test`))
+      window.location.pathname.includes(`/login`))
   ) {
     return null;
   }
