@@ -93,13 +93,13 @@ const Navbar = () => {
     };
   }, []);
 
-  if (
-    typeof window !== "undefined" &&
-    (window.location.pathname.includes(`/admine`) ||
-      window.location.pathname.includes(`/login`))
-  ) {
-    return null;
-  }
+  // if (
+  //   typeof window !== "undefined" &&
+  //   (window.location.pathname.includes(`/admine`) ||
+  //     window.location.pathname.includes(`/login`))
+  // ) {
+  //   return null;
+  // }
 
   return (
     <nav>

@@ -33,14 +33,14 @@ const Sponsorship = () => {
   //   ],
   // };
 
-  if (
-    (typeof window !== "undefined" &&
-      window.location.pathname.includes(`/admine`)||
-    window.location.pathname.includes(`/about`)||
-    window.location.pathname.includes(`/login`))
-  ) {
-    return null;
-  }
+  // if (
+  //   (typeof window !== "undefined" &&
+  //     window.location.pathname.includes(`/admine`)||
+  //   window.location.pathname.includes(`/about`)||
+  //   window.location.pathname.includes(`/login`))
+  // ) {
+  //   return null;
+  // }
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-10 md:mx-auto mt-12 w-full font-poppins font-semibold h-fit">
       <div>
