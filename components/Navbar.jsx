@@ -107,7 +107,7 @@ const Navbar = () => {
         <div
           className={`flex z-50  md:mx-auto xl:w-full lg:max-w-none py-4  justify-between px-6 duration-200 
           ${
-            window.location.pathname !== "/" || scrollPosition > 10
+            scrollPosition > 10
               ? `${
                   isOpen
                     ? "text-black  bg-neutral-50 top-0 mb-auto"
