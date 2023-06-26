@@ -18,32 +18,36 @@ const PlayerStats = () => {
         </h1>
       </div>
 
-      <div className="flex-col justify-center items-center ">
-        <div className="">
-          <div>
-            <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
-              Goals
-            </h1>
-            <CardPlayer position={"goals"} />
-          </div>
-          <div>
-            <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
-              Assist
-            </h1>
-            <CardPlayer position={"cleansheets"} />
-          </div>
-          <div>
-            <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
-              Passes
-            </h1>
-            <CardPlayer position={"passes"} />
-          </div>
-          <div>
-            <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
-              Clean Sheets
-            </h1>
-            <CardPlayer position={"assist"} />
-          </div>
+      <div className="fjustify-center items-center ">
+        <div className="h-fit">
+          <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
+            Goals
+          </h1>
+          <CardPlayer position={"K"} />
+        </div>
+        <div>
+          <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
+            Assist
+          </h1>
+          <CardPlayer position={"B"} />
+        </div>
+        <div>
+          <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
+            Passes
+          </h1>
+          <CardPlayer position={"CMF"} />
+        </div>
+        <div>
+          <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
+            Clean Sheets
+          </h1>
+          <CardPlayer position={"S"} />
+        </div>
+        <div>
+          <h1 className="pl-10 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1 uppercase">
+            Clean Sheets
+          </h1>
+          <CardPlayer position={"W"} />
         </div>
       </div>
     </div>

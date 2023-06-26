@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        
         bebasNeue: ["var(--font-bebasneue)"],
         montserrat: ["var(--font-montserrat)"],
         poppins: ["var(--font-poppins)"],

@@ -53,7 +53,7 @@ const MatchSchedule = () => {
     <>
       <div className="h-fit max-w-7xl pb-10 w-full px-2 sm:px- md:mx-auto">
         <div className="mx-auto mt-10 w-full font-poppins font-semibold">
-          <div className="flex justify-between items-center ">
+          <div className="flex justify-between max-lg:px-10 items-center ">
             <div>
               <h1 className="md:text-2xl lg:text-4xl text-xl h-fit  mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
                 Match shcedule

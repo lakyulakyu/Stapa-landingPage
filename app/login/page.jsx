@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MdWhatsapp } from "react-icons/md";
@@ -10,7 +10,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userData, setUserData] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
 
   const toggleShowPassword = () => {
@@ -55,16 +54,17 @@ const Login = () => {
     }
   };
 
-  // const handleLogin = () => {
-  //   setIsLoggedIn(true);
-  //   localStorage.setItem("isLoggedIn", true);
-  //   localStorage.setItem("userData", JSON.stringify(data));
-  // };
+
 
   return (
-    <div className=" w-full flex items-center px-8 sm:px-0 h-screen bg-gray-100">
-      <div className="w-full  ">
-        <div className="bg-white  items-center  h-fit max-w-md p-8 mx-auto shadow-md rounded-md">
+    
+    <div className="md:max-w-md mx-auto  md:h-screen h-[70vh]">
+      <Link href={"/"}>
+      <h1 className="mt-5 sm:ml-36 md:ml-0 ml-5 border rounded-lg p-2 px-4 w-fit ">Home</h1>
+      </Link>
+      <div className=" w-full flex items-center  px-8 sm:px-0 ">
+      <div className="w-full ">
+        <div className="bg-white  items-center  h-fit mt-14 max-w-md  mx-auto border-b-2 border-neutral-200 ">
           <div className="flex item-center gap-6 h-14 md:h-28 justify-center mb-4">
             <Image
               width={100}
@@ -164,7 +164,9 @@ const Login = () => {
           </p>
         </div>
       </div>
-    </div>
+    
+      </div>
+      </div>
   );
 };
 

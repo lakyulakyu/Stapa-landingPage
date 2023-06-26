@@ -94,9 +94,10 @@ const Navbar = () => {
   }, []);
 
   if (
-    (typeof window !== "undefined" &&
-      window.location.pathname.includes(`/admine`)) ||
-    window.location.pathname.includes(`/login`)
+    typeof window !== "undefined" &&
+    (window.location.pathname.includes(`/admine`) ||
+      window.location.pathname.includes(`/login`) ||
+      window.location.pathname.includes(`/page-test`))
   ) {
     return null;
   }
@@ -190,31 +191,34 @@ const Navbar = () => {
                 </Link>
               ))}
               <button
-                className="px-2 max-w-[260px] "
+                className="px-2 w-full mb-4"
                 onClick={isLoggedIn ? handleProfile : handleLogin}
               >
                 {isLoggedIn ? (
                   <>
-                    <div className="flex items-center pl-4 p-2 mt-10 w-full  mb-4 px-4 rounded-lg border border-neutral-400">
-                      <h1 className="pr-2 border-r-2 text-black-main truncate border-neutral-200 max-w-[200px] w-fit ">
-                        Ijddksdad ahdahd ahbsdhbabsdshb habsdh
-                      </h1>
-                      <Image
-                        width={1000}
-                        alt=""
-                        height={1000}
-                        className="h-8 w-8 ml-2 object-cover border rounded-full"
-                        src={"/pemain.jpg"}
-                      />
+                    <div className="flex items-center pl-4 p-2 mt-10  mb-4 px-4 rounded-lg border border-neutral-400">
+                      <button>
+                        <h1 className="pr-2 border-r-2 text-black-main truncate border-neutral-200 sm:max-w-[200px] max-w-[100px] w-fit ">
+                          Ijddksdad ahdahd ahbsdhbabsdshb habsdh
+                        </h1>
+                        <Image
+                          width={1000}
+                          alt=""
+                          height={1000}
+                          className="h-8 w-8 ml-2 object-cover border rounded-full"
+                          src={"/pemain.jpg"}
+                        />
+                      </button>
                     </div>
-                    <button className="px-3" onClick={handleLogout}>
-                      <p className="py-2 rounded-lg  border-2 text-primary-red  border-primary-red ">
+
+                    <button className=" w-full mb-2 " onClick={handleLogout}>
+                      <p className="py-2 w-full rounded-lg  border-2 text-primary-red  border-primary-red ">
                         Logout
                       </p>
                     </button>
                   </>
                 ) : (
-                  <p className="py-2 rounded-lg  text-primary-red  w-full   ">
+                  <p className="py-2 rounded-lg border  text-primary-red  w-full   ">
                     Login
                   </p>
                 )}
