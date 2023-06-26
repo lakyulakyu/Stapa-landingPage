@@ -7,31 +7,31 @@ import "slick-carousel/slick/slick-theme.css";
 import imageSponsor from "../../Json/Sponsor";
 
 const Sponsorship = () => {
-  const settings = {
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // const settings = {
+  //   infinite: true,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   dots: false,
+  //   arrows: false,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1100,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 700,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // };
 
   if (
     (typeof window !== "undefined" &&
@@ -51,10 +51,10 @@ const Sponsorship = () => {
       <div className="my-10 ">
         {/* <Slider {...settings} className="w-full h-fit"> */}
         <div className="md:grid-cols-5 sm:grid-cols-2  grid ">
-          {Array.from({ length: 5 }, (_, index) => {
+          {Array.from({ length: 5 }, () => {
             return (
               <>
-                <div className="bg-neutral-100 mx-6  rounded-full mb-2">
+                <div  key={2} className="bg-neutral-100 mx-6  rounded-full mb-2">
                   {/* <Image
                   key={item.id}
                   src={item.url}
@@ -74,7 +74,7 @@ const Sponsorship = () => {
         {/* </Slider> */}
         <div className="w-full h-fit mt-4">
           <div className="sm:grid-cols-2 grid grid-cols-1 gap-6 h-fit">
-            {Array.from({ length: 2 }, (_, index) => {
+            {Array.from({ length: 2 }, () => {
               return (
                 <>
                   {/* <Image
@@ -85,7 +85,7 @@ const Sponsorship = () => {
                   height={300}
                   className="aspect-[3/2] object-contain mix-blend-color-burn px-6"
                 /> */}
-                  <h1 className="text-center bg-neutral-100 py-20 w-full object-center rounded-3xl mb-2 h-full items-center  text-neutral-300">
+                  <h1 key={2} className="text-center bg-neutral-100 py-20 w-full object-center rounded-3xl mb-2 h-full items-center  text-neutral-300">
                     Available
                   </h1>
                 </>

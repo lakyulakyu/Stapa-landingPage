@@ -30,13 +30,15 @@ const UserDatas = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = (window) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [UserData, setUserData] = useState(null);
+  const [Window, setWindow] = useState(null);
+
 
   const handleLogin = () => {
     setIsLoggedIn();
