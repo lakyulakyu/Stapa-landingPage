@@ -3,74 +3,88 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdOutlineDoubleArrow } from "react-icons/md";
 import { AiOutlineInstagram } from "react-icons/ai";
-import DataStats from "../../../../Json/Player.json";
-import { CgArrowLongLeft } from "react-icons/cg";
+import { ButtonBack } from "@/components/User/Button";
+async function getData(uuid) {
+  const res = await fetch(
+    "http://api.mokletscience.com/api/v1/player/" + uuid,
+    {
+      headers: {
+        cache: "no-store",
+      },
+    }
+  );
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
 
-const detailIndividu = ({ params }) => {
-  const id = params.detail;
-  const item = DataStats.find((item) => item.id === parseInt(id));
+export default async function detailIndividu({ params }) {
+  const data = await getData(params.detail);
 
-  console.log(item);
-
-  const calculateYear = (birthdate) => {
-    const birthdateObj = new Date(birthdate);
+  const calculateYear = (birthday) => {
+    const birthdateObj = new Date(birthday);
     const currentYear = new Date().getFullYear();
     const birthYear = birthdateObj.getFullYear();
     const age = currentYear - birthYear;
-
     return age;
   };
 
   return (
-    <div className="h-screen text-black-main mt-32">
-      <Link href={`/Team/detail`}>
-        <button className="text-lg  gap-2 md:ml-10 ml-2 flex items-center border-2 p-2 rounded-lg text-red-500 ">
-          <CgArrowLongLeft />
-          <span className="-mt-0.5 text-sm">Kembali</span>
-        </button>
-      </Link>
+    <div className="h-screen max-w-6xl mx-auto text-black-main mt-36">
+      <div className="w-fit">
+        <ButtonBack />
+      </div>
       <div className="w-full h-full pt-8 flex">
-        <div className="mx-auto w-3/5 px-10">
+        <div className="mx-auto w-4/5 px-10">
           <div>
             <div className="flex justify-between items-center">
-              <p className="text-5xl font-semibold max-w-md">{item.name}</p>
+              <p className="text-5xl font-semibold max-w-md">
+                {data.data.fullname}
+              </p>
               <p className="text-5xl font-bold max-w-md border-b-4 border-primary-red text-primary-red">
-                {item.number}
+                {data.data.number_of_player}
               </p>
             </div>
-            <p className="uppercase text-lg mt-4">{item.position}</p>
-            <Link href={item.link_sosmed} target="blank">
-              <p className="text-3xl flex  hover:bg-neutral-200 px-2 py-1 w-fit rounded-md border items-center gap-2 mt-4">
+            <p className="uppercase text-lg mt-4">{data.data.position}</p>
+            <p className="text-3xl   hover:bg-neutral-200 px-2 py-1 w-fit rounded-md border items-center  mt-4">
+              <Link
+                href={`https://www.instagram.com/${data.data.nickname}`}
+                target="blank "
+                className="flex gap-2"
+              >
                 <AiOutlineInstagram />
-                <span className="text-lg">Instagram</span>
-              </p>
-            </Link>
+                <span className="text-lg">{data.data.nickname}</span>
+              </Link>
+            </p>
           </div>
           <div className="border-b-2 py-8 mt-6  uppercase grid grid-cols-2">
             <p className="flex items-center gap-2">
               <MdOutlineDoubleArrow />
               Tempat Lahir :{" "}
-              <span className="text-primary-red font-medium">{item.asal}</span>
+              <span className="text-primary-red font-medium">
+                {data.data.place_of_birth}
+              </span>
             </p>
             <p className="flex items-center gap-2">
               <MdOutlineDoubleArrow />
               Umur :
               <span className="text-primary-red font-medium">
-                ( {calculateYear(item.birthday)} Tahun )
+                ( {calculateYear(data.data.date_of_birth)} Tahun )
               </span>
-              {item.birthday}
+              {data.data.date_of_birth}
             </p>
             <p className="flex items-center gap-2">
               <MdOutlineDoubleArrow /> tinggi badan :{" "}
               <span className="text-primary-red font-medium">
-                {item.height}
+                {data.data.height}
               </span>
               Cm
             </p>
             <p className="flex items-center gap-2">
               <MdOutlineDoubleArrow /> berat badan :
               <span className="text-primary-red font-medium">
-                {item.berat_badan}
+                {data.data.weight}
               </span>{" "}
               Kg
             </p>
@@ -79,21 +93,12 @@ const detailIndividu = ({ params }) => {
         </div>
         <Image
           alt=""
-          src={item.img}
+          src={data.data.photo_player}
           height={1000}
           width={1000}
-          className="h-full w-2/5 object-cover"
+          className=" h-96 w-1/5 object-cover"
         />
       </div>
     </div>
   );
-};
-
-export default detailIndividu;
-
-// "id": ,
-//     "img":
-//     "name":
-//     "number":
-//     "birthday":
-//     "position":
+}

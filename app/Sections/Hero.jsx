@@ -6,6 +6,25 @@ import Link from "next/link";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
+const data = [
+  {
+    id: 1,
+    img: "/Logo.png",
+  },
+  {
+    id: 2,
+    img: "/Logo-libra.png",
+  },
+  {
+    id: 3,
+    img: "/Logo-Web.png",
+  },
+  {
+    id: 4,
+    img: "/logo-batu.png",
+  },
+];
+
 const Hero = () => {
   const settings = {
     infinite: true,
@@ -17,16 +36,12 @@ const Hero = () => {
     autoplaySpeed: 4000,
   };
 
-
   return (
-    <div className="w-screen ">
+    <>
       {/* <Slider {...settings} className="w-full h-fi"> */}
-        {/* {heroContent.map((item) => {
-          return ( */}
-            <div
-              className="lg:h-screen md:h-[50vh] h-48 w-screen bg-cover bg-no-repeat"
-            >
-              {/* <div className="font-poppins relative md:top-1/4  lg:top-2/4 top-1/4 sm:top-1/2  lg:max-w-6xl md:mx-20 xl:max-w-7xl px-2 sm:px-0 sm:mx-10  lg:mx-auto text-light-grey ">
+
+      <div className="lg:h-screen md:h-[50vh] h-56 w-screen bg-primary-red bg-opacity-20 ">
+        {/* <div className="font-poppins relative md:top-1/4  lg:top-2/4 top-1/4 sm:top-1/2  lg:max-w-6xl md:mx-20 xl:max-w-7xl px-2 sm:px-0 sm:mx-10  lg:mx-auto text-light-grey ">
                 <h4 className="text-lg uppercase font-semibold">
                   {item.number}
                 </h4>
@@ -39,37 +54,30 @@ const Hero = () => {
                   </button>
                 </Link>
               </div> */}
-              <div className="absolute w-screen h-full top-0 -z-10">
-                <div className="absolute opacity-30 md:h-[50vh] h-48 lg:h-screen w-full bg-primary-red"></div>
-                <div className="flex lg:h-96 h-32 mx-auto lg:mt-40 mt-20  w-fit">
-                  <Image
-                    src={"/Logo.png"}
-                    alt=""
-                    width={1000}
-                    height={1000}
-                    className="md:w-full md:h-full h-24 w-fit  object-contain lg:p-20 p-3 block "
-                  />
-                  <Image
-                    src={"/Logo-libra.png"}
-                    alt=""
-                    width={1000}
-                    height={1000}
-                    className="md:w-full md:h-full h-24 w-fit object-contain lg:p-20 p-3 block "
-                  />
-                  <Image
-                    src={"/Logo-Web.png"}
-                    alt=""
-                    width={1000}
-                    height={1000}
-                    className="md:w-full md:h-full h-24 w-fit object-contain lg:p-20 p-3 "
-                  />
-                </div>
-              </div>
-            </div>
-          {/* ); */}
-        {/* })}
-      </Slider> */}
-    </div>
+
+        <div className="w-full flex  h-full items-center  ">
+          <div className="mx-auto  h-full max-h-[60vh]  items-center  w-fit flex flex-wrap">
+            {data.map((item) => {
+              return (
+                <>
+                  <div key={item.id} className="lg:h-80  mx-auto  sm:h-32  w-fit">
+                    <Image
+                      src={item.img}
+                      alt=""
+                      width={1000}
+                      height={1000}
+                      className="md:w-full md:h-full sm:h-24 h-16 w-fit  object-contain lg:p-20 p-3 block "
+                    />
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* </Slider> */}
+      </div>
+    </>
   );
 };
 

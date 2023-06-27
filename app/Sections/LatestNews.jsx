@@ -48,7 +48,7 @@ const LatestNews = () => {
   };
   return (
     <div className="md:max-w-7xl mb-10 mx-auto px-2 sm:px-10 md:mx-auto  w-full font-poppins font-semibold h-full">
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center max-sm:px-10 ">
         <div>
           <h1 className="md:text-2xl lg:text-4xl text-xl h-fit mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
             Latest News

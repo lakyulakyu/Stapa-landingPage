@@ -2,19 +2,15 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { MdOutlineClose } from "react-icons/md";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import EditPasswordPage from "./User/EditPassword";
 import { AiFillCaretDown } from "react-icons/ai";
+import { Logout, Login } from "./User/Button";
+
 const navigation = [
-  {
-    id: 1,
-    name: "Home",
-    href: "/",
-  },
-  {
-    id: 2,
-    name: "News",
-    href: "/News",
-  },
+  { id: 1, name: "Home", href: "/" },
+  { id: 2, name: "News", href: "/News" },
   { id: 3, name: "Team", href: "/Team" },
   { id: 4, name: "Match", href: "/Matched" },
   { id: 5, name: "Video", href: "/Video" },
@@ -34,21 +30,12 @@ const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [openPopup, setOpenPopup] = useState(false);
-  const [openProfile, setOpenProfile] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [UserData, setUserData] = useState(null);
+  const [openProfile, setOpenProfile] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
-  const handleLogin = () => {
-    setIsLoggedIn();
-    window.location.href = "/login";
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    window.location.href = "/login";
-  };
-  const handleProfile = () => {
-    setOpenProfile(!openProfile);
+  const handleItemClick = (itemId) => {
+    setSelectedItem(itemId);
   };
 
   const toggleMenu = () => {
@@ -57,18 +44,18 @@ const Navbar = () => {
   const Popup = () => {
     setOpenPopup(!openPopup);
   };
+  const handleProfile = () => {
+    setOpenProfile(!openProfile);
+  };
 
   const checkLoggedInStatus = () => {
     const isLoggedInStorage = localStorage.getItem("isLoggedIn");
     if (isLoggedInStorage) {
       setIsLoggedIn(true);
-      const storedUserData = localStorage.getItem("userData");
-      setUserData(JSON.parse(storedUserData));
     }
   };
   useEffect(() => {
     checkLoggedInStatus();
-
     const handleResize = () => {
       if (window.innerWidth > 870) {
         setIsOpen(false);
@@ -93,30 +80,33 @@ const Navbar = () => {
     };
   }, []);
 
-  // if (
-  //   typeof window !== "undefined" &&
-  //   (window.location.pathname.includes(`/admine`) ||
-  //     window.location.pathname.includes(`/login`))
-  // ) {
-  //   return null;
-  // }
+  const pathname = typeof window !== "undefined" && window.location.pathname;
+  if (pathname === "/login") {
+    return null;
+  }
 
   return (
     <nav>
-      <div className="fixed w-full  z-50 top-0">
+      <div className="fixed w-full  z-40 top-0">
         <div
           className={`flex z-50  md:mx-auto xl:w-full lg:max-w-none py-4  justify-between px-6 duration-200 
-          ${
-            scrollPosition > 10
-              ? `${
-                  isOpen
-                    ? "text-black  bg-neutral-50 top-0 mb-auto"
-                    : "bg-neutral-50 items-center"
-                }  shadow-2xl `
-              : `${
-                  isOpen ? "top-0 mb-auto bg-neutral-50" : " bg-transparent "
-                }text-white items-center `
-          }`}
+          
+${
+  pathname === "/"
+    ? ` ${
+        scrollPosition > 10
+          ? `${
+              isOpen
+                ? "text-black  bg-neutral-50 top-0 mb-auto"
+                : "bg-neutral-50 items-center"
+            }  shadow-2xl text-black `
+          : `${
+              isOpen ? "top-0 mb-auto text-black-main   " : "text-white "
+            } items-center bg-transparent `
+      } `
+    : ` bg-white text-black-main items-center`
+}
+            `}
         >
           <div className="md:h-fit h-12 w-12  md:w-fit">
             <Link href={"/"}>
@@ -130,13 +120,18 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="md:block hidden ml-auto mr-auto  w-fit">
+          <div className="md:block hidden  mx-auto  w-fit">
             {navigation.map((item) => (
               <Link
+                onSelect={"bg-slate-400"}
                 key={item.id}
                 href={item.href}
-                className="
-                 hover:border-b-2 focus:borderb-2 bg-opacity-5 pb-3  uppercase mx-3 font-normal"
+                onClick={() => handleItemClick(item.id)}
+                className={`text-xl pb-3 uppercase mx-3 font-normal ${
+                  selectedItem === item.id
+                    ? "border-b-2 border-neutral-700"
+                    : ""
+                }`}
               >
                 {item.name}
               </Link>
@@ -148,31 +143,9 @@ const Navbar = () => {
               type="button"
               className={`${
                 scrollPosition > 10 ? "border-black-main" : "border-white"
-              }text-neutral-400 focus:outline-none focus:text-white"
-              aria-label="Toggle menu`}
+              }text-neutral-400 text-3xl focus:outline-none focus:text-white"`}
             >
-              <svg
-                className="h-10 w-10"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
+              {isOpen ? <MdOutlineClose /> : <HiOutlineMenuAlt3 />}
             </button>
           </div>
           {/* for list whren is open  */}
@@ -182,24 +155,29 @@ const Navbar = () => {
                 <Link
                   key={item.id}
                   href={item.href}
-                  className={`border-black-main  hover:bg-neutral-200 hover:underline focus:borderb-2 bg-opacity-5 pr-4  uppercase flex font-normal`}
+                  onClick={() => handleItemClick(item.id)}
+                  className={`${
+                    selectedItem === item.id
+                      ? " bg-neutral-200 rounded-lg pr-2 mx-2 font-semibold "
+                      : ""
+                  }  hover:bg-neutral-200 hover:underline focus:borderb-2  pr-4 uppercase flex font-normal`}
                 >
                   <p className=" text-sm py-4 ml-auto right-0  pl-2 text-end ">
                     {item.name}
                   </p>
                 </Link>
               ))}
-              <button
-                className="px-2 w-full mb-4"
-                onClick={isLoggedIn ? handleProfile : handleLogin}
-              >
+              <div className="px-2 w-full mb-4">
                 {isLoggedIn ? (
                   <>
                     <div className="flex items-center pl-4 p-2 mt-10  mb-4 px-4 rounded-lg border border-neutral-400">
-                      <button>
-                        <h1 className="pr-2 border-r-2 text-black-main truncate border-neutral-200 sm:max-w-[200px] max-w-[100px] w-fit ">
-                          Ijddksdad ahdahd ahbsdhbabsdshb habsdh
-                        </h1>
+                      <button
+                        className="flex justify-end w-full"
+                        onClick={handleProfile}
+                      >
+                        <p className="pr-2 border-r-2 text-black-main truncate border-neutral-200 sm:max-w-[200px] max-w-[100px] w-fit ">
+                          user login
+                        </p>
                         <Image
                           width={1000}
                           alt=""
@@ -209,25 +187,17 @@ const Navbar = () => {
                         />
                       </button>
                     </div>
-
-                    <button className=" w-full mb-2 " onClick={handleLogout}>
-                      <p className="py-2 w-full rounded-lg  border-2 text-primary-red  border-primary-red ">
-                        Logout
-                      </p>
-                    </button>
+                    <Logout />
                   </>
                 ) : (
-                  <p className="py-2 rounded-lg border  text-primary-red  w-full   ">
-                    Login
-                  </p>
+                  <Login />
                 )}
-              </button>
+              </div>
             </div>
           )}
 
-          {/* popup for login and logout ==>lebih ke sudah login apa belum? */}
           <div className="uppercase max-md:hidden flex items-center  gap-4">
-            <h1 className="flex items-center">Id</h1>
+            <h1 className="flex items-center">user Login</h1>
             <button onClick={Popup}>
               {isLoggedIn ? (
                 <>
@@ -249,8 +219,8 @@ const Navbar = () => {
               {/* this is popup */}
             </button>
             {openPopup && (
-              <div className="absolute  top-16 w-52 h-fit  -translate-x-36">
-                <button className="mt-2 bg-white text-sm  uppercase font-medium py-0.5 w-full px-2 rounded-lg">
+              <div className="absolute  top-16 w-52 h-fit  -translate-x-16">
+                <div className="mt-2 bg-white text-sm  uppercase font-medium py-0.5 w-full px-2 rounded-lg">
                   {isLoggedIn ? (
                     <>
                       <div className="w-full">
@@ -260,21 +230,14 @@ const Navbar = () => {
                         >
                           profile
                         </button>
-                        <button className="w-full" onClick={handleLogout}>
-                          <p className="py-2 mt-4 rounded-lg  border-2 text-primary-red mb-2 w-full  border-primary-red ">
-                            Logout
-                          </p>
-                        </button>
+
+                        <Logout />
                       </div>
                     </>
                   ) : (
-                    <button className="w-full" onClick={handleLogin}>
-                      <p className="py-2 mt-4 rounded-lg  border-2 text-primary-red mb-2 w-full  border-primary-red ">
-                        Login
-                      </p>
-                    </button>
+                    <Login />
                   )}
-                </button>
+                </div>
               </div>
             )}
           </div>

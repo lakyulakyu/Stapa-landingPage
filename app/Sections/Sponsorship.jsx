@@ -44,7 +44,7 @@ const Sponsorship = () => {
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-10 md:mx-auto mt-12 w-full font-poppins font-semibold h-fit">
       <div>
-        <h1 className="md:text-2xl lg:text-4xl text-xl h-fit mt-4 w-full font-normal text-black-main uppercase">
+        <h1 className="md:text-2xl max-sm:px-10 lg:text-4xl text-xl h-fit mt-4 w-full font-normal text-black-main uppercase">
           Sponsorship
         </h1>
       </div>

@@ -43,7 +43,7 @@ export const metadata = {
   description: "Website for",
 };
 
-export default function RootLayout({ children}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
@@ -51,7 +51,6 @@ export default function RootLayout({ children}) {
       >
         <Navbar />
         {children}
-
         <Sponsorship />
         <Footer />
       </body>

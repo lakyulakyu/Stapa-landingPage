@@ -6,11 +6,10 @@ import Link from "next/link";
 const CardTeam = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
-
+  
   const handleHover = () => {
     setIsHovered(true);
   };
-
   const handleLeave = () => {
     setIsHovered(false);
   };

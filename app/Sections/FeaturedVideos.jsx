@@ -75,7 +75,7 @@ const FeaturedVideos = () => {
 
   return (
     <div className="h-fit pb-10 w-full px-2 sm:px-10 max-w-7xl md:mx-auto">
-      <div className="flex text-black-main justify-between mb-10 items-center mx-auto   z-10 w-full ">
+      <div className="flex text-black-main max-sm:px-10 justify-between  mb-10 items-center mx-auto  z-10 w-full ">
         <div>
           <h1 className="md:text-2xl lg:text-4xl text-xl h-fit mt-4 text-center max-w-2xl w-full mx-auto font-normal text-black-main uppercase">
             Videos
@@ -97,9 +97,9 @@ const FeaturedVideos = () => {
       </div>
       <div className="w-full">
         <Slider {...settings} ref={sliderRef} className="w-full h-fit">
-          {Video.map((item) => (
+          {Video.map((item,index) => (
             <>
-              <CardVideos   key={item.id} item={item} />
+              <CardVideos  key={index} item={item} />
             </>
           ))}
         </Slider>

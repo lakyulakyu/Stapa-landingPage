@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React,{useEffect} from "react";
 import Link from "next/link";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdWhatsapp } from "react-icons/md";
@@ -9,10 +9,20 @@ const Footer = () => {
   // if (
   //   (typeof window !== "undefined" &&
   //     window.location.pathname.includes(`/admine`)) ||
-  //   window.location.pathname.includes(`/login`) 
+  //   window.location.pathname.includes(`/login`)
   // ) {
   //   return null;
   // }
+
+  useEffect(() => {
+    const pathname =
+      typeof window !== "undefined" ? window.location.pathname : "";
+
+    if (pathname === "/login") {
+    } else {
+      
+    }
+  }, []);
 
   return (
     <div

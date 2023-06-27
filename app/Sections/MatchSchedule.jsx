@@ -51,7 +51,7 @@ const MatchSchedule = () => {
   };
   return (
     <>
-      <div className="h-fit max-w-7xl pb-10 w-full px-2 sm:px- md:mx-auto">
+      <div className="h-fit max-w-7xl pb-10 w-full px-2 md:px-10  md:mx-auto">
         <div className="mx-auto mt-10 w-full font-poppins font-semibold">
           <div className="flex justify-between max-lg:px-10 items-center ">
             <div>

@@ -11,7 +11,7 @@ const layout = ({ children }) => {
         </h1>
         <div className="flex">
           {children}
-          <div className="hidden sticky top-56 md:block border-l w-1/4">halo</div>
+          <div className="hidden sticky top-56 md:block border-l mx-auto w-1/4">belum ada berita</div>
         </div>
       </div>
     </div>

@@ -43,7 +43,7 @@ const CardSosmed = () => {
           <>
             <div
               key={item.id}
-              className="hover:shadow-xl shadow-neutral-100 pb-4 rounded-b-2xl mb-10 px-5  hover:scale-90 duration-150 ease-in-out  h-full "
+              className="hover:shadow-xl   shadow-neutral-100 sm:pb-4 rounded-b-2xl mb-10 px-5  hover:scale-90 duration-150 ease-in-out  h-full "
             >
               <Link
                 target="_blank"
@@ -51,7 +51,7 @@ const CardSosmed = () => {
                 rel="noopener noreferrer"
               >
                 <div className="">
-                  <div className="sm:h-28 mx-auto h-32 w-52 sm:w-auto ">
+                  <div className="sm:h-28 mx-auto  max-sm:hidden w-52 sm:w-auto ">
                     <Image
                       src={item.logo}
                       width={1000}
@@ -60,7 +60,7 @@ const CardSosmed = () => {
                       className="object-contain w-full h-full"
                     />
                   </div>
-                  <div className="flex mx-auto w-fit gap-2 my-4 items-center">
+                  <div className="flex sm:mx-auto w-fit gap-2 sm:my-4 items-center">
                     <Image
                       src={item.logo}
                       alt=""
