@@ -127,7 +127,7 @@ ${
                 key={item.id}
                 href={item.href}
                 onClick={() => handleItemClick(item.id)}
-                className={`text-xl pb-3 uppercase mx-3 font-normal ${
+                className={`text-lg pb-3 uppercase mx-3 font-normal ${
                   selectedItem === item.id
                     ? "border-b-2 border-neutral-700"
                     : ""
@@ -175,7 +175,7 @@ ${
                         className="flex justify-end w-full"
                         onClick={handleProfile}
                       >
-                        <p className="pr-2 border-r-2 text-black-main truncate border-neutral-200 sm:max-w-[200px] max-w-[100px] w-fit ">
+                        <p className="pr-2 border-r-2  text-black-main truncate border-neutral-200 sm:max-w-[200px] max-w-[100px] w-fit ">
                           user login
                         </p>
                         <Image
@@ -196,12 +196,12 @@ ${
             </div>
           )}
 
-          <div className="uppercase max-md:hidden flex items-center  gap-4">
-            <h1 className="flex items-center">user Login</h1>
+          <div className="uppercase max-md:hidden   flex items-center  gap-4">
+            <h1 className="flex items-center truncate">user Login</h1>
             <button onClick={Popup}>
               {isLoggedIn ? (
                 <>
-                  <div className="pl-4 border-l-2">
+                  <div className="pl-2 border-l-2">
                     <Image
                       width={1000}
                       alt=""

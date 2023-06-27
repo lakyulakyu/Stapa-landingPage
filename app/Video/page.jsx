@@ -32,7 +32,7 @@ const Video = [
 const page = () => {
   return (
     <>
-      <div className=" w-full h-fit  mt-32 grid grid-cols-5  text-center ">
+      <div className=" w-full h-fit md:mt-44 mx-auto mt-24 flex flex-wrap   ">
         {Video.map((item) => (
           <CardVideos key={item.id} item={item} />
         ))}
