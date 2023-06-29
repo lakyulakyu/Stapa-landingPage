@@ -39,9 +39,11 @@ const sourceSerifPro = Source_Serif_Pro({
 });
 
 export const metadata = {
-  title: "LMSS",
+  title: `Moklet Science`,
   description: "Website for",
 };
+
+
 
 export default function RootLayout({ children }) {
   return (
@@ -49,7 +51,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable} ${poppins.variable} overflow-x-hidden`}
       >
+        <div >
         <Navbar />
+
+        </div>
         {children}
         <Sponsorship />
         <Footer />

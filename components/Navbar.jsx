@@ -80,8 +80,8 @@ const Navbar = () => {
     };
   }, []);
 
-  const pathname = typeof window !== "undefined" && window.location.pathname;
-  if (pathname === "/login") {
+  const pathname =  window.location.pathname
+  if (pathname==='/login') {
     return null;
   }
 
