@@ -81,7 +81,7 @@ const Navbar = () => {
   }, []);
 
   const pathname =
-    typeof window !== undefined ? window.location.pathname : null;
+    typeof window !== "undefined" ? window.location.pathname : null;
   if (
     pathname === "/login" ||
     pathname === "/admine" ||
