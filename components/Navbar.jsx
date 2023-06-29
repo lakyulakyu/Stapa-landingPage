@@ -81,12 +81,11 @@ const Navbar = () => {
   }, []);
 
   const pathname =
-    typeof window !== "undefined" ? window.location.pathname : null;
+    typeof window !== undefined ? window.location.pathname : null;
   if (
     pathname === "/login" ||
     pathname === "/admine" ||
-    pathname === "/about" ||
-    pathname !== undefined
+    pathname === "/about"
   ) {
     return null;
   }
@@ -181,7 +180,7 @@ ${
                         onClick={handleProfile}
                       >
                         <p className="pr-2 border-r-2  text-black-main truncate border-neutral-200 sm:max-w-[200px] max-w-[100px] w-fit ">
-                          user login
+                          ur name here
                         </p>
                         <Image
                           width={1000}
@@ -201,8 +200,8 @@ ${
             </div>
           )}
 
-          <div className="uppercase max-md:hidden   flex items-center  gap-4">
-            <h1 className="flex items-center truncate">user Login</h1>
+          <div className="uppercase max-md:hidden  flex items-center  gap-4">
+            <h1 className="truncate w-32">Loginbvjlvbljvbvvijvbsjv vbsabv</h1>
             <button onClick={Popup}>
               {isLoggedIn ? (
                 <>
@@ -224,7 +223,7 @@ ${
               {/* this is popup */}
             </button>
             {openPopup && (
-              <div className="absolute  top-16 w-52 h-fit  -translate-x-16">
+              <div className="absolute  top-24 w-52 h-fit  right-6">
                 <div className="mt-2 bg-white text-sm  uppercase font-medium py-0.5 w-full px-2 rounded-lg">
                   {isLoggedIn ? (
                     <>

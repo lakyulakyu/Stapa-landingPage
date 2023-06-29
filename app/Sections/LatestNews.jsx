@@ -60,9 +60,10 @@ const LatestNews = () => {
           </Link>
         </div>
         <div className=" flex text-2xl">
-          <button 
-          // onClick={prev} 
-          className="">
+          <button
+            // onClick={prev}
+            className=""
+          >
             <h1 className="rotate-180 border-l-2 hover:bg-slate-100  py-4 px-2 text-gray-400">
               <CgArrowLongRight />
             </h1>
@@ -84,7 +85,9 @@ const LatestNews = () => {
           > */}
           {/* {DataNews.map((item, index) => ( */}
 
-          <h1 className="text-center text-neutral-300 py-8">belum ada berita</h1>
+          <h1 className="text-center text-neutral-300 py-8">
+            belum ada berita
+          </h1>
 
           {/* // <CardLatestNews key={index} item={item} index={index} /> */}
           {/* //   ))} */}

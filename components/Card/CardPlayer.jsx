@@ -39,8 +39,9 @@ export default async function CardPlayer({ position, params }) {
                 <Link href={`Team/${params.player}/${uuid}`}>
                   <div
                     key={number_of_player}
-                    className="max-sm:w-40 sm:w-60 border h-full  md:h-80 "
+                    className="max-sm:w-40 sm:w-60 border rounded-xl h-full  md:h-80 "
                   >
+
                     <div className="h-52 md:h-60 w-full ">
                       <Image
                         alt=""

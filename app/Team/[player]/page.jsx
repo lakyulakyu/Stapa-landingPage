@@ -19,7 +19,7 @@ const PlayerStats = ({ params }) => {
             Goal Keepers
           </h1>
 
-          <CardPlayer position={"K"} params={params} />
+          <CardPlayer position={"K"}  params={params} />
         </div>
         <div className=" h-fit ">
           <h1 className="pl-10 my-8 border-b-2 border-gray-200  h-10 text-xl font-normal pt-1  bg-neutral-200 uppercase">

@@ -40,8 +40,7 @@ const CardTeam = ({ item }) => {
           <div className="flex">
             <p className="text-neutral-400 md:text-base text-xs w-24 md:w-32 uppercase font-medium">
               Player
-            </p>
-            <p className="text-primary-red ">{item.length}</p>
+            </p> 
           </div>
         </div>
       </div>

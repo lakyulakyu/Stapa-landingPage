@@ -19,8 +19,7 @@ const Footer = () => {
 if (
   pathname === "/login" ||
   pathname === "/admine" ||
-  pathname === "/about" ||
-  pathname !== undefined
+  pathname === "/about" 
 ) {
   return null;
 }
