@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Error = () => {
   return (
-    <div>
+    <div className="h-screen  pt-56">
       haaman ini tidak ada!
       <Link href={"/"}>
         <button>kembali ke halaman utaman</button>

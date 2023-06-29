@@ -80,9 +80,14 @@ const Navbar = () => {
     };
   }, []);
 
-
-   const pathname = typeof window !== "undefined" ? window.location.pathname : null;
-  if (pathname === "/login") {
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : null;
+  if (
+    pathname === "/login" ||
+    pathname === "/admine" ||
+    pathname === "/about" ||
+    pathname !== undefined
+  ) {
     return null;
   }
   return (

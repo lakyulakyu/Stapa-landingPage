@@ -14,16 +14,16 @@ const Footer = () => {
   //   return null;
   // }
 
-  useEffect(() => {
-    const pathname =
-      typeof window !== "undefined" ? window.location.pathname : "";
-
-    if (pathname === "/login") {
-    } else {
-      
-    }
-  }, []);
-
+  const pathname =
+  typeof window !== "undefined" ? window.location.pathname : null;
+if (
+  pathname === "/login" ||
+  pathname === "/admine" ||
+  pathname === "/about" ||
+  pathname !== undefined
+) {
+  return null;
+}
   return (
     <div
       id="More"
