@@ -80,11 +80,11 @@ const Navbar = () => {
     };
   }, []);
 
-  const pathname = window.location.pathname;
-  if (typeof window && (pathname === "/login")) {
+
+   const pathname = typeof window !== "undefined" ? window.location.pathname : null;
+  if (pathname === "/login") {
     return null;
   }
-
   return (
     <nav>
       <div className="fixed w-full  z-40 top-0">
