@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import MatchReport from "@/components/Card/MatchReport";
 import Match from "../../../Json/Match";
+import { ButtonBack } from "@/components/User/Button";
 import Link from "next/link";
 const MatchedRev = ({ params }) => {
   const id = params.detail;
@@ -10,8 +11,12 @@ const MatchedRev = ({ params }) => {
   console.log("item.detail_match.detail", item.detail_match[0].detail);
 
   return (
-    <div className="h-fit">
+    <div className="h-fit mt-32">
       <div className=" mx-auto font-poppins">
+        <div className="w-24">
+          <ButtonBack />
+        </div>
+
         <div className="grid grid-cols-3 mb-4 mt-24 mx-auto bg-white py-2 rounded-md shadow-xl items-center max-w-[200px] ">
           <Image
             alt=""

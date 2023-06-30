@@ -1,41 +1,70 @@
 "use client";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import axios from "axios";
 
+// ,
 const AddUser = () => {
   const [showDetail, setShowDetail] = useState(false);
-  const [data, setData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     username: "",
     password: "",
     role: "",
+    // photo_profile: null,
   });
 
   const handleButtonClick = () => {
     setShowDetail(!showDetail);
   };
 
-  const handleChange = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handlePhotoChange = (event) => {
+    const file = event.target.files[0];
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      photo: file,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const authToken =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY4ODA0NzQwNywiZXhwIjoxNjg4MDU4MjA3fQ.OXpeTvjVCSQcQ6m_dhRPFu0BqxBcvyihazAgU8eZ32k";
+    const formDataToSend = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      formDataToSend.append(key, value);
+    });
 
     try {
-      const response = await axios.post(
-        "http://api-user-dev.mokletscience.online/api/v1/user/register",
-        data
+      const response = await fetch(
+        "https://api-user-dev.mokletscience.com/api/v1/user/register",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+          body: formDataToSend,
+        }
       );
-      console.log(response.data);
-      alert("Okee");
-      window.location.reload();
+
+      if (response.ok) {
+        console.log("Data sent successfully!");
+      } else {
+        console.log("Failed to send data.");
+      }
     } catch (error) {
-      console.error(error);
-      alert("Gagal tambah User");
+      console.error("Error occurred while sending data:", error);
     }
   };
+
   return (
     <div className={`max-w-6xl mx-auto ${showDetail ? "mb-10" : "mb-4"}`}>
       <button
@@ -55,9 +84,9 @@ const AddUser = () => {
         )}
         <p>Register</p>
       </button>
-      <div>
+      <form onSubmit={handleSubmit}>
         {showDetail && (
-          <form onSubmit={handleSubmit}>
+          <>
             <div className="grid gap-4 grid-cols-2">
               <div className="flex-col">
                 <label htmlFor="File">Name</label>
@@ -65,7 +94,7 @@ const AddUser = () => {
                   type="text"
                   className="w-full cursor-text rounded border focus:outline-none capitalize focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
                   name="name"
-                  value={data.name}
+                  value={formData.name}
                   onChange={handleChange}
                 />
               </div>
@@ -75,17 +104,28 @@ const AddUser = () => {
                   type="text"
                   className="w-full cursor-text rounded border focus:outline-none capitalize focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
                   name="username"
-                  value={data.username}
+                  value={formData.username}
                   onChange={handleChange}
                 />
               </div>
+
+              {/* <div>
+                <label htmlFor="Healine">photo</label>
+                <input
+                  type="file"
+                  className="w-full cursor-text rounded border focus:outline-none capitalize focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
+                  name="photo_profile"
+                  value={formData.photo_profile}
+                  onChange={handleChange}
+                />
+              </div> */}
               <div>
                 <label htmlFor="Healine">password</label>
                 <input
                   type="text"
                   className="w-full cursor-text rounded border focus:outline-none  focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
                   name="password"
-                  value={data.password}
+                  value={formData.password}
                   onChange={handleChange}
                 />
               </div>
@@ -95,20 +135,20 @@ const AddUser = () => {
                   type="text"
                   className="w-full cursor-text rounded border focus:outline-none capitalize focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
                   name="role"
-                  value={data.role}
+                  value={formData.role}
                   onChange={handleChange}
                 />
               </div>
             </div>
-            <button
-              type="submit"
-              className="w-full mt-4 bg-green-400 h-10 rounded-md text-white uppercase focus:bg-white focus:border border-neutral-300 focus:text-neutral-500"
-            >
-              kirim
-            </button>
-          </form>
+          </>
         )}
-      </div>
+        <button
+          type="submit"
+          className="w-full mt-4 bg-green-400 h-10 rounded-md text-white uppercase focus:bg-white focus:border border-neutral-300 focus:text-neutral-500"
+        >
+          kirim
+        </button>
+      </form>
     </div>
   );
 };

@@ -90,11 +90,10 @@ const Navbar = () => {
     return null;
   }
   return (
-    <nav>
-      <div className="fixed w-full  z-40 top-0">
+    <nav >
+      <div className="fixed w-full z-40 top-0">
         <div
-          className={`flex z-50  md:mx-auto xl:w-full lg:max-w-none py-4  justify-between px-6 duration-200 
-          
+          className={`flex z-50 h-28 md:mx-auto xl:w-full lg:max-w-none py-4  justify-between px-6 duration-200 
 ${
   pathname === "/"
     ? ` ${
@@ -112,14 +111,14 @@ ${
 }
             `}
         >
-          <div className="md:h-fit h-12 w-12  md:w-fit">
+          <div className="md:h-20 h-12 w-12 md:w-20">
             <Link href={"/"}>
               <Image
                 src="/Logo-Web.png"
                 alt="logo"
                 width={100}
                 height={100}
-                className=" object-contain  bg-slate-50 rounded-full p-2"
+                className=" object-contain  bg-slate-50 rounded-full md:p-3"
               />
             </Link>
           </div>
