@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MdOutlineDoubleArrow } from "react-icons/md";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { ButtonBack } from "@/components/User/Button";
+import { format } from 'date-fns';
 async function getData(uuid) {
   const res = await fetch(
     "http://api.mokletscience.com/api/v1/player/" + uuid,
@@ -22,6 +23,11 @@ async function getData(uuid) {
 export default async function detailIndividu({ params }) {
   const data = await getData(params.detail);
 
+
+  const originalDate = data.data.date_of_birth;
+  const formatDate = format(new Date(originalDate), 'dd,MMMM yyyy');
+
+  
   const calculateYear = (birthday) => {
     const birthdateObj = new Date(birthday);
     const currentYear = new Date().getFullYear();
@@ -72,7 +78,7 @@ export default async function detailIndividu({ params }) {
               <span className="text-primary-red font-medium">
                 ( {calculateYear(data.data.date_of_birth)} Tahun )
               </span>
-              {data.data.date_of_birth}
+              {formatDate}
             </p>
             <p className="flex items-center gap-2">
               <MdOutlineDoubleArrow /> tinggi badan :{" "}

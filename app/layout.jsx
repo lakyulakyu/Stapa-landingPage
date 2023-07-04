@@ -43,18 +43,14 @@ export const metadata = {
   description: "Website for",
 };
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable} ${poppins.variable} overflow-x-hidden`}
       >
-        <div >
         <Navbar />
 
-        </div>
         {children}
         <Sponsorship />
         <Footer />

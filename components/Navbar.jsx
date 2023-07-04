@@ -79,6 +79,8 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const username = localStorage.getItem("user");
+  const photo_profile = localStorage.getItem("user_photo");
 
   const pathname =
     typeof window !== "undefined" ? window.location.pathname : null;
@@ -90,7 +92,7 @@ const Navbar = () => {
     return null;
   }
   return (
-    <nav >
+    <nav>
       <div className="fixed w-full z-40 top-0">
         <div
           className={`flex z-50 h-28 md:mx-auto xl:w-full lg:max-w-none py-4  justify-between px-6 duration-200 
@@ -179,14 +181,14 @@ ${
                         onClick={handleProfile}
                       >
                         <p className="pr-2 border-r-2  text-black-main truncate border-neutral-200 sm:max-w-[200px] max-w-[100px] w-fit ">
-                          ur name here
+                          {username}
                         </p>
                         <Image
                           width={1000}
                           alt=""
                           height={1000}
                           className="h-8 w-8 ml-2 object-cover border rounded-full"
-                          src={"/pemain.jpg"}
+                          src={photo_profile || "/default-human.png"}
                         />
                       </button>
                     </div>
@@ -200,7 +202,9 @@ ${
           )}
 
           <div className="uppercase max-md:hidden  flex items-center  gap-4">
-            <h1 className="truncate w-32">Loginbvjlvbljvbvvijvbsjv vbsabv</h1>
+            <h1 className="truncate w-32 text-end">
+              {isLoggedIn ? username : "login"}
+            </h1>
             <button onClick={Popup}>
               {isLoggedIn ? (
                 <>
@@ -210,7 +214,7 @@ ${
                       alt=""
                       height={1000}
                       className="h-8 w-8 object-cover border rounded-full"
-                      src={"/pemain.jpg"}
+                      src={photo_profile || "/default-human.png"}
                     />
                   </div>
                 </>

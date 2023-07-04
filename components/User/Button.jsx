@@ -19,7 +19,8 @@ export function Login() {
 //logout button
 export function Logout() {
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn"), (window.location.href = "/");
+    localStorage.removeItem("isLoggedIn"),
+    localStorage.removeItem("token"), (window.location.href = "/");
   };
   return (
     <button className=" w-full mb-2 " onClick={handleLogout}>

@@ -1,9 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MdWhatsapp } from "react-icons/md";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { BsCheck } from "react-icons/bs";
 
 const Login = () => {
   const [username, setusername] = useState("");
@@ -40,11 +40,20 @@ const Login = () => {
 
       if (response.ok) {
         const data = await response.json();
-        const token = data.data.token;
-        localStorage.setItem("token", token);
-        window.location.href = "/";
+        console.log(data.data[0].user);
+        localStorage.setItem("token", data.data[0].token);
+        localStorage.setItem("user", data.data[0].user.username);
+        localStorage.setItem("user_photo", data.data[0].user.photo_profile);
+        localStorage.setItem("role", data.data[0].user.role);
+
         setIsLoggedIn(true);
         localStorage.setItem("isLoggedIn", true);
+
+        if (data.data[0].user.role === "ADMIN") {
+          window.location.href = "/admine";
+        } else {
+          window.location.href = "/";
+        }
       } else {
         const errorData = await response.json();
         setErrorMessage(errorData.message);
@@ -107,7 +116,7 @@ const Login = () => {
                 >
                   Password
                 </label>
-                <div className="w-full flex pr-2 border-2 rounded  ">
+                <div>
                   <input
                     type={showPassword ? "text" : "password"}
                     id="password"
@@ -116,9 +125,16 @@ const Login = () => {
                     value={password}
                     onChange={handlePasswordChange}
                   />
-                  <button onClick={toggleShowPassword}>
-                    {showPassword ? <AiFillEye /> : <AiFillEyeInvisible />}
+                </div>
+                <div className="flex gap-4 mt-2 items-center">
+                  <button
+                    type="button"
+                    onClick={toggleShowPassword}
+                    className="border text-blue-600 text-2xl w-6 h-6"
+                  >
+                    {showPassword ? <BsCheck /> : ""}
                   </button>
+                  <p>Tunjukan password</p>
                 </div>
               </div>
               {errorMessage && (

@@ -5,8 +5,7 @@ import { GiSoccerField } from "react-icons/gi";
 import DataMatch from "../../Json/Match";
 import YouTubeLive from "../User/YoutubeLive";
 import Link from "next/link";
-import { format, parseISO } from "date-fns";
-import idLocale from "date-fns/locale/id";
+
 function MatchNow() {
   const [schedule, setSchedule] = useState([]);
 
