@@ -15,9 +15,7 @@ const Footer = () => {
   // }
 
 
-  if (typeof window === "undefined") {
-    return null;
-  }
+  
 
   const pathname = window.location.pathname;
   if (
