@@ -6,24 +6,24 @@ import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdWhatsapp } from "react-icons/md";
 
 const Footer = () => {
-  if (
-    (typeof window !== "undefined" &&
-      window.location.pathname.includes(`/Admine`)) ||
-    window.location.pathname.includes(`/login`) ||
-    window.location.pathname.includes(`/about`)
-  ) {
-    return null;
-  }
-
-  //   const pathname =
-  //   typeof window !== "undefined" ? window.location.pathname : null;
   // if (
-  //   pathname === "/login" ||
-  //   pathname === "/Admine" ||
-  //   pathname === "/about"
+  //   (typeof window !== "undefined" &&
+  //     window.location.pathname.includes(`/Admine`)) ||
+  //   window.location.pathname.includes(`/login`) ||
+  //   window.location.pathname.includes(`/about`)
   // ) {
   //   return null;
   // }
+
+    const pathname =
+    typeof window === "undefined" ? window.location.pathname : null;
+  if (
+    pathname === "/login" ||
+    pathname === "/Admine" ||
+    pathname === "/about"
+  ) {
+    return null;
+  }
   return (
     <div
       id="More"
