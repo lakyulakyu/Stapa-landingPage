@@ -1,41 +1,37 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { CgArrowLongRight } from "react-icons/cg";
 import CardVideos from "../../components/Card/CardVideos";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Video = [
-  {
-    id: 1,
-    url: "https://www.youtube.com/embed/7vs-Xz9uGwc",
-    headline: "HIGHLIGHT MULIA HATI VS MUTIARA SOLO 5-0",
-    time: "03:09",
-  },
-  {
-    id: 2,
-    url: "https://www.youtube.com/embed/ktBGuVsxTIQ",
-    headline: "HighLight Putra Gendangan vs Walisongo 1-0",
-    time: "04:07",
-  },
-
-  {
-    id: 3,
-    url: "https://www.youtube.com/embed/BevJqPWHtOg",
-    headline: "HIGHLIGHT SKM KRJAN VS PSHW ANDBOY FC 1-0",
-    time: "02:26",
-  },
-
-  {
-    id: 4,
-    url: "https://www.youtube.com/embed/xwade8dZ-OY",
-    headline: "Technical Meeting ASKOT Batu bersama LabMokletScience",
-    time: "00.51",
-  },
-];
-
 const FeaturedVideos = () => {
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    fetchVideos();
+  }, []);
+
+  async function fetchVideos() {
+    try {
+      const response = await fetch(
+        "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAdzQyw7F__Nr1IfTMFh-GGhwvhG6wMAG0&channelId=UCeHsWLotqZDJTdl1xJZLk-w&part=snippet&maxResults=10"
+      );
+      const data = await response.json();
+
+      console.log(data);
+      const videos = data.items.map((item) => ({
+        title: item.snippet.title,
+        thumbnail: item.snippet.thumbnails.default.url,
+        videoId: item.id.videoId,
+        description: item.snippet.description,
+      }));
+
+      setVideos(videos);
+    } catch (error) {
+      console.error("Error fetching videos:", error);
+    }
+  }
   const sliderRef = useRef(null);
   const next = () => sliderRef.current.slickNext(+1);
   const prev = () => sliderRef.current.slickPrev(-1);
@@ -44,8 +40,8 @@ const FeaturedVideos = () => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    dots: false,
-    arrows: false,
+    dots: true,
+    arrows: true,
     autoplay: true,
     autoplaySpeed: 4000,
     responsive: [
@@ -97,10 +93,8 @@ const FeaturedVideos = () => {
       </div>
       <div className="w-full">
         <Slider {...settings} ref={sliderRef} className="w-full h-fit">
-          {Video.map((item,index) => (
-            <>
-              <CardVideos  key={index} item={item} />
-            </>
+          {videos.map((video) => (
+            <CardVideos key={video.videoId} video={video} />
           ))}
         </Slider>
       </div>

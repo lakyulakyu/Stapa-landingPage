@@ -14,6 +14,7 @@
     "date-fns": "^2.30.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
+    "googleapis": "^120.0.0",
     "html-to-image": "^1.11.11",
     "html2canvas": "^1.4.1",
     "next": "13.4.3",

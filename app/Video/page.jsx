@@ -1,44 +1,41 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import CardVideos from "@/components/Card/CardVideos";
 
-const Video = [
-  {
-    id: 1,
-    url: "https://www.youtube.com/embed/7vs-Xz9uGwc",
-    headline: "HIGHLIGHT MULIA HATI VS MUTIARA SOLO 5-0",
-    time: "03:09",
-  },
-  {
-    id: 2,
-    url: "https://www.youtube.com/embed/ktBGuVsxTIQ",
-    headline: "HighLight Putra Gendangan vs Walisongo 1-0",
-    time: "04:07",
-  },
+export default function page() {
+  const [videos, setVideos] = useState([]);
 
-  {
-    id: 3,
-    url: "https://www.youtube.com/embed/BevJqPWHtOg",
-    headline: "HIGHLIGHT SKM KRJAN VS PSHW ANDBOY FC 1-0",
-    time: "02:26",
-  },
+  useEffect(() => {
+    fetchVideos();
+  }, []);
 
-  {
-    id: 4,
-    url: "https://www.youtube.com/embed/xwade8dZ-OY",
-    headline: "Technical Meeting ASKOT Batu bersama LabMokletScience",
-    time: "00.51",
-  },
-];
-const page = () => {
+  async function fetchVideos() {
+    try {
+      const response = await fetch(
+        "https://www.googleapis.com/youtube/v3/search?key=AIzaSyAdzQyw7F__Nr1IfTMFh-GGhwvhG6wMAG0&channelId=UCeHsWLotqZDJTdl1xJZLk-w&part=snippet&maxResults=10"
+      );
+      const data = await response.json();
+
+      console.log(data);
+      const videos = data.items.map((item) => ({
+        title: item.snippet.title,
+        thumbnail: item.snippet.thumbnails.default.url,
+        videoId: item.id.videoId,
+        description: item.snippet.description,
+      }));
+
+      setVideos(videos);
+    } catch (error) {
+      console.error("Error fetching videos:", error);
+    }
+  }
   return (
     <>
       <div className=" w-full h-fit md:mt-44 mx-auto mt-24 flex flex-wrap   ">
-        {Video.map((item) => (
-          <CardVideos key={item.id} item={item} />
+        {videos.map((video) => (
+          <CardVideos key={video.videoId} video={video} />
         ))}
       </div>
     </>
   );
-};
-
-export default page;
+}
