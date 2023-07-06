@@ -16,16 +16,6 @@ const navigation = [
   { id: 5, name: "Video", href: "/Video" },
   { id: 6, name: "About us", href: "/about" },
 ];
-const UserDatas = [
-  {
-    id: 1,
-    name: "zhidan",
-    photo_profile: "/pemain.jpg",
-    username: "zhidan",
-    password: "adadeh",
-  },
-];
-
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -79,11 +69,26 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  // const username = localStorage.getItem("user");
+  // const photo_profile = localStorage.getItem("user_photo");
+
+  // const pathname =
+  //   typeof window !== "undefined" ? window.location.pathname : null;
+  // if (
+  //   pathname === "/login" ||
+  //   pathname === "/admine" ||
+  //   pathname === "/about"
+  // ) {
+  //   return null;
+  // }
+
+  if (typeof window === "undefined") {
+    return null;
+  }
   const username = localStorage.getItem("user");
   const photo_profile = localStorage.getItem("user_photo");
 
-  const pathname =
-    typeof window !== "undefined" ? window.location.pathname : null;
+  const pathname = window.location.pathname;
   if (
     pathname === "/login" ||
     pathname === "/admine" ||
