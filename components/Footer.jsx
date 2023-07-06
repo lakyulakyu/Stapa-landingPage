@@ -15,8 +15,13 @@ const Footer = () => {
   //   return null;
   // }
 
-    const pathname =
-    typeof window === "undefined" ? window.location.pathname : null;
+  if (typeof window === "undefined") {
+    return null;
+  }
+  // const username = localStorage.getItem("user");
+  // const photo_profile = localStorage.getItem("user_photo");
+
+  const pathname = window.location.pathname;
   if (
     pathname === "/login" ||
     pathname === "/Admine" ||
