@@ -1,5 +1,5 @@
-// import React from "react";
-// import CardVideos from "@/components/Card/CardVideos";
+import React from "react";
+import CardVideos from "@/components/Card/CardVideos";
 
 // async function getData() {
 //   const res = await fetch(
@@ -11,24 +11,25 @@
 //   return res.json();
 // }
 
-// export default async function page() {
-//   const data = await getData();
+export default async function page() {
+  // const data = await getData();
 
-//   console.log(data);
-//   const videos = data.items.map((item) => ({
-//     title: item.snippet.title,
-//     thumbnail: item.snippet.thumbnails.default.url,
-//     videoId: item.id.videoId,
-//     description: item.snippet.description,
-//   }));
+  // console.log(data);
+  // const videos = data.items.map((item) => ({
+  //   title: item.snippet.title,
+  //   thumbnail: item.snippet.thumbnails.default.url,
+  //   videoId: item.id.videoId,
+  //   description: item.snippet.description,
+  // }));
 
-//   return (
-//     <>
-//       <div className=" w-full h-fit md:mt-44 mx-auto mt-24 flex flex-wrap   ">
-//         {videos.map((video) => (
-//           <CardVideos key={video.videoId} video={video} />
-//         ))}
-//       </div>
-//     </>
-//   );
-// }
+  return (
+    <>
+      <div className=" w-full h-fit md:mt-44 mx-auto mt-24 flex flex-wrap   ">
+        {/* {videos.map((video) => (
+          <CardVideos key={video.videoId} video={video} />
+        ))} */}
+        oke
+      </div>
+    </>
+  );
+}
