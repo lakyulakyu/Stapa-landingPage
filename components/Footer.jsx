@@ -18,7 +18,7 @@ const Footer = () => {
   typeof window !== "undefined" ? window.location.pathname : null;
 if (
   pathname === "/login" ||
-  pathname === "/admine" ||
+  pathname === "/Admine" ||
   pathname === "/about" 
 ) {
   return null;
