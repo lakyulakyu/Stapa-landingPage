@@ -63,7 +63,7 @@ const AddUser = () => {
     }
   };
   return (
-    <div className={`max-w-6xl mx-auto ${showDetail ? "mb-10" : "mb-4"}`}>
+    <div className={`max-w-6xl mx-auto mt-44 ${showDetail ? "mb-10" : "mb-4"}`}>
       <button
         onClick={handleButtonClick}
         className={` flex gap-4 text-neutral-500 text-2xl hover:bg-neutral-100 items-center border-b w-full pb-2 ${
