@@ -17,7 +17,7 @@ const CardVideos = ({ video }) => {
             />
           </Link>
 
-          <h1 className="capitalize font-semibold mt-4 hover:underline font-poppins text-start">
+          <h1 className="capitalize font-semibold mt-4 hover:underline line-clamp-2 font-poppins text-start">
             {video.title}
           </h1>
           <p className="line-clamp-3 ">{video.description}</p>
