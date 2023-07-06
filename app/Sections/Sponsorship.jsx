@@ -43,14 +43,18 @@ const Sponsorship = () => {
   // }
 
 
-  const pathname =
-  typeof window !== "undefined" ? window.location.pathname : null;
-if (
-  pathname === "/login" ||
-  pathname === "/Admine" 
-) {
-  return null;
-}
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  const pathname = window.location.pathname;
+  if (
+    pathname === "/login" ||
+    pathname === "/Admine" ||
+    pathname === "/about"
+  ) {
+    return null;
+  }
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-10 md:mx-auto mt-12 w-full font-poppins font-semibold h-fit">
       <div>

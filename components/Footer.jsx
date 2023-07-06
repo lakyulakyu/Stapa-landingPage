@@ -14,8 +14,12 @@ const Footer = () => {
   //   return null;
   // }
 
-  const pathname =
-    typeof window !== "undefined" ? window.location.pathname : null;
+
+  if (typeof window === "undefined") {
+    return null;
+  }
+
+  const pathname = window.location.pathname;
   if (
     pathname === "/login" ||
     pathname === "/Admine" ||
