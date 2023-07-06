@@ -208,12 +208,12 @@ ${
             <button onClick={Popup}>
               {isLoggedIn ? (
                 <>
-                  <div className="pl-2 border-l-2">
+                  <div className="pl-2 border-l-2 border-primary-red">
                     <Image
                       width={1000}
                       alt=""
                       height={1000}
-                      className="h-8 w-8 object-cover border rounded-full"
+                      className="h-8 w-8 object-cover border  border-primary-red rounded-full"
                       src={photo_profile || "/default-human.png"}
                     />
                   </div>

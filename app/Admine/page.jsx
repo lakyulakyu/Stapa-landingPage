@@ -11,15 +11,15 @@ import AddUser from "@/components/Admine/AddUser";
 const page = () => {
   return (
     <>
-      <NavAdmin />
-      <News />
+      {/* <NavAdmin /> */}
+      {/* <News /> */}
       <AddUser />
-      <Shedule />
+      {/* <Shedule />
       <Sosmed />
       <Sponsor />
       <Video />
       <DetailMatch />
-      <PlayerDetail />
+      <PlayerDetail /> */}
     </>
   );
 };

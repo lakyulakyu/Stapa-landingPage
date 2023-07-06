@@ -1,70 +1,67 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
-// ,
+import axios from "axios";
 const AddUser = () => {
-  const [showDetail, setShowDetail] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    username: "",
-    password: "",
-    role: "",
-    // photo_profile: null,
-  });
-
+  const [showDetail, setShowDetail] = useState(true);
   const handleButtonClick = () => {
     setShowDetail(!showDetail);
   };
+  const [formData, setFormData] = useState({
+    name: "",
+    password: "",
+    role: "",
+    photo_profile: null,
+    username: "",
+  });
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  };
-
-  const handlePhotoChange = (event) => {
-    const file = event.target.files[0];
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      photo: file,
-    }));
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const authToken =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY4ODA0NzQwNywiZXhwIjoxNjg4MDU4MjA3fQ.OXpeTvjVCSQcQ6m_dhRPFu0BqxBcvyihazAgU8eZ32k";
-    const formDataToSend = new FormData();
-    Object.entries(formData).forEach(([key, value]) => {
-      formDataToSend.append(key, value);
-    });
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
-      const response = await fetch(
+      const jsonData = JSON.stringify(formData); // Convert formData to JSON string
+      const response = await axios.post(
         "https://api-user-dev.mokletscience.com/api/v1/user/register",
+        jsonData, // Send JSON data
         {
-          method: "POST",
           headers: {
-            Authorization: `Bearer ${authToken}`,
+            "Content-Type": "application/json", // Set the content type to JSON
           },
-          body: formDataToSend,
         }
       );
 
-      if (response.ok) {
-        console.log("Data sent successfully!");
+      if (response.status === 200) {
+        alert("oke");
+        const responseData = response.data;
+        console.log(responseData);
       } else {
-        console.log("Failed to send data.");
+        alert("berhasil tambah user");
+        throw new Error("Terjadi kesalahan saat mengirim data ke API");
       }
     } catch (error) {
-      console.error("Error occurred while sending data:", error);
+      if (error.response && error.response.status === 409) {
+        alert("User sudah ada");
+      } else {
+        alert("Terjadi kesalahan saat mengirim data ke API");
+        console.error(error);
+      }
     }
   };
 
+  const handleChange = (e) => {
+    if (e.target.name === "photo") {
+      // If the changed input is the photo input field
+      setFormData((prevData) => ({
+        ...prevData,
+        [e.target.name]: e.target.files[0], // Set the photo property to the selected file
+      }));
+    } else {
+      // If the changed input is not the photo input field
+      setFormData((prevData) => ({
+        ...prevData,
+        [e.target.name]: e.target.value,
+      }));
+    }
+  };
   return (
     <div className={`max-w-6xl mx-auto ${showDetail ? "mb-10" : "mb-4"}`}>
       <button
@@ -82,7 +79,7 @@ const AddUser = () => {
             <MdOutlineKeyboardArrowDown />
           </p>
         )}
-        <p>Register</p>
+        <p>New User</p>
       </button>
       <form onSubmit={handleSubmit}>
         {showDetail && (
@@ -92,7 +89,7 @@ const AddUser = () => {
                 <label htmlFor="File">Name</label>
                 <input
                   type="text"
-                  className="w-full cursor-text rounded border focus:outline-none capitalize focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
+                  className="w-full cursor-text rounded border focus:outline-none  focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -102,23 +99,22 @@ const AddUser = () => {
                 <label htmlFor="Healine">Username</label>
                 <input
                   type="text"
-                  className="w-full cursor-text rounded border focus:outline-none capitalize focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
+                  className="w-full cursor-text rounded border focus:outline-none  focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
                   name="username"
                   value={formData.username}
                   onChange={handleChange}
                 />
               </div>
 
-              {/* <div>
+              <div>
                 <label htmlFor="Healine">photo</label>
                 <input
                   type="file"
-                  className="w-full cursor-text rounded border focus:outline-none capitalize focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
+                  className="w-full cursor-text rounded border focus:outline-none  focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
                   name="photo_profile"
-                  value={formData.photo_profile}
                   onChange={handleChange}
                 />
-              </div> */}
+              </div>
               <div>
                 <label htmlFor="Healine">password</label>
                 <input
@@ -131,23 +127,27 @@ const AddUser = () => {
               </div>
               <div>
                 <label htmlFor="Nickname">Role</label>
-                <input
-                  type="text"
-                  className="w-full cursor-text rounded border focus:outline-none capitalize focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
+                <select
+                  className="w-full cursor-text rounded border focus:outline-none focus:border-blue-400 border-neutral-300 file:mr-4 px-3 py-[0.32rem] text-neutral-700"
                   name="role"
                   value={formData.role}
                   onChange={handleChange}
-                />
+                >
+                  <option value="">Select Role</option>
+                  <option value="USER">User</option>
+                  <option value="ADMIN">Admin</option>
+                  <option value="MEDIA">Media</option>
+                </select>
               </div>
             </div>
+            <button
+              type="submit"
+              className="w-full mt-4 bg-green-400 h-10 rounded-md text-white uppercase focus:bg-white focus:border border-neutral-300 focus:text-neutral-500"
+            >
+              kirim
+            </button>
           </>
         )}
-        <button
-          type="submit"
-          className="w-full mt-4 bg-green-400 h-10 rounded-md text-white uppercase focus:bg-white focus:border border-neutral-300 focus:text-neutral-500"
-        >
-          kirim
-        </button>
       </form>
     </div>
   );

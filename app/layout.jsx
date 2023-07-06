@@ -50,7 +50,6 @@ export default function RootLayout({ children }) {
         className={`${bebasNeue.variable} ${montserrat.variable} ${sourceSerifPro.variable} ${poppins.variable} overflow-x-hidden`}
       >
         <Navbar />
-
         {children}
         <Sponsorship />
         <Footer />

@@ -11,23 +11,22 @@ const CardMatch = ({ item }) => {
 
   return (
     <>
-      <Link
-        className={` ${isEven ? "" : "bg-neutral-100 "} `}
-        href={`/Matched/$`}
-      >
+      <Link className={` ${isEven ? "" : "bg-neutral-100 "} `} href={``}>
         <div
           key={item.id}
           className={` ${
-            pathname === "/" ? "" : "flex flex-col-reverse md:flex-col"
-          } hover:bg-neutral-100 h-80 py-4  mx-auto rounded-lg border w-full min-h-fit  min-w-fit px-6`}
+            pathname === "/"
+              ? " h-80"
+              : "flex flex-col-reverse md:flex-col max-lg:h-fit h-80 "
+          } hover:bg-neutral-100  py-4  mx-auto rounded-lg border w-full  min-h-fit  px-6`}
         >
-          <div className="pb-4">
-            <div className="flex justify-evenly w-full items-center sm:justify-between">
+          <div className="pb-4 ">
+            <div className="flex justify-evenly  items-center sm:justify-between">
               <p
                 className={
                   pathname == "/"
                     ? "hidden"
-                    : "md:block font-semibold text-2xl underline text-primary-red max-md:hidden "
+                    : "lg:hidden max-sm:hidden font-semibold text-2xl underline text-primary-red  block"
                 }
               >
                 {item.score_tim_1}
@@ -37,8 +36,8 @@ const CardMatch = ({ item }) => {
                 className={` ${
                   pathname === "/"
                     ? " hover:scale-110 h-24 "
-                    : "max-lg:rounded-xl flex lg:h-28 flex-col max-lg:flex-row-reverse hover:scale-105 hover:-translate-x-2 max-lg:w-fit max-md:w-full md:min-w-[200px] min-w-fit w-24   "
-                } border-2 bg-white py-2 px-1 rounded-s-3xl rounded-t-3xl  ease-out duration-300 `}
+                    : "max-lg:rounded-xl flex lg:h-28  max-md:my-2  max-sm:rounded-s-3xl max-sm:rounded-t-3xl max-sm:flex-col min-h-[100px] flex-col max-lg:flex-row-reverse items-center hover:scale-105 hover:-translate-x-2 sm:min-w-fit max-lg:w-full  lg:w-24"
+                } border-2 bg-white py-2 px-1 rounded-s-3xl ml-4 rounded-t-3xl  ease-out duration-300 `}
               >
                 <Image
                   key={item.id}
@@ -57,11 +56,11 @@ const CardMatch = ({ item }) => {
                 </p>
               </div>
               <div
-                className={` ${ 
+                className={` ${
                   pathname === "/"
                     ? " hover:scale-110 h-24 "
-                    : "max-lg:rounded-none flex lg:h-28 flex-col max-lg:flex-row hover:scale-105 hover:translate-x-2 max-lg:w-fit max-md:w-full md:min-w-[200px] min-w-fit w-24   "
-                } border-2 bg-white py-2 px-1 rounded-e-3xl border-primary-red rounded-t-3xl  ease-out duration-300 `}
+                    : "max-lg:rounded-xl max-sm:rounded-e-3xl max-md:my-2 min-h-[100px] max-sm:rounded-t-3xl flex lg:h-28  max-sm:flex-col flex-col items-center max-lg:flex-row hover:scale-105 hover:-translate-x-2 sm:min-w-fit max-lg:w-full  lg:w-24  "
+                } border-2 bg-white py-2 px-1 rounded-e-3xl mr-4 border-primary-red rounded-t-3xl  ease-out duration-300 `}
               >
                 <Image
                   key={item.id}
@@ -83,7 +82,7 @@ const CardMatch = ({ item }) => {
                 className={
                   pathname == "/"
                     ? "hidden"
-                    : "md:block font-semibold text-2xl underline text-primary-red max-md:hidden "
+                    : "lg:hidden max-sm:hidden  font-semibold text-2xl underline text-primary-red  block"
                 }
               >
                 {item.score_tim_2}
@@ -95,11 +94,13 @@ const CardMatch = ({ item }) => {
             {item.score_tim_1 || item.score_tim_2 ? (
               <div
                 className={`${
-                  pathname === "/" ? "" : "md:hidden block"
-                } text-lg sm:text-start text-center flex justify-evenly -mb-2 mt-1  w-full font-poppins font-bold text-red-600
+                  pathname === "/" ? "" : " lg:block hidden max-sm:block "
+                } 
                 `}
               >
-                <p>{item.score_tim_1}</p> - <p>{item.score_tim_2}</p>
+                <div className=" text-lg sm:text-start text-center  -mb-2 mt-1 flex justify-evenly w-full font-poppins font-bold text-red-600">
+                  <p>{item.score_tim_1}</p> - <p>{item.score_tim_2}</p>
+                </div>
               </div>
             ) : (
               ""

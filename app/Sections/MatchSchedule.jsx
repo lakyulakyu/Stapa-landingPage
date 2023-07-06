@@ -21,8 +21,8 @@ const MatchSchedule = () => {
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    // autoplay: true,
-    // autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1200,

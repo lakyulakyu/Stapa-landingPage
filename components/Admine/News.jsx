@@ -4,7 +4,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import axios from "axios";
 
 const News = () => {
-  const [showDetail, setShowDetail] = useState(true);
+  const [showDetail, setShowDetail] = useState(false);
   const [data, setData] = useState({
     title: "",
     excerpt: "",
