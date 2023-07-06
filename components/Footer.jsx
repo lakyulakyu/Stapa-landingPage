@@ -14,18 +14,15 @@ const Footer = () => {
   //   return null;
   // }
 
-  if (typeof window === "undefined") {
-    return null;
-  }
- 
-  const pathname = window.location.pathname;
-  if (
-    pathname === "/login" ||
-    pathname === "/Admine" ||
-    pathname === "/about"
-  ) {
-    return null;
-  }
+  const pathname =
+  typeof window !== "undefined" ? window.location.pathname : null;
+if (
+  pathname === "/login" ||
+  pathname === "/Admine" ||
+  pathname === "/about" 
+) {
+  return null;
+}
   return (
     <div
       id="More"

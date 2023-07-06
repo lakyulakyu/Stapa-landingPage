@@ -42,17 +42,15 @@ const Sponsorship = () => {
   //   return null;
   // }
 
-  if (typeof window === "undefined") {
-    return null;
-  }
-  const pathname = window.location.pathname;
-  if (
-    pathname === "/login" ||
-    pathname === "/Admine" ||
-    pathname === "/about"
-  ) {
-    return null;
-  }
+
+  const pathname =
+  typeof window !== "undefined" ? window.location.pathname : null;
+if (
+  pathname === "/login" ||
+  pathname === "/Admine" 
+) {
+  return null;
+}
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-10 md:mx-auto mt-12 w-full font-poppins font-semibold h-fit">
       <div>
@@ -66,7 +64,7 @@ const Sponsorship = () => {
           {Array.from({ length: 5 }, () => {
             return (
               <>
-                <div key={2} className="bg-neutral-100 mx-6  rounded-full mb-2">
+                <div  key={2} className="bg-neutral-100 mx-6  rounded-full mb-2">
                   {/* <Image
                   key={item.id}
                   src={item.url}
@@ -97,10 +95,7 @@ const Sponsorship = () => {
                   height={300}
                   className="aspect-[3/2] object-contain mix-blend-color-burn px-6"
                 /> */}
-                  <h1
-                    key={2}
-                    className="text-center bg-neutral-100 py-20 w-full object-center rounded-3xl mb-2 h-full items-center  text-neutral-300"
-                  >
+                  <h1 key={2} className="text-center bg-neutral-100 py-20 w-full object-center rounded-3xl mb-2 h-full items-center  text-neutral-300">
                     Available
                   </h1>
                 </>
