@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CardVideos from "@/components/Card/CardVideos";
 
 async function getData() {
