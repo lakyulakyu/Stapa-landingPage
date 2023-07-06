@@ -17,11 +17,13 @@ const CardTeam = ({ item }) => {
   useEffect(() => {
     setShowDetail(isHovered || window.innerWidth < 700);
   }, [isHovered]);
+
+  
   return (
     <div
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
-      className="flex w-full  pt-2 "
+      className="flex w-full shadow-md rounded-lg pt-2  "
     >
       <div className="h-20 w-full max-w-[70px]">
         <Image
@@ -32,7 +34,7 @@ const CardTeam = ({ item }) => {
           className="h-16 w-fit mix-blend-color-burn items-center"
         />
       </div>
-      <div className=" w-full shadow-sm px-3 mx-auto ">
+      <div className=" w-full px-3 mx-auto ">
         <div className="w-full text-sm overflow-clip capitalize font-semibold  bottom-0">
           <p className="md:text-lg text-base  text-primary-red uppercase font-semibold tracking-widest">
             {item.club_name}
@@ -46,7 +48,7 @@ const CardTeam = ({ item }) => {
       </div>
       {isHovered && (
         <Link href={`/Team/${item.uuid}`}>
-          <button className="bg-neutral-400  active:duration-200  ease-out flex px-2 sm:mt-6 mt-4 sm:pt-0.5 rounded-sm  sm:w-24 justify-between items-center text-light-grey font-semibold text-xs  uppercase tracking-widest">
+          <button className="bg-neutral-400 h-16 active:duration-200  ease-out flex px-2 my-2 rounded-sm  sm:w-24 justify-between items-center text-light-grey font-semibold text-xs  uppercase tracking-widest">
             <p className="hidden sm:block">Detail</p>
             <span className="text-2xl rotate-90 sm:rotate-0  ">
               <MdArrowRight />

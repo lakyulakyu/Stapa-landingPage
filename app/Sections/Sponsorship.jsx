@@ -47,7 +47,7 @@ const Sponsorship = () => {
   typeof window !== "undefined" ? window.location.pathname : null;
 if (
   pathname === "/login" ||
-  pathname === "/admine" 
+  pathname === "/Admine" 
 ) {
   return null;
 }

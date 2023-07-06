@@ -91,7 +91,7 @@ const Navbar = () => {
   const pathname = window.location.pathname;
   if (
     pathname === "/login" ||
-    pathname === "/admine" ||
+    pathname === "/Admine" ||
     pathname === "/about"
   ) {
     return null;

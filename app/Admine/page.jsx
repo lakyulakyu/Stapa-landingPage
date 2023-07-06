@@ -11,7 +11,7 @@ import AddUser from "@/components/Admine/AddUser";
 const page = () => {
   return (
     <>
-      {/* <NavAdmin /> */}
+      <NavAdmin />
       {/* <News /> */}
       <AddUser />
       {/* <Shedule />
