@@ -50,7 +50,7 @@ const Login = () => {
         localStorage.setItem("isLoggedIn", true);
 
         if (data.data[0].user.role === "ADMIN") {
-          window.location.href = "/admine";
+          window.location.href = "/Admine";
         } else {
           window.location.href = "/";
         }
