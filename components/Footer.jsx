@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React,{useEffect} from "react";
 import Link from "next/link";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdWhatsapp } from "react-icons/md";
@@ -14,17 +14,15 @@ const Footer = () => {
   //   return null;
   // }
 
-
-  
-
-  const pathname = window.location.pathname;
-  if (
-    pathname === "/login" ||
-    pathname === "/Admine" ||
-    pathname === "/about"
-  ) {
-    return null;
-  }
+  const pathname =
+  typeof window !== "undefined" ? window.location.pathname : null;
+if (
+  pathname === "/login" ||
+  pathname === "/admine" ||
+  pathname === "/about" 
+) {
+  return null;
+}
   return (
     <div
       id="More"
