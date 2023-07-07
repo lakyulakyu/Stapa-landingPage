@@ -18,9 +18,9 @@ const CardMatch = ({ item }) => {
             pathname === "/"
               ? " h-80"
               : "flex flex-col-reverse md:flex-col max-lg:h-fit h-80 "
-          } hover:bg-neutral-100  py-4  mx-auto rounded-lg border w-full  min-h-fit  px-6`}
+          } hover:bg-neutral-100  py-4  mx-auto rounded-lg border w-full min-h-fit`}
         >
-          <div className="pb-4 ">
+          <div className="pb-4">
             <div className="flex justify-evenly  items-center sm:justify-between">
               <p
                 className={
@@ -112,7 +112,7 @@ const CardMatch = ({ item }) => {
                 ? ""
                 : "max-md:text-center md:flex justify-between  items-center  capitalize"
             }
-           w-full`}
+           w-full px-6`}
           >
             <article>
               <p className="text-xs text-primary-red -mt-1">

@@ -19,7 +19,7 @@ const MatchSchedule = () => {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -85,10 +85,16 @@ const MatchSchedule = () => {
           <Slider
             {...settings}
             ref={sliderRef}
-            className="w-full h-full   divide-x-4 "
+            className="w-full h-full  divide-x-4 "
           >
             {DataMatch.map((item) => {
-              return <CardMatch key={item.id} item={item} />
+              return (
+                <>
+                  <div className="mx-1">
+                    <CardMatch key={item.id} item={item} />
+                  </div>
+                </>
+              );
             })}
           </Slider>
           <MatchNow />

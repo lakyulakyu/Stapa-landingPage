@@ -33,7 +33,10 @@ const Matched = () => {
         <div className="w-full">
           <div className="w-full lg:gap-y-8 py-2  grid mx-auto grid-cols-1  lg:grid-cols-3  divide-gray-300 mt-10 h-fit">
           {DataMatch.map((item) => {
-              return <CardMatch key={item.id} item={item} />
+              return <>
+              <div className="lg:mx-4">
+              <CardMatch key={item.id} item={item} />
+                </div></>
             })}
           </div>
         </div>
